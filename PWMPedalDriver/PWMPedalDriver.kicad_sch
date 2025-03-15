@@ -1236,12 +1236,6 @@
 		(uuid "39bf759e-14ac-41d1-8b72-a3068e4d1e0c")
 	)
 	(junction
-		(at 227.33 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3b7bfc86-cd3a-482e-8323-cc9ea2ed813e")
-	)
-	(junction
 		(at 127 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1482,16 +1476,6 @@
 			(type default)
 		)
 		(uuid "593d9c5a-327d-421d-94eb-1a2bcb77c4ad")
-	)
-	(wire
-		(pts
-			(xy 227.33 60.96) (xy 231.14 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5af5c409-901e-43a5-b14e-2f461fefb3ed")
 	)
 	(wire
 		(pts
@@ -1987,7 +1971,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded"
 			(at 200.66 45.72 0)
 			(effects
 				(font
@@ -2777,7 +2761,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5e3d0959-2f48-4bfd-8309-8b14edfab953")
 		(property "Reference" "R12"
 			(at 152.4 26.5895 90)
@@ -2787,8 +2770,8 @@
 				)
 			)
 		)
-		(property "Value" "R"
-			(at 152.4 29.0138 90)
+		(property "Value" "100k_NP"
+			(at 152.4 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3609,7 +3592,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded"
 			(at 132.08 48.26 0)
 			(effects
 				(font
@@ -3952,73 +3935,6 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 231.14 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c53051c0-0111-41ad-af5b-302db3c59455")
-		(property "Reference" "TP1"
-			(at 232.537 56.4458 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 232.537 58.8701 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
-			(at 236.22 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 236.22 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 231.14 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e3a69d26-1474-4040-b4b6-b9cf60d5eb62")
-		)
-		(instances
-			(project ""
-				(path "/ca3f4581-2760-476b-ae38-fbfd5da505cf"
-					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
 		(at 194.31 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4045,7 +3961,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill1.4mm_Beaded"
+		(property "Footprint" "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded"
 			(at 189.23 80.01 0)
 			(effects
 				(font
