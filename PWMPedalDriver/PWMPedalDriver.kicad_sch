@@ -1953,7 +1953,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "023d17c8-fa6b-4b60-9b32-e34b0b1b64b5")
-		(property "Reference" "TP2"
+		(property "Reference" "C+1"
 			(at 196.977 41.2058 0)
 			(effects
 				(font
@@ -2004,7 +2004,7 @@
 		(instances
 			(project "PWMPedalDriver"
 				(path "/ca3f4581-2760-476b-ae38-fbfd5da505cf"
-					(reference "TP2")
+					(reference "C+1")
 					(unit 1)
 				)
 			)
@@ -3574,7 +3574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b539c64f-cdee-4705-aa4a-35b2d69de532")
-		(property "Reference" "TP4"
+		(property "Reference" "Osc1Out1"
 			(at 128.397 43.7458 0)
 			(effects
 				(font
@@ -3625,7 +3625,7 @@
 		(instances
 			(project "PWMPedalDriver"
 				(path "/ca3f4581-2760-476b-ae38-fbfd5da505cf"
-					(reference "TP4")
+					(reference "Osc1Out1")
 					(unit 1)
 				)
 			)
@@ -3943,7 +3943,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1b1631c-da2b-40d0-a2e0-bbb3c730b4d4")
-		(property "Reference" "TP3"
+		(property "Reference" "TPC-1"
 			(at 195.707 82.0998 0)
 			(effects
 				(font
@@ -3994,7 +3994,7 @@
 		(instances
 			(project "PWMPedalDriver"
 				(path "/ca3f4581-2760-476b-ae38-fbfd5da505cf"
-					(reference "TP3")
+					(reference "TPC-1")
 					(unit 1)
 				)
 			)
