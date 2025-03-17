@@ -2830,7 +2830,7 @@
 		)
 		(uuid "44c3e893-56eb-4016-82a1-29a267b4023a")
 	)
-	(label "Motor0"
+	(label "Motor1"
 		(at 168.91 74.93 270)
 		(effects
 			(font
