@@ -2742,7 +2742,6 @@
 	)
 	(label "Motor0"
 		(at 71.12 72.39 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2753,7 +2752,6 @@
 	)
 	(label "G4"
 		(at 191.77 107.95 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2764,7 +2762,6 @@
 	)
 	(label "DBUS"
 		(at 219.71 57.15 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2775,7 +2772,6 @@
 	)
 	(label "Motor0"
 		(at 125.73 97.79 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2786,7 +2782,6 @@
 	)
 	(label "Vdrive"
 		(at 69.85 100.33 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2797,7 +2792,6 @@
 	)
 	(label "G1"
 		(at 43.18 68.58 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2808,7 +2802,6 @@
 	)
 	(label "G2"
 		(at 247.65 138.43 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2819,7 +2812,6 @@
 	)
 	(label "DBUS"
 		(at 127 76.2 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2830,7 +2822,6 @@
 	)
 	(label "Motor1"
 		(at 127 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2839,9 +2830,8 @@
 		)
 		(uuid "44c3e893-56eb-4016-82a1-29a267b4023a")
 	)
-	(label "Motor0"
+	(label "Motor1"
 		(at 168.91 74.93 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2850,9 +2840,8 @@
 		)
 		(uuid "4807a0fe-600e-41f4-806e-ec32549a172e")
 	)
-	(label "EBUS"
+	(label "SBUS"
 		(at 218.44 72.39 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2863,7 +2852,6 @@
 	)
 	(label "Vdrive"
 		(at 248.92 120.65 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2874,7 +2862,6 @@
 	)
 	(label "Vdrive"
 		(at 40.64 59.69 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2885,7 +2872,6 @@
 	)
 	(label "Motor0"
 		(at 219.71 62.23 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2896,7 +2882,6 @@
 	)
 	(label "SBUS"
 		(at 128.27 118.11 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2907,7 +2892,6 @@
 	)
 	(label "Motor1"
 		(at 186.69 81.28 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2918,7 +2902,6 @@
 	)
 	(label "G3"
 		(at 60.96 107.95 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2929,7 +2912,6 @@
 	)
 	(label "G2"
 		(at 196.85 71.12 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2940,7 +2922,6 @@
 	)
 	(label "Vdrive"
 		(at 205.74 106.68 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2951,7 +2932,6 @@
 	)
 	(label "Motor0"
 		(at 53.34 78.74 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2962,7 +2942,6 @@
 	)
 	(label "Vdrive"
 		(at 41.91 105.41 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2973,7 +2952,6 @@
 	)
 	(label "Vdrive"
 		(at 199.39 62.23 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2984,7 +2962,6 @@
 	)
 	(label "G4"
 		(at 247.65 148.59 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2995,7 +2972,6 @@
 	)
 	(label "G1"
 		(at 247.65 133.35 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3006,7 +2982,6 @@
 	)
 	(label "G3"
 		(at 247.65 143.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3017,7 +2992,6 @@
 	)
 	(label "Vdrive"
 		(at 182.88 100.33 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3028,7 +3002,6 @@
 	)
 	(label "Motor1"
 		(at 219.71 67.31 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4530,7 +4503,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 260.35 35.56 0)
 			(effects
 				(font
