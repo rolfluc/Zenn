@@ -68,6 +68,46 @@
 	)
 	(attr through_hole)
 	(fp_line
+		(start -12.7 -15.748)
+		(end -12.192 -15.748)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "56e26ccc-e372-4207-9aa1-22831f225ed6")
+	)
+	(fp_line
+		(start -12.7 -3.048)
+		(end -12.7 -15.748)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7878a2ca-1e1b-45aa-891c-0d22003c8916")
+	)
+	(fp_line
+		(start -12.192 -15.748)
+		(end -12.192 -3.429)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "16842695-f63e-4f92-83ce-e8c5bab7e2fc")
+	)
+	(fp_line
+		(start -12.192 -3.429)
+		(end 12.192 -3.429)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "df68a7e8-cafa-4bd0-9241-b23e7bf9713b")
+	)
+	(fp_line
 		(start -5.12 -2.82)
 		(end -5.12 1.821)
 		(stroke
@@ -118,6 +158,26 @@
 		(uuid "d9c0cb36-3c6b-444a-a360-2d09fac59dc7")
 	)
 	(fp_line
+		(start 0 -3.048)
+		(end -12.7 -3.048)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "64819cb8-7be0-4003-b725-c6b1a2da8c95")
+	)
+	(fp_line
+		(start 0 -3.048)
+		(end 12.7 -3.048)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "22fc3cfa-3266-4419-b926-bdd64a3a2b51")
+	)
+	(fp_line
 		(start 1.851 -2.82)
 		(end 1.851 -1.31)
 		(stroke
@@ -136,6 +196,36 @@
 		)
 		(layer "F.SilkS")
 		(uuid "8321cdc7-76df-4e5f-820a-d612e3cd5efe")
+	)
+	(fp_line
+		(start 12.192 -15.748)
+		(end 12.7 -15.748)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "7b94c0ba-546c-4329-bd5b-5e883af5182a")
+	)
+	(fp_line
+		(start 12.192 -3.429)
+		(end 12.192 -15.748)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "78092592-c8b4-441e-98b4-d1a4f4848bf9")
+	)
+	(fp_line
+		(start 12.7 -3.048)
+		(end 12.7 -15.748)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "93d71340-09b8-42bb-853b-3e498e463e16")
 	)
 	(fp_line
 		(start -5.25 -2.95)
@@ -247,21 +337,8 @@
 		(layer "F.Fab")
 		(uuid "3804fd0c-49b7-4e52-9e7b-ec2f66a9cc7e")
 	)
-	(fp_text user "TODO HeatSinkHere"
-		(at -8 -6 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "df83f136-cf04-42f4-9375-d714ef367ed8")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-			(justify left bottom)
-		)
-	)
 	(fp_text user "${REFERENCE}"
-		(at 0 -3.82 0)
+		(at 0 -1.31 0)
 		(layer "F.Fab")
 		(uuid "e86f8ba0-e4d6-4290-aac5-a4baf1d6a93d")
 		(effects
