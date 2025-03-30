@@ -121,6 +121,17 @@
 		(layer "Edge.Cuts")
 		(uuid "13c438e4-3c63-477a-9258-fa60eefed97a")
 	)
+	(gr_circle
+		(center 138.9 97.4)
+		(end 139 96.1)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "5aa3fa1a-615f-44bc-8c84-de400bfe9c6c")
+	)
 	(gr_line
 		(start 47.5 143.8)
 		(end 242.5 143.8)
@@ -221,6 +232,17 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "dd75c8ab-7c54-4656-8377-17f2eeffc187")
+	)
+	(gr_circle
+		(center 151.3 97.4)
+		(end 151.7 96.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "def7fb0d-f504-411a-bda4-f2e2b47d5970")
 	)
 	(gr_line
 		(start 238.5 108.8)
