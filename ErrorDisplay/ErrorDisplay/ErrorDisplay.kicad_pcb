@@ -80,189 +80,1198 @@
 		)
 	)
 	(net 0 "")
-	(gr_line
-		(start 238.5 110.8)
-		(end 242.5 110.8)
-		(stroke
-			(width 0.05)
-			(type default)
+	(net 1 "/Motors/P0_3")
+	(net 2 "/Motors/P0_2")
+	(net 3 "/Motors/P0_0")
+	(net 4 "/Motors/P0_1")
+	(net 5 "/Motors/P1_1")
+	(net 6 "/Motors/P1_3")
+	(net 7 "/Motors/P1_0")
+	(net 8 "/Motors/P1_2")
+	(net 9 "/Motors/P2_3")
+	(net 10 "/Motors/P2_1")
+	(net 11 "/Motors/P2_0")
+	(net 12 "/Motors/P2_2")
+	(footprint "MountingHole:MountingHole_4.3mm_M4"
+		(layer "F.Cu")
+		(uuid "39c5b1c1-8fe5-4df7-afba-10793da111c0")
+		(at 226 82.4 135)
+		(descr "Mounting Hole 4.3mm, no annular, M4")
+		(tags "mounting hole 4.3mm no annular m4")
+		(property "Reference" "H2"
+			(at 0 -5.3 135)
+			(layer "F.SilkS")
+			(uuid "39ff588b-8a2a-42f6-ac22-11eca2b0c9dd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
 		)
-		(layer "Edge.Cuts")
-		(uuid "0100036c-3cab-4c01-99c7-ffa07d3840b2")
+		(property "Value" "MountingHole"
+			(at 0 5.3 135)
+			(layer "F.Fab")
+			(uuid "715cfaeb-1646-4c5f-ac68-0cd43890d859")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fa093081-dc79-403a-bdf5-81f56fce7b97")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9f26270e-d2ed-4fd8-b68f-93ca4913ed87")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "10f12ad4-d628-4252-8dc8-eb988b466240")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/576b584d-b2ec-4bc6-be27-79ffe09c31f5")
+		(sheetname "Root")
+		(sheetfile "ErrorDisplay.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 4.3 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Cmts.User")
+			(uuid "6c67cc48-7303-4a39-9ee4-2f7d3e9e1983")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 4.55 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "2f72f6e3-9e97-4ebe-860f-1fc30216bac7")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 135)
+			(layer "F.Fab")
+			(uuid "5383a4c4-3061-442b-a767-ffdb27d554ed")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 135)
+			(size 4.3 4.3)
+			(drill 4.3)
+			(layers "*.Cu" "*.Mask")
+			(uuid "3ce65920-dfe5-4661-92bf-707cdb3d786e")
+		)
 	)
-	(gr_line
-		(start 242.5 143.8)
-		(end 242.5 141.2)
-		(stroke
-			(width 0.05)
-			(type default)
+	(footprint "MountingHole:MountingHole_4.3mm_M4"
+		(layer "F.Cu")
+		(uuid "4937042d-5ff6-44cf-8319-aad4aa7f509c")
+		(at 242.6 135.7 45)
+		(descr "Mounting Hole 4.3mm, no annular, M4")
+		(tags "mounting hole 4.3mm no annular m4")
+		(property "Reference" "H3"
+			(at 0 -5.3 45)
+			(layer "F.SilkS")
+			(uuid "9f1da0b5-c012-4ee5-876f-e5d69a2e49df")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
 		)
-		(layer "Edge.Cuts")
-		(uuid "0735a774-2048-4515-b505-c1976a5824fd")
+		(property "Value" "MountingHole"
+			(at 0 5.3 45)
+			(layer "F.Fab")
+			(uuid "e87050af-50b1-462b-a4ee-f987bca06cc1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "23133531-8d49-4f08-b1fd-986b0013af52")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a0d622d-7918-40da-89de-0dbcb4ce0cee")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c85b76c4-7d6d-49ef-ae4e-b8979d67643a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/eefde28c-ade4-4d75-8b40-efb737cef3e6")
+		(sheetname "Root")
+		(sheetfile "ErrorDisplay.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 4.3 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Cmts.User")
+			(uuid "7e9537df-0a95-457c-b4d6-a117a6752461")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 4.55 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "38c30f9e-a005-49fc-a447-19a0c7d19cd4")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 45)
+			(layer "F.Fab")
+			(uuid "396e47dc-7148-4f0c-bc32-2ce809f8876e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 45)
+			(size 4.3 4.3)
+			(drill 4.3)
+			(layers "*.Cu" "*.Mask")
+			(uuid "acd46105-7806-42b9-b250-ce7540adafc3")
+		)
+	)
+	(footprint "Library:X27-168"
+		(layer "F.Cu")
+		(uuid "4b39e184-f8f8-45cb-a314-fa7002cf71b8")
+		(at 104.1 109.3)
+		(property "Reference" "J3"
+			(at 0 3 0)
+			(layer "F.SilkS")
+			(uuid "ef1fa8b8-c63a-439d-85bb-f29fa3ee539f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "X27Motor"
+			(at 0 -2.4 0)
+			(layer "F.Fab")
+			(uuid "d3185651-7906-415b-a0ae-b8bb968541a2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Library:X27-168"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5d4a0608-3c84-48d6-b2c2-2a99b47e8cbe")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ec415ca0-8a8a-430e-8f7c-598208511672")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2003f191-4515-4fd6-9e8a-08de6b119f56")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/156055a7-0314-4264-bfe8-1ce416b07d9a/9d43d2a2-5b0d-475c-a2a8-63faed1b74f9")
+		(sheetname "Motors")
+		(sheetfile "Motors.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -5.4 14)
+			(end 5.4 14)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fe4bc3d3-94c5-43e0-a02c-8a365266bec8")
+		)
+		(fp_circle
+			(center 0 -6)
+			(end 0.8 -6)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "cacde11c-c055-45bc-b136-da50d53b46bb")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 15 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "5a95b22b-c766-435c-8b66-964f257f8678")
+		)
+		(fp_text user "1"
+			(at 9.4 -3.8 0)
+			(layer "F.SilkS")
+			(uuid "2e3a737d-2c30-425b-ae16-fc0704aef851")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "3"
+			(at -9.6 3.8 0)
+			(layer "F.SilkS")
+			(uuid "3d623a7b-886c-45d5-91dc-3f6952dbd3d9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "4"
+			(at -9.6 -3.8 0)
+			(layer "F.SilkS")
+			(uuid "62df7c76-7ba8-48a3-85e4-4b47396b7950")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "2"
+			(at 9.6 3.8 0)
+			(layer "F.SilkS")
+			(uuid "8fed3c2e-6ba7-47c9-8701-24818ea102b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at -9.2 9.2)
+			(size 2.5 2.5)
+			(drill 2.5)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "42de59a9-dcf0-4098-9009-c9f76be82d19")
+		)
+		(pad "" thru_hole circle
+			(at 0 -10.2)
+			(size 4 4)
+			(drill 4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "44b43fa1-9df7-40d8-a227-cfe61b90e98b")
+		)
+		(pad "1" thru_hole circle
+			(at 11.4 -3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 11 "/Motors/P2_0")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "d86b4ff3-79f3-48b0-b4b4-3715d8295115")
+		)
+		(pad "2" thru_hole circle
+			(at 11.4 3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 10 "/Motors/P2_1")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "98fcd982-25a9-479c-bf0a-2a8523e24e80")
+		)
+		(pad "3" thru_hole circle
+			(at -11.4 3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 12 "/Motors/P2_2")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "f836321b-1f9d-457b-8a36-e4acc63b9c77")
+		)
+		(pad "4" thru_hole circle
+			(at -11.4 -3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 9 "/Motors/P2_3")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "644cdf41-14ff-4f54-963c-86263e019878")
+		)
+		(model "${KIPRJMOD}/x27168.step"
+			(offset
+				(xyz 0 0 0.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 180)
+			)
+		)
+	)
+	(footprint "MountingHole:MountingHole_4.3mm_M4"
+		(layer "F.Cu")
+		(uuid "bf13f3c1-2922-476e-afe0-883146acd0d6")
+		(at 64 82.4 -135)
+		(descr "Mounting Hole 4.3mm, no annular, M4")
+		(tags "mounting hole 4.3mm no annular m4")
+		(property "Reference" "H1"
+			(at 0 -5.3 45)
+			(layer "F.SilkS")
+			(uuid "a6487330-fb01-4d5d-99ae-efa23bb8f2b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 5.3 45)
+			(layer "F.Fab")
+			(uuid "078a6f2d-e5ae-402a-8068-b413eacadeb4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+			(at 0 0 -135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "edc54818-bff2-46a8-a31c-d389b2801e4b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01d79f62-5b92-4d63-8847-767ed08a4d2b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 -135)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b1e5856b-b385-449d-a9b9-1306efd272cd")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/57966148-c7d6-4291-9695-92c916a05f2b")
+		(sheetname "Root")
+		(sheetfile "ErrorDisplay.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 4.3 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Cmts.User")
+			(uuid "731db54c-e5ef-4dc7-b8b9-9a77378fbd5b")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 4.55 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "cab8ea1a-5e5e-4efa-b283-8fc66598633b")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 45)
+			(layer "F.Fab")
+			(uuid "4c6c0a89-9802-40c6-8492-0be696758641")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 225)
+			(size 4.3 4.3)
+			(drill 4.3)
+			(layers "*.Cu" "*.Mask")
+			(uuid "4b607ea8-f1fc-4fd2-9bab-0afab8b70295")
+		)
+	)
+	(footprint "MountingHole:MountingHole_4.3mm_M4"
+		(layer "F.Cu")
+		(uuid "c7d13c0a-8ae0-416a-9b0a-f1c8c6f9698a")
+		(at 47.4 135.7 -45)
+		(descr "Mounting Hole 4.3mm, no annular, M4")
+		(tags "mounting hole 4.3mm no annular m4")
+		(property "Reference" "H4"
+			(at 0 -5.3 135)
+			(layer "F.SilkS")
+			(uuid "4dd376d7-fe1d-4442-bb0d-1e72a396ce63")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 0 5.3 135)
+			(layer "F.Fab")
+			(uuid "9f8ae465-2ce7-43b3-adea-857dd0569deb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
+			(at 0 0 -45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "98852c3f-7829-4e28-85b5-046346e98999")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 -45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7470db81-1fc5-4e2c-82a3-8b1b6dc91af3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 0 0 -45)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6dc6eef6-36b3-4ef6-aaae-756a33185ffe")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "MountingHole*")
+		(path "/c82aaf92-ee74-4dbe-a717-e99606dbe3ae")
+		(sheetname "Root")
+		(sheetfile "ErrorDisplay.kicad_sch")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(fp_circle
+			(center 0 0)
+			(end 4.3 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "Cmts.User")
+			(uuid "4c606e1b-6498-47b7-ad3b-da63a7978c7b")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 4.55 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.CrtYd")
+			(uuid "5096874f-b336-437d-af23-a931c8dfb284")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 135)
+			(layer "F.Fab")
+			(uuid "84402b6f-789e-49f7-b5be-710dfafd3ce1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" np_thru_hole circle
+			(at 0 0 315)
+			(size 4.3 4.3)
+			(drill 4.3)
+			(layers "*.Cu" "*.Mask")
+			(uuid "db048a24-c12f-4579-84fc-9d84eccffe6e")
+		)
+	)
+	(footprint "Library:X27-168"
+		(layer "F.Cu")
+		(uuid "d655e35a-926c-4cca-bc82-365a2d61d855")
+		(at 145.1 109.3)
+		(property "Reference" "J2"
+			(at 0 3 0)
+			(layer "F.SilkS")
+			(uuid "0f23c520-0923-4fe0-b66d-0b42bb67450c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "X27Motor"
+			(at 0 -2.4 0)
+			(layer "F.Fab")
+			(uuid "8ef978c1-b8f7-44eb-82d7-47a45b5af9cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Library:X27-168"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "47b2cd35-7933-4fde-be1f-bcfabfbad301")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a66638b2-a4d1-44ef-9bb8-92d0d6fb100e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "16afc999-95b0-4339-bbc5-d4b1c92b7836")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/156055a7-0314-4264-bfe8-1ce416b07d9a/a522a5f2-5f9c-4200-95f2-79cb6690c59c")
+		(sheetname "Motors")
+		(sheetfile "Motors.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -5.4 14)
+			(end 5.4 14)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "c548c481-267e-403e-9e71-bdd13355141d")
+		)
+		(fp_circle
+			(center 0 -6)
+			(end 0.8 -6)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "1ce50ba1-275a-4d01-983e-f34bb11818a0")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 15 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "990b7753-05ef-4951-9871-d8949a764f58")
+		)
+		(fp_text user "1"
+			(at 9.4 -3.8 0)
+			(layer "F.SilkS")
+			(uuid "0468813d-e1ba-4f74-8e51-3e70b4ed3a7d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "2"
+			(at 9.6 3.8 0)
+			(layer "F.SilkS")
+			(uuid "879257bc-73cf-4aae-ac0b-5ae77753a4f8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "3"
+			(at -9.6 3.8 0)
+			(layer "F.SilkS")
+			(uuid "a7e3129b-8308-4735-b05c-6736ef3f2b0e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "4"
+			(at -9.6 -3.8 0)
+			(layer "F.SilkS")
+			(uuid "df5e8051-2ec3-45a6-8a13-7c795dce0008")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at -9.2 9.2)
+			(size 2.5 2.5)
+			(drill 2.5)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "4760ae3a-fd86-45a9-a2e7-a30e8211e5e4")
+		)
+		(pad "" thru_hole circle
+			(at 0 -10.2)
+			(size 4 4)
+			(drill 4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "5a79b092-68a6-4186-a6d2-6131986a0589")
+		)
+		(pad "1" thru_hole circle
+			(at 11.4 -3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 7 "/Motors/P1_0")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "7a3803f2-8727-4528-bd7d-d7b59c12130c")
+		)
+		(pad "2" thru_hole circle
+			(at 11.4 3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 5 "/Motors/P1_1")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "18ba7dc1-2d5a-477c-885a-fb8db1157d5a")
+		)
+		(pad "3" thru_hole circle
+			(at -11.4 3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 8 "/Motors/P1_2")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "bcb4da44-dc80-41e3-9b0b-5840b8d6fab5")
+		)
+		(pad "4" thru_hole circle
+			(at -11.4 -3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 6 "/Motors/P1_3")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "27d46023-b99f-463c-a85b-e04dbddcc3c4")
+		)
+		(model "${KIPRJMOD}/x27168.step"
+			(offset
+				(xyz 0 0 0.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 180)
+			)
+		)
+	)
+	(footprint "Library:X27-168"
+		(layer "F.Cu")
+		(uuid "e2a2ad1b-d337-4c9e-9fba-ac458cd6cc08")
+		(at 186.1 109.3)
+		(property "Reference" "J1"
+			(at 0 3 0)
+			(layer "F.SilkS")
+			(uuid "a868d46a-6fbd-41fc-8dd5-c94afb573218")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "X27Motor"
+			(at 0 -2.4 0)
+			(layer "F.Fab")
+			(uuid "8fe9a4bb-5272-4275-920d-886704deac54")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Footprint" "Library:X27-168"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "94bc7fb6-dcec-4272-b1d9-e0491ae582f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0dc0217c-50b7-4405-ace4-855d91ff80f3")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4fa94a94-eec3-437f-9dc3-2da2386e4eac")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/156055a7-0314-4264-bfe8-1ce416b07d9a/d32c114e-9b5d-4a69-89e0-a2c6fe3b1df4")
+		(sheetname "Motors")
+		(sheetfile "Motors.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -5.4 14)
+			(end 5.4 14)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "1abab131-f1c4-468a-9675-974b3ef541f2")
+		)
+		(fp_circle
+			(center 0 -6)
+			(end 0.8 -6)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "70e1418e-7027-42b1-a9c7-8a75e1546c56")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 15 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill none)
+			(layer "F.SilkS")
+			(uuid "b98f6032-7e23-4265-8034-58a2d6af3c8a")
+		)
+		(fp_text user "3"
+			(at -9.6 3.8 0)
+			(layer "F.SilkS")
+			(uuid "1e6ba142-4da2-4a7e-8dcd-40eeff86cfbc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "1"
+			(at 9.4 -3.8 0)
+			(layer "F.SilkS")
+			(uuid "71e860df-8e8f-4ccf-b437-52a878db8c33")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "2"
+			(at 9.6 3.8 0)
+			(layer "F.SilkS")
+			(uuid "c2ab9200-1261-4e36-a00a-24c3872c030c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(fp_text user "4"
+			(at -9.6 -3.8 0)
+			(layer "F.SilkS")
+			(uuid "c4eee209-fd57-49f6-a657-5c6537e898f6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "" thru_hole circle
+			(at -9.2 9.2)
+			(size 2.5 2.5)
+			(drill 2.5)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "32144447-7835-41dd-8e68-6d0417d62916")
+		)
+		(pad "" thru_hole circle
+			(at 0 -10.2)
+			(size 4 4)
+			(drill 4)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(uuid "c5488e83-761a-468f-bf2d-47a3914fa1ac")
+		)
+		(pad "1" thru_hole circle
+			(at 11.4 -3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 3 "/Motors/P0_0")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "815f66f9-9e2f-4540-807c-aa6ff3c0db8c")
+		)
+		(pad "2" thru_hole circle
+			(at 11.4 3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 4 "/Motors/P0_1")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "82eea4c2-39c9-4fe3-9fae-d57bbf9a1ba2")
+		)
+		(pad "3" thru_hole circle
+			(at -11.4 3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 2 "/Motors/P0_2")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "5d5a4b51-3d7a-49b8-bfd1-895702c4c1ed")
+		)
+		(pad "4" thru_hole circle
+			(at -11.4 -3.8)
+			(size 1.6 1.6)
+			(drill 0.8)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 1 "/Motors/P0_3")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "45c0afb7-52a2-416f-9fb5-7fbfad3992fc")
+		)
+		(model "${KIPRJMOD}/x27168.step"
+			(offset
+				(xyz 0 0 0.5)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -90 0 180)
+			)
+		)
 	)
 	(gr_arc
-		(start 47.5 130.3)
-		(mid 53 135.8)
-		(end 47.5 141.3)
+		(start 221.5 82.4)
+		(mid 228.07453 78.406715)
+		(end 228.587255 86.081863)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "10752da9-98d4-4c69-9b60-ea33df38d045")
+		(uuid "6b823de8-3c17-4ae0-9314-13d39fb6636c")
 	)
 	(gr_line
-		(start 51.5 108.8)
-		(end 51.5 110.8)
+		(start 47.4 131.2)
+		(end 60.818019 85.581981)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "13c438e4-3c63-477a-9258-fa60eefed97a")
-	)
-	(gr_circle
-		(center 138.9 97.4)
-		(end 139 96.1)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill none)
-		(layer "Edge.Cuts")
-		(uuid "5aa3fa1a-615f-44bc-8c84-de400bfe9c6c")
-	)
-	(gr_line
-		(start 47.5 143.8)
-		(end 242.5 143.8)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "7aecd748-9bfd-47ac-a29c-41c81b282f94")
-	)
-	(gr_line
-		(start 47.5 110.8)
-		(end 47.5 130.3)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "84791ff0-a00b-4092-b91c-308662ed7d13")
-	)
-	(gr_line
-		(start 47.5 110.8)
-		(end 51.5 110.8)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "8d0bd2e4-36b0-46e1-9697-5d63f089edcc")
-	)
-	(gr_line
-		(start 47.5 108.8)
-		(end 51.5 108.8)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "92973cd3-cb63-468a-806c-47f2082b2275")
+		(uuid "7be4c64a-694b-4702-a5e7-3ca2dfdd0867")
 	)
 	(gr_arc
-		(start 242.5 141.2)
-		(mid 237 135.7)
-		(end 242.5 130.2)
+		(start 51.9 135.7)
+		(mid 44.218019 138.881981)
+		(end 47.4 131.2)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "92a49133-f3ce-4d32-b483-eb327c737e5d")
+		(uuid "9000d8fa-edb1-4701-9c60-b6bb780a26f2")
+	)
+	(gr_arc
+		(start 60.818019 85.581981)
+		(mid 62.277924 78.242541)
+		(end 68.5 82.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "a90bec73-4116-4e9e-8550-7b1c920eb1d4")
 	)
 	(gr_line
-		(start 242.5 110.8)
-		(end 242.5 130.2)
+		(start 68.5 82.4)
+		(end 221.5 82.4)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "ad8278b5-2cee-4a11-8b45-648f6b5ac88c")
+		(uuid "bbe0560a-b3e7-44ba-b5bf-bd354229efa3")
 	)
 	(gr_line
-		(start 47.5 88.8)
-		(end 242.5 88.8)
+		(start 238.1 135.7)
+		(end 51.9 135.7)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "b011f309-3406-47ee-94ea-ed96ac32b3c4")
+		(uuid "c03b65a8-afdd-4e83-90b5-600aa1a3c029")
+	)
+	(gr_arc
+		(start 242.6 131.2)
+		(mid 245.781981 138.881981)
+		(end 238.1 135.7)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d61760ce-ffa8-4203-bb82-69f3f229d8c0")
 	)
 	(gr_line
-		(start 238.5 108.8)
-		(end 242.5 108.8)
+		(start 242.6 131.2)
+		(end 228.587255 86.081863)
 		(stroke
 			(width 0.05)
 			(type default)
 		)
 		(layer "Edge.Cuts")
-		(uuid "cc85969c-a2e6-4b72-868a-65dcb8a06814")
-	)
-	(gr_line
-		(start 47.5 143.8)
-		(end 47.5 141.3)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "d5645a2c-652e-48c0-a66a-83e1f13b1793")
-	)
-	(gr_line
-		(start 242.5 108.8)
-		(end 242.5 88.8)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "dd75c8ab-7c54-4656-8377-17f2eeffc187")
-	)
-	(gr_circle
-		(center 151.3 97.4)
-		(end 151.7 96.2)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill none)
-		(layer "Edge.Cuts")
-		(uuid "def7fb0d-f504-411a-bda4-f2e2b47d5970")
-	)
-	(gr_line
-		(start 238.5 108.8)
-		(end 238.5 110.8)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "ee3617dc-cd01-46b8-ac42-773f59953ba7")
-	)
-	(gr_line
-		(start 47.5 108.8)
-		(end 47.5 88.8)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "f0dab26d-70dd-4052-9508-6a8d261b1360")
+		(uuid "f4f475b8-2ecd-4d67-9092-71674eeb916b")
 	)
 	(gr_circle
 		(center 217.599999 132.698967)
@@ -462,17 +1471,6 @@
 		(layer "User.1")
 		(uuid "57717c95-9339-45c0-99b7-a3fb975c21e3")
 	)
-	(gr_circle
-		(center 151.3 97.398967)
-		(end 152.6 97.398967)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill none)
-		(layer "User.1")
-		(uuid "59be8235-a0cd-440d-80e0-501f266560b3")
-	)
 	(gr_line
 		(start 242.6 135.698967)
 		(end 242.6 147.398967)
@@ -641,8 +1639,8 @@
 		(uuid "7c161cca-9525-4d77-8875-ee45d5f46c55")
 	)
 	(gr_line
-		(start 47.4 135.698967)
-		(end 242.6 135.698967)
+		(start 51.9 135.7)
+		(end 247.1 135.7)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -864,17 +1862,6 @@
 		(layer "User.1")
 		(uuid "ce1cf4bc-5d14-4d5a-9e39-dbd0bc1c0223")
 	)
-	(gr_circle
-		(center 138.9 97.398967)
-		(end 140.2 97.398967)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(fill none)
-		(layer "User.1")
-		(uuid "d4b543fe-e1c4-4753-9d2b-1e224435262a")
-	)
 	(gr_line
 		(start 174.4 125.398967)
 		(end 174.4 140.398967)
@@ -997,6 +1984,18 @@
 		)
 		(layer "User.2")
 		(uuid "696126f2-7047-4117-9041-1c15c11cfa2d")
+	)
+	(gr_text "Motor Spindle 18.5mm"
+		(at 136.2 96.2 0)
+		(layer "User.1")
+		(uuid "e097974c-343b-4eda-8ead-c5fe8ab0d073")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
 	)
 	(zone
 		(net 0)
