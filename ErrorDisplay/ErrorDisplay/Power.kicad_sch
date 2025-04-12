@@ -1,0 +1,31 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "d8655863-c9d0-42c9-90c4-b2ed02261ce8")
+	(paper "A4")
+	(lib_symbols)
+	(label "CAN_VCC"
+		(at 22.86 15.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bbf5029f-8bce-42fd-b9c3-44974e8f7e6f")
+	)
+	(hierarchical_label "CAN_VCC"
+		(shape input)
+		(at 22.86 15.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5f4da1d7-72bd-4db9-9558-7bb457a35b57")
+	)
+)

@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 4.3,
+          "height": 4.3,
+          "width": 4.3
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -469,8 +469,8 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
-      "svg": "",
+      "step": "ErrorDisplay.step",
+      "svg": "./",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -582,6 +582,18 @@
     [
       "156055a7-0314-4264-bfe8-1ce416b07d9a",
       "Motors"
+    ],
+    [
+      "8a6223f5-12ee-48f3-8d0c-6241631bb0b4",
+      "CANBus"
+    ],
+    [
+      "81040da9-6b64-4078-af1d-cd4e230b19a0",
+      "MCU"
+    ],
+    [
+      "4cb849ab-6f58-464b-9cd3-f7bac15c10d4",
+      "Power"
     ]
   ],
   "text_variables": {}
