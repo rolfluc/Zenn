@@ -1,0 +1,76 @@
+(footprint "PlasticInsert"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -1.27 0 90)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "33d7ed16-75f7-4ace-a018-01e008e3b760")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PlasticInsert"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "69d1b8fe-fba9-4fa0-9cdd-f375ac786101")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a3f4dc9b-f49c-468e-8a68-1898df745c67")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3f4daf89-1154-4833-81dc-874965f8255a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a4f9ec94-d121-4e43-ae3b-a64e0f97373c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole rect
+		(at 0 0)
+		(size 1.524 1.524)
+		(drill oval 2.2 6.25)
+		(layers "F&B.Cu" "*.Mask")
+		(uuid "a50088bb-47bb-469b-9da8-6d9808e9a856")
+	)
+)
