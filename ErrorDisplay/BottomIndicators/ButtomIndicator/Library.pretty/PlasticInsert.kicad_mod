@@ -66,11 +66,12 @@
 			)
 		)
 	)
-	(pad "" np_thru_hole rect
+	(pad "" thru_hole oval
 		(at 0 0)
-		(size 1.524 1.524)
+		(size 2.21 6.26)
 		(drill oval 2.2 6.25)
-		(layers "F&B.Cu" "*.Mask")
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
 		(uuid "a50088bb-47bb-469b-9da8-6d9808e9a856")
 	)
 )
