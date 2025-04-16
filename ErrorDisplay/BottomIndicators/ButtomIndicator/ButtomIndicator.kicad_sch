@@ -3205,7 +3205,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Library:dickbutt_12"
 			(at 125.73 157.48 0)
 			(effects
 				(font
