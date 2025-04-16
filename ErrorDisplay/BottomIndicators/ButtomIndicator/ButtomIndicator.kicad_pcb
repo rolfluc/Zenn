@@ -2941,6 +2941,7 @@
 		(property "Reference" "H20"
 			(at 0 0 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "9ada1eaf-b2b0-46d4-abe1-7bd23274def8")
 			(effects
 				(font
@@ -3497,6 +3498,7 @@
 			(at -1.27 0 90)
 			(unlocked yes)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e2dac02e-954a-43fc-8f6d-e34e0d8b2762")
 			(effects
 				(font
@@ -6338,6 +6340,7 @@
 		(property "Reference" "H14"
 			(at 0 0 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c58a88ee-8d7a-492d-ad1b-df6ecbd9c627")
 			(effects
 				(font
