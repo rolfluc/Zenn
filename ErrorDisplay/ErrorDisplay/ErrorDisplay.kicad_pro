@@ -594,6 +594,10 @@
     [
       "4cb849ab-6f58-464b-9cd3-f7bac15c10d4",
       "Power"
+    ],
+    [
+      "ad853e90-c6f2-40ce-830a-fa643b925a5e",
+      "DigitalDisplay"
     ]
   ],
   "text_variables": {}

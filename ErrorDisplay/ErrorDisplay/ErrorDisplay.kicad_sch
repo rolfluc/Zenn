@@ -1234,6 +1234,44 @@
 			)
 		)
 	)
+	(sheet
+		(at 68.58 162.56)
+		(size 31.75 27.94)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ad853e90-c6f2-40ce-830a-fa643b925a5e")
+		(property "Sheetname" "DigitalDisplay"
+			(at 68.58 161.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DigitalDisplay.kicad_sch"
+			(at 68.58 191.0846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ErrorDisplay"
+				(path "/96a9355b-dc07-421e-8192-6c91221ac38a"
+					(page "6")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
