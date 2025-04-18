@@ -1,0 +1,18 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "b4f0609a-98f0-4e43-831d-e310ce77942a")
+	(paper "A4")
+	(lib_symbols)
+	(text "TODO 12V in, 3v3 out"
+		(exclude_from_sim no)
+		(at 125.222 103.632 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6c9329ef-8979-481d-91e5-f13feb479f94")
+	)
+)

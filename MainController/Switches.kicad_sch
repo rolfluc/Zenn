@@ -1,0 +1,98 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "4f266801-5241-4be7-8e52-e16102a6e8e3")
+	(paper "A4")
+	(lib_symbols)
+	(text "TODO Foward/Reverse/Neutral Switch"
+		(exclude_from_sim no)
+		(at 42.418 49.784 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "28869c4e-fa96-462d-a1a6-7077306b68f3")
+	)
+	(text "TODO Brake Pedal Switch"
+		(exclude_from_sim no)
+		(at 43.942 43.434 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "33ed81f2-bb1c-457c-ab58-e67e6523db21")
+	)
+	(text "TODO light switch"
+		(exclude_from_sim no)
+		(at 42.926 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6e24e49b-0b23-43cc-b54d-8447f739a11e")
+	)
+	(text "TODO key switch"
+		(exclude_from_sim no)
+		(at 42.672 29.464 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7e740212-0611-4c04-8819-b7a145876764")
+	)
+	(text "TODO Horn?"
+		(exclude_from_sim no)
+		(at 43.18 57.658 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "83263dca-9dc6-47c2-8fb5-4eef8c98463c")
+	)
+	(text "TODO Hand Brake?"
+		(exclude_from_sim no)
+		(at 43.18 53.848 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a23c9436-fdf6-4898-891b-a313fd727b09")
+	)
+	(text "TODO Brights"
+		(exclude_from_sim no)
+		(at 42.164 77.216 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b9387a76-d369-4f06-b831-2dc628d79c25")
+	)
+	(text "TODO SSRs?"
+		(exclude_from_sim no)
+		(at 95.25 55.626 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "cb444095-ca84-468b-a3db-25aabdab0262")
+	)
+	(text "TODO Turn Signal Left\nTODO Turn Signal Right"
+		(exclude_from_sim no)
+		(at 42.418 65.786 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fbad4dac-0388-4cd9-9be5-107447192c49")
+	)
+)
