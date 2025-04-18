@@ -488,6 +488,17 @@
 		)
 		(uuid "047807cf-993a-4a19-a3e1-2884a3145db6")
 	)
+	(label "SDA"
+		(at 100.33 166.37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "08dba688-3997-4d14-9e05-5558c028a699")
+	)
 	(label "CAN_STBY"
 		(at 171.45 147.32 0)
 		(fields_autoplaced yes)
@@ -531,6 +542,39 @@
 			(justify left bottom)
 		)
 		(uuid "770045e3-189a-47ad-9a84-f2a107bd0bad")
+	)
+	(label "SCL"
+		(at 134.62 151.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7a8035d1-99d6-4817-89ff-1ca19c9e5536")
+	)
+	(label "SCL"
+		(at 100.33 163.83 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "828ae7a3-fe28-49a6-80f4-f9e58e7c517b")
+	)
+	(label "SDA"
+		(at 134.62 153.67 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8d0d0757-0b45-4d15-89ad-d6d51f7dc253")
 	)
 	(label "CANL"
 		(at 241.3 124.46 90)
@@ -1110,7 +1154,7 @@
 			)
 		)
 		(property "Sheetfile" "MCU.kicad_sch"
-			(at 132.334 154.94 90)
+			(at 132.334 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1157,6 +1201,26 @@
 				(justify right)
 			)
 			(uuid "0353d90b-0b6e-4a6e-b285-52f47c20aa2f")
+		)
+		(pin "SDA" input
+			(at 134.62 153.67 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "feae4c88-8ab9-4a64-8b49-9295a4e79a94")
+		)
+		(pin "SCL" input
+			(at 134.62 151.13 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3004a15f-9edf-4669-96ae-7b9551b11c9c")
 		)
 		(instances
 			(project "ErrorDisplay"
@@ -1263,6 +1327,26 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "SCL" input
+			(at 100.33 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7385af80-3cca-4603-aa42-17cc96fb6049")
+		)
+		(pin "SDA" input
+			(at 100.33 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "433d8429-562a-4e0c-80c6-06d1e82a5b12")
 		)
 		(instances
 			(project "ErrorDisplay"
