@@ -1,0 +1,109 @@
+(footprint "CEM-1205-IC"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -7 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "7842048f-35ef-4750-bf49-54832d31c1a6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "CEM-1205-IC"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "ee6f65eb-40ab-4581-8c0e-0d239b63c038")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7ac89e58-df3f-49e2-a112-95af8aa06312")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f5a4eb30-42c1-4800-9898-7e084c184f74")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7a372739-fac2-4246-9a20-68f345891538")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 6 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "550ac452-a9b1-4f0f-b2c3-3f7d2484a1bb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e7b794d0-33be-4e39-9dd9-078a39598d4c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 3.8)
+		(size 2.5 2.5)
+		(drill 0.81)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b325dbe0-05ab-4f2b-bbb8-5f67c6fb3bae")
+	)
+	(pad "2" thru_hole circle
+		(at 0 -3.8)
+		(size 2.5 2.5)
+		(drill 0.81)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "b6f319f6-8bfb-4f4c-ac04-57e480eb6ebf")
+	)
+)

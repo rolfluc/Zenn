@@ -598,6 +598,10 @@
     [
       "ad853e90-c6f2-40ce-830a-fa643b925a5e",
       "DigitalDisplay"
+    ],
+    [
+      "63dd5814-ebb0-4bfe-80f3-8f8cf8185ae2",
+      "Backlight"
     ]
   ],
   "text_variables": {}

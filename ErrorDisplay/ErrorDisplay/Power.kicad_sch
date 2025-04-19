@@ -1666,7 +1666,6 @@
 	)
 	(label "CAN_VCC"
 		(at 134.62 31.75 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1677,7 +1676,6 @@
 	)
 	(label "CAN_VCC"
 		(at 129.54 46.99 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1688,7 +1686,6 @@
 	)
 	(label "CAN_VCC"
 		(at 127 120.65 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1699,7 +1696,6 @@
 	)
 	(label "CAN_VCC"
 		(at 129.54 52.07 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1710,7 +1706,6 @@
 	)
 	(label "CAN_VCC"
 		(at 22.86 15.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1722,7 +1717,6 @@
 	(hierarchical_label "CAN_VCC"
 		(shape input)
 		(at 22.86 15.24 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

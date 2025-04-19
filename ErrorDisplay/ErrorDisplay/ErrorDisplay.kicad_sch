@@ -468,7 +468,6 @@
 	)
 	(label "CAN_VCC"
 		(at 271.78 19.05 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -479,7 +478,6 @@
 	)
 	(label "CANH"
 		(at 238.76 124.46 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -490,7 +488,6 @@
 	)
 	(label "SDA"
 		(at 100.33 166.37 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -501,7 +498,6 @@
 	)
 	(label "CAN_STBY"
 		(at 171.45 147.32 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -510,9 +506,38 @@
 		)
 		(uuid "12b8baf5-53a7-4e2a-ab01-132d4a204b7f")
 	)
+	(label "AMB_OUT"
+		(at 142.24 123.19 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ee3a923-7820-4d27-acf5-2851f8d7e8aa")
+	)
+	(label "CAN_RXD"
+		(at 199.39 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2499a224-8828-48fe-9a4c-a0b380f01dc2")
+	)
+	(label "HB_LED"
+		(at 99.06 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2d71445c-4447-449d-b986-bc74e2728cd9")
+	)
 	(label "CANL"
 		(at 271.78 24.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -521,9 +546,18 @@
 		)
 		(uuid "3ea68308-0cf8-4792-aafa-618ab0e3cb39")
 	)
+	(label "LED_IN"
+		(at 139.7 123.19 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "571f917c-7747-45d6-bd1c-0c2c1bddc485")
+	)
 	(label "CAN_STBY"
 		(at 199.39 147.32 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -532,9 +566,18 @@
 		)
 		(uuid "5c157579-e3d2-4dff-bfc6-0ac2701f19ac")
 	)
+	(label "CAN_TXD"
+		(at 171.45 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6d95acc6-8223-46bd-b829-b38e1346a041")
+	)
 	(label "GND"
 		(at 260.35 31.75 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -543,9 +586,18 @@
 		)
 		(uuid "770045e3-189a-47ad-9a84-f2a107bd0bad")
 	)
+	(label "LED_IN"
+		(at 99.06 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "77fcb7ef-17b8-4a27-b743-4aa39743f356")
+	)
 	(label "SCL"
 		(at 134.62 151.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -556,7 +608,6 @@
 	)
 	(label "SCL"
 		(at 100.33 163.83 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -567,7 +618,6 @@
 	)
 	(label "SDA"
 		(at 134.62 153.67 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -576,9 +626,18 @@
 		)
 		(uuid "8d0d0757-0b45-4d15-89ad-d6d51f7dc253")
 	)
+	(label "AMB_OUT"
+		(at 99.06 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8dfac0a3-6d88-4921-ba0e-ac8ede5207a5")
+	)
 	(label "CANL"
 		(at 241.3 124.46 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -589,7 +648,6 @@
 	)
 	(label "GND"
 		(at 271.78 26.67 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -600,7 +658,6 @@
 	)
 	(label "CAN_VCC"
 		(at 68.58 127 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -609,9 +666,38 @@
 		)
 		(uuid "a73b7ce7-8790-4e94-a5e3-a752957eae1c")
 	)
+	(label "CAN_TXD"
+		(at 199.39 129.54 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b9253747-5333-4a18-a523-be870a30b4c4")
+	)
+	(label "CAN_RXD"
+		(at 171.45 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c1c5fd7b-0797-4c0a-8aae-611e215cfada")
+	)
+	(label "HB_LED"
+		(at 137.16 123.19 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e556e37a-7ad3-4f0e-91d4-9b584c09416f")
+	)
 	(label "CANH"
 		(at 271.78 21.59 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1134,6 +1220,73 @@
 		)
 	)
 	(sheet
+		(at 69.85 73.66)
+		(size 29.21 22.86)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "63dd5814-ebb0-4bfe-80f3-8f8cf8185ae2")
+		(property "Sheetname" "Backlight"
+			(at 69.85 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Backlight.kicad_sch"
+			(at 67.564 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "LED_IN" input
+			(at 99.06 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "2bfcd40f-1dd9-4f89-ac43-b279f6ed7710")
+		)
+		(pin "HB_LED" input
+			(at 99.06 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e1c8eb1d-a14a-4a88-8268-ed28c3197769")
+		)
+		(pin "AMB_OUT" input
+			(at 99.06 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1a686097-b26c-4916-af47-db914fbccf03")
+		)
+		(instances
+			(project "ErrorDisplay"
+				(path "/96a9355b-dc07-421e-8192-6c91221ac38a"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 134.62 123.19)
 		(size 36.83 31.75)
 		(stroke
@@ -1222,6 +1375,56 @@
 			)
 			(uuid "3004a15f-9edf-4669-96ae-7b9551b11c9c")
 		)
+		(pin "HB_LED" input
+			(at 137.16 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "b61403ab-6cf3-4c03-8cb3-a1363baec3c3")
+		)
+		(pin "LED_IN" input
+			(at 139.7 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4c2c0226-b9e3-497d-97f9-7b5fa426b850")
+		)
+		(pin "AMB_OUT" input
+			(at 142.24 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "718906b4-c09e-4541-b1e7-ed22529f65c1")
+		)
+		(pin "CAN_RXD" input
+			(at 171.45 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "08008bce-543f-4ce7-9520-619e4c529c9a")
+		)
+		(pin "CAN_TXD" input
+			(at 171.45 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "d38e5c06-0bc7-4158-8d3c-2e77743eba51")
+		)
 		(instances
 			(project "ErrorDisplay"
 				(path "/96a9355b-dc07-421e-8192-6c91221ac38a"
@@ -1289,6 +1492,26 @@
 				(justify right)
 			)
 			(uuid "439c4937-294e-4838-ab0b-840ae5db2f80")
+		)
+		(pin "CAN_RXD" input
+			(at 199.39 127 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "28cf548f-8b0d-44e7-b4be-2437006f5582")
+		)
+		(pin "CAN_TXD" input
+			(at 199.39 129.54 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "86a07768-328d-4269-81cd-167479b37f58")
 		)
 		(instances
 			(project "ErrorDisplay"
