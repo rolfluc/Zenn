@@ -1642,7 +1642,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
+		(property "Description" "AHRF1500"
 			(at 71.12 62.23 0)
 			(effects
 				(font

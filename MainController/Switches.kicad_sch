@@ -5,6 +5,16 @@
 	(uuid "4f266801-5241-4be7-8e52-e16102a6e8e3")
 	(paper "A4")
 	(lib_symbols)
+	(text "Mutually Exclusive"
+		(exclude_from_sim no)
+		(at 94.234 68.326 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0cedcf8b-3371-4809-8350-cf163d826607")
+	)
 	(text "TODO Forward, Reverse. Neutral Implicit."
 		(exclude_from_sim no)
 		(at 36.322 49.784 0)
@@ -24,6 +34,16 @@
 			)
 		)
 		(uuid "33ed81f2-bb1c-457c-ab58-e67e6523db21")
+	)
+	(text "Mutually Exclusive"
+		(exclude_from_sim no)
+		(at 97.79 17.526 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4d1bd524-4a85-4ead-8149-58ffe90b4c88")
 	)
 	(text "TODO light switch - 2"
 		(exclude_from_sim no)
@@ -65,6 +85,26 @@
 		)
 		(uuid "a23c9436-fdf6-4898-891b-a313fd727b09")
 	)
+	(text "Mutually Exclusive"
+		(exclude_from_sim no)
+		(at 98.806 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a958fda7-50f0-45ff-b4aa-5a924bd6ee22")
+	)
+	(text "Mutually Exclusive"
+		(exclude_from_sim no)
+		(at 98.552 36.322 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b35b74b5-eb2f-461b-a439-3fea8008d84b")
+	)
 	(text "TODO Brights"
 		(exclude_from_sim no)
 		(at 35.814 86.106 0)
@@ -87,7 +127,7 @@
 	)
 	(text "TODO Turn Signal Left\nTODO Turn Signal Right"
 		(exclude_from_sim no)
-		(at 36.068 74.676 0)
+		(at 36.322 64.516 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -96,7 +136,7 @@
 		(uuid "fbad4dac-0388-4cd9-9be5-107447192c49")
 	)
 	(label "Drive_Forward"
-		(at 82.55 53.34 0)
+		(at 82.55 16.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -106,7 +146,7 @@
 		(uuid "009e0149-358a-4d0f-a453-c02f4cd1854f")
 	)
 	(label "Switch_On"
-		(at 82.55 35.56 0)
+		(at 82.55 29.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -116,7 +156,7 @@
 		(uuid "02b2ff96-393e-4620-8ba6-a25fb5217cc6")
 	)
 	(label "Drive_reverse"
-		(at 82.55 57.15 0)
+		(at 82.55 20.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -146,7 +186,7 @@
 		(uuid "26c5d0fb-e839-4bac-accc-7036f00ee58e")
 	)
 	(label "Switch_ACC"
-		(at 82.55 31.75 0)
+		(at 82.55 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -156,7 +196,7 @@
 		(uuid "478e4374-11c3-4fa0-94d8-11ee358aa5f3")
 	)
 	(label "Light_Low"
-		(at 82.55 39.37 0)
+		(at 82.55 35.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -166,7 +206,7 @@
 		(uuid "4c26ca50-10be-4ec9-b199-21c6d67b65c1")
 	)
 	(label "Light_medium"
-		(at 82.55 43.18 0)
+		(at 82.55 39.37 0)
 		(effects
 			(font
 				(size 1.27 1.27)
