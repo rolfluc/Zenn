@@ -414,6 +414,10 @@
     [
       "e3258dc7-a6c2-4af0-bf8b-570778281705",
       "PowerConnections"
+    ],
+    [
+      "3894937e-824a-45c3-a311-ede26cacc5d1",
+      "MotorController"
     ]
   ],
   "text_variables": {}

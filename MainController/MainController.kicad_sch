@@ -262,6 +262,44 @@
 		)
 	)
 	(sheet
+		(at 224.79 111.76)
+		(size 48.26 33.02)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3894937e-824a-45c3-a311-ede26cacc5d1")
+		(property "Sheetname" "MotorController"
+			(at 224.79 111.0484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MotorController.kicad_sch"
+			(at 224.79 145.3646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "MainController"
+				(path "/e87d5277-7d46-4d0d-9217-730b2b1f3b51"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 57.15 138.43)
 		(size 39.37 33.02)
 		(fields_autoplaced yes)
