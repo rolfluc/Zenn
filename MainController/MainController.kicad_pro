@@ -406,6 +406,14 @@
     [
       "ad01f32f-d0f5-4462-9cfb-0d910c1228e2",
       "Power"
+    ],
+    [
+      "df213dea-268f-4d9c-83b6-0d719d94eaa5",
+      "VoltageMeasurement"
+    ],
+    [
+      "e3258dc7-a6c2-4af0-bf8b-570778281705",
+      "PowerConnections"
     ]
   ],
   "text_variables": {}

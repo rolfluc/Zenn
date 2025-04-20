@@ -5,6 +5,66 @@
 	(uuid "e87d5277-7d46-4d0d-9217-730b2b1f3b51")
 	(paper "A4")
 	(lib_symbols)
+	(label "12V_IN_+"
+		(at 181.61 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3004efca-ae92-4911-868c-26dbf6650551")
+	)
+	(label "HV_IN_-"
+		(at 181.61 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "724befe0-5618-4b60-a87d-9e504f563b4d")
+	)
+	(label "12V_IN_+"
+		(at 214.63 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ba381bc0-2720-4358-a5fb-8b896fd0c6eb")
+	)
+	(label "HV_IN_-"
+		(at 214.63 36.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c564a6cd-badf-4e08-bc36-3a45e52c9f76")
+	)
+	(label "HV_IN_+"
+		(at 181.61 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8cdb90e-4824-4741-b2f5-3e44864cc06e")
+	)
+	(label "HV_IN_+"
+		(at 214.63 34.29 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f949736a-e9e7-428b-98b4-a18150c108a9")
+	)
 	(sheet
 		(at 17.78 82.55)
 		(size 27.94 21.59)
@@ -173,6 +233,142 @@
 			(project "MainController"
 				(path "/e87d5277-7d46-4d0d-9217-730b2b1f3b51"
 					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 151.13 31.75)
+		(size 30.48 24.13)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "df213dea-268f-4d9c-83b6-0d719d94eaa5")
+		(property "Sheetname" "VoltageMeasurement"
+			(at 151.13 31.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "VoltageMeasurement.kicad_sch"
+			(at 151.13 56.4646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "HV_IN_+" input
+			(at 181.61 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "eedcfe16-caa3-48e3-ace3-3ec726fc29bd")
+		)
+		(pin "HV_IN_-" input
+			(at 181.61 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e743442b-569c-49bd-aff9-dd070affbc68")
+		)
+		(pin "12V_IN_+" input
+			(at 181.61 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "aed5b494-54dc-4096-8ce0-b0465a42f847")
+		)
+		(instances
+			(project "MainController"
+				(path "/e87d5277-7d46-4d0d-9217-730b2b1f3b51"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 214.63 31.75)
+		(size 30.48 26.67)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e3258dc7-a6c2-4af0-bf8b-570778281705")
+		(property "Sheetname" "PowerConnections"
+			(at 214.63 31.0384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PowerConnecitons.kicad_sch"
+			(at 214.63 59.0046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "HV_IN_+" input
+			(at 214.63 34.29 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3e8fd6ed-24b2-4235-af4b-b26578b697fa")
+		)
+		(pin "HV_IN_-" input
+			(at 214.63 36.83 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "33583c3c-7499-4e9d-8741-dee80c9d9fc5")
+		)
+		(pin "12V_IN_+" input
+			(at 214.63 43.18 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b954a8c6-ee85-4737-a963-84a5c094047e")
+		)
+		(instances
+			(project "MainController"
+				(path "/e87d5277-7d46-4d0d-9217-730b2b1f3b51"
+					(page "8")
 				)
 			)
 		)

@@ -527,7 +527,6 @@
 	)
 	(label "PEDAL_VCC"
 		(at 154.94 87.63 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -538,7 +537,6 @@
 	)
 	(label "GND"
 		(at 165.1 142.24 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -549,7 +547,6 @@
 	)
 	(label "SWITCH_2"
 		(at 154.94 97.79 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -560,7 +557,6 @@
 	)
 	(label "A_PEDAL"
 		(at 154.94 90.17 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -571,7 +567,6 @@
 	)
 	(label "SWITCH_1"
 		(at 154.94 95.25 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -582,7 +577,6 @@
 	)
 	(label "PEDAL_VCC"
 		(at 138.43 81.28 270)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -593,7 +587,6 @@
 	)
 	(label "A_PEDAL"
 		(at 271.78 16.51 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -604,7 +597,6 @@
 	)
 	(label "SWITCH_1"
 		(at 271.78 20.32 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -615,7 +607,6 @@
 	)
 	(label "GND"
 		(at 154.94 92.71 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -626,7 +617,6 @@
 	)
 	(label "SWITCH_2"
 		(at 271.78 24.13 180)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -638,7 +628,6 @@
 	(hierarchical_label "SWITCH_2"
 		(shape input)
 		(at 271.78 24.13 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -650,7 +639,6 @@
 	(hierarchical_label "A_PEDAL"
 		(shape input)
 		(at 271.78 16.51 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -662,7 +650,6 @@
 	(hierarchical_label "SWITCH_1"
 		(shape input)
 		(at 271.78 20.32 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
