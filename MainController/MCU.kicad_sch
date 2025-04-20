@@ -5,4 +5,46 @@
 	(uuid "b88e30ec-e361-4086-8f51-4d4a3e10abe1")
 	(paper "A4")
 	(lib_symbols)
+	(label "OUTP"
+		(at 19.05 16.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "78d21af6-7aaf-43ec-b1fd-fd6b8e63b574")
+	)
+	(label "OUTN"
+		(at 19.05 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "adb49fd4-775f-4f62-8521-d164e27eb1ed")
+	)
+	(hierarchical_label "OUTP"
+		(shape input)
+		(at 19.05 16.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "03a5577c-bc51-48d0-9cd9-f686bfe8f563")
+	)
+	(hierarchical_label "OUTN"
+		(shape input)
+		(at 19.05 19.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "724144e1-936f-4729-ad02-48414a693003")
+	)
 )

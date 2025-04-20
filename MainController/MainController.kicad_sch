@@ -5,6 +5,26 @@
 	(uuid "e87d5277-7d46-4d0d-9217-730b2b1f3b51")
 	(paper "A4")
 	(lib_symbols)
+	(label "OUTP"
+		(at 181.61 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "167a4377-fd18-4426-a5da-860a8045b3a0")
+	)
+	(label "OUTN"
+		(at 179.07 91.44 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "18acb2c2-fbb4-4417-b17c-f7c05a06c0a3")
+	)
 	(label "12V_IN_+"
 		(at 181.61 41.91 0)
 		(effects
@@ -24,6 +44,26 @@
 			(justify left bottom)
 		)
 		(uuid "724befe0-5618-4b60-a87d-9e504f563b4d")
+	)
+	(label "OUTP"
+		(at 181.61 91.44 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7cfd8eb5-8df0-4ad3-8526-a12787757f61")
+	)
+	(label "OUTN"
+		(at 181.61 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8965a029-993d-405c-ad2e-33017e270450")
 	)
 	(label "12V_IN_+"
 		(at 214.63 43.18 180)
@@ -191,6 +231,16 @@
 				(justify left top)
 			)
 		)
+		(pin "3v3_iso" input
+			(at 81.28 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "76671cde-4e49-4993-9933-525b913a7079")
+		)
 		(instances
 			(project "MainController"
 				(path "/e87d5277-7d46-4d0d-9217-730b2b1f3b51"
@@ -228,6 +278,26 @@
 				)
 				(justify left top)
 			)
+		)
+		(pin "OUTN" input
+			(at 179.07 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "9fda8644-0743-4f17-a2f1-6ddfad519cc6")
+		)
+		(pin "OUTP" input
+			(at 181.61 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1bbf71be-eb9f-454a-9df9-6a29ca049327")
 		)
 		(instances
 			(project "MainController"
@@ -296,6 +366,26 @@
 				(justify right)
 			)
 			(uuid "aed5b494-54dc-4096-8ce0-b0465a42f847")
+		)
+		(pin "OUTN" input
+			(at 181.61 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "75644c40-19bf-4c03-bb32-bf7449e4fecf")
+		)
+		(pin "OUTP" input
+			(at 181.61 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "e3d1db02-cf17-4531-b444-bc928e7a04c7")
 		)
 		(instances
 			(project "MainController"
