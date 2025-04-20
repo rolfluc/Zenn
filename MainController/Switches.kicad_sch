@@ -5,9 +5,9 @@
 	(uuid "4f266801-5241-4be7-8e52-e16102a6e8e3")
 	(paper "A4")
 	(lib_symbols)
-	(text "TODO Foward/Reverse/Neutral Switch"
+	(text "TODO Forward, Reverse. Neutral Implicit."
 		(exclude_from_sim no)
-		(at 42.418 49.784 0)
+		(at 36.322 49.784 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17,7 +17,7 @@
 	)
 	(text "TODO Brake Pedal Switch"
 		(exclude_from_sim no)
-		(at 43.942 43.434 0)
+		(at 36.83 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -27,7 +27,7 @@
 	)
 	(text "TODO light switch"
 		(exclude_from_sim no)
-		(at 42.926 36.83 0)
+		(at 36.83 41.91 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -35,9 +35,9 @@
 		)
 		(uuid "6e24e49b-0b23-43cc-b54d-8447f739a11e")
 	)
-	(text "TODO key switch"
+	(text "TODO key switch - 2  positions"
 		(exclude_from_sim no)
-		(at 42.672 29.464 0)
+		(at 36.322 38.354 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -47,7 +47,7 @@
 	)
 	(text "TODO Horn?"
 		(exclude_from_sim no)
-		(at 43.18 57.658 0)
+		(at 36.322 58.166 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 	)
 	(text "TODO Hand Brake?"
 		(exclude_from_sim no)
-		(at 43.18 53.848 0)
+		(at 35.814 54.102 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -67,7 +67,7 @@
 	)
 	(text "TODO Brights"
 		(exclude_from_sim no)
-		(at 42.164 77.216 0)
+		(at 35.814 86.106 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -77,7 +77,7 @@
 	)
 	(text "TODO SSRs?"
 		(exclude_from_sim no)
-		(at 95.25 55.626 90)
+		(at 88.9 64.516 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -87,12 +87,33 @@
 	)
 	(text "TODO Turn Signal Left\nTODO Turn Signal Right"
 		(exclude_from_sim no)
-		(at 42.418 65.786 0)
+		(at 36.068 74.676 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "fbad4dac-0388-4cd9-9be5-107447192c49")
+	)
+	(label "12V_IN_+"
+		(at 22.86 15.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dce5f545-fcd3-4e8c-b714-fde7e6c22b69")
+	)
+	(hierarchical_label "12V_IN_+"
+		(shape input)
+		(at 22.86 15.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c0914963-783b-4bbf-aa27-4d7d4ebebd87")
 	)
 )

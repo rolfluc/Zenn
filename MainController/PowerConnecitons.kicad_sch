@@ -966,16 +966,6 @@
 		)
 		(uuid "e0761940-935f-4f29-9d89-9387d3081beb")
 	)
-	(text "TODO design Pi Filter"
-		(exclude_from_sim no)
-		(at 49.784 53.086 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6b54a2ee-786d-492b-b6a3-6b1744d1c3c8")
-	)
 	(text "TODO polyfuse"
 		(exclude_from_sim no)
 		(at 73.66 53.086 0)
