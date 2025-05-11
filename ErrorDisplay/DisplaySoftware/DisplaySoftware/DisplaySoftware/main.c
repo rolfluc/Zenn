@@ -2,6 +2,7 @@
 #include <stm32_hal_legacy.h>
 #include "FreeRTOS/Source/include/FreeRTOS.h"
 #include "FreeRTOS/Source/include/task.h"
+#include "Heartbeat.h"
 
 void SystemClock_Config(void)
 {
@@ -50,6 +51,7 @@ int main(void)
 {
 	HAL_Init();
 	SystemClock_Config();
+	StartHeartbeat();
 	
 	vTaskStartScheduler();
 	__ASM("bkpt 255");
