@@ -1,1 +1,6 @@
 *.FCBak
+*.step
+EWARM/*
+Core/*
+.mxproject
+Drivers/*
