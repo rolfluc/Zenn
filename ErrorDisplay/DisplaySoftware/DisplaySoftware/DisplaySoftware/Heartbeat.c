@@ -3,7 +3,7 @@
 #include "FreeRTOS/Source/include/FreeRTOS.h"
 #include "FreeRTOS/Source/include/task.h"
 
-#define HB_STACK_SIZE configMINIMAL_STACK_SIZE*2
+#define HB_STACK_SIZE configMINIMAL_STACK_SIZE
 #define HB_TASK_NAME "HB"
 static const uint32_t HB_TIME_MS = 500;
 static TaskHandle_t hbTaskHandle = NULL;

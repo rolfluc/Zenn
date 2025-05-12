@@ -56,6 +56,8 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <ClCompile Include="ADC.c" />
+    <ClCompile Include="Backlight.c" />
     <ClCompile Include="CAN.c" />
     <ClCompile Include="freertos.c" />
     <ClCompile Include="FreeRTOS\Source\croutine.c" />
@@ -69,11 +71,17 @@
     <ClCompile Include="FreeRTOS\Source\tasks.c" />
     <ClCompile Include="FreeRTOS\Source\timers.c" />
     <ClCompile Include="Heartbeat.c" />
+    <ClCompile Include="LEDController.c" />
     <ClCompile Include="main.c" />
+    <ClInclude Include="ADC.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
     <ClCompile Include="system_STM32G0xx.c" />
     <ClCompile Include="Timebase.c" />
     <ClCompile Include="Timer.c" />
+    <ClCompile Include="TLC5973.c" />
     <ClCompile Include="Watchdog.c" />
+    <ClInclude Include="Backlight.h" />
     <ClInclude Include="FreeRTOS\Source\include\atomic.h" />
     <ClInclude Include="FreeRTOS\Source\include\croutine.h" />
     <ClInclude Include="FreeRTOS\Source\include\deprecated_definitions.h" />
@@ -98,8 +106,11 @@
     <ClInclude Include="FreeRTOS\Source\portable\GCC\portasm.h" />
     <ClInclude Include="FreeRTOS\Source\portable\GCC\portmacro.h" />
     <ClInclude Include="Heartbeat.h" />
+    <ClInclude Include="LEDController.h" />
+    <ClInclude Include="PinDefs.h" />
     <ClInclude Include="Timebase.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="TLC5973.h" />
     <ClInclude Include="Watchdog.h" />
     <None Include="stm32.props" />
     <ClCompile Include="$(BSP_ROOT)\STM32G0xxxx\StartupFiles\startup_stm32g0b1xx.c" />

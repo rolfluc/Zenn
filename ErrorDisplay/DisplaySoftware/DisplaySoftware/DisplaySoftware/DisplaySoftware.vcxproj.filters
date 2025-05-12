@@ -651,6 +651,18 @@
     <ClCompile Include="FreeRTOS\Source\timers.c">
       <Filter>FreeRTOS\src</Filter>
     </ClCompile>
+    <ClCompile Include="Backlight.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="TLC5973.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="LEDController.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="ADC.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAN.h">
@@ -739,6 +751,21 @@
     </ClInclude>
     <ClInclude Include="FreeRTOS\Source\portable\GCC\portasm.h">
       <Filter>FreeRTOS\portable\GCC</Filter>
+    </ClInclude>
+    <ClInclude Include="Backlight.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="TLC5973.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDController.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="PinDefs.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="ADC.h">
+      <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
