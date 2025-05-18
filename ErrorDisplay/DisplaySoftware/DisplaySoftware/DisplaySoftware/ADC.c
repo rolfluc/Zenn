@@ -1,6 +1,9 @@
 #include "ADC.h"
 #include "stm32g0xx_hal.h"
 #include <stdbool.h>
+
+#include "PinDefs.h"
+
 ADC_HandleTypeDef adc1Handle;
 
 // TODO right now this is just for one channel, confirm there is only 1 ADC being needed, otherwise map adc -> cb. same with In progress.
@@ -19,6 +22,15 @@ void ADC1_COMP_IRQHandler(void)
 
 void InitADC(ADCChannel channel)
 {
+	RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
+	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+	PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_SYSCLK;
+	if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+	{
+		__ASM("bkpt 255");
+	}
+	__HAL_RCC_ADC_CLK_ENABLE();
+	
 	GPIO_InitTypeDef init;
 	
 	adc1Handle.Instance = ADC1;
@@ -50,17 +62,26 @@ void InitADC(ADCChannel channel)
 	
 	init.Mode = GPIO_MODE_ANALOG; 
 	init.Pull = GPIO_NOPULL;
-	//init.Pin = Latch_ADC.pinNumber;
-	//HAL_GPIO_Init(Latch_ADC.pinPort, &init);
+	init.Pin = AMBIENT_PIN.pinNumber;
+	HAL_GPIO_Init(AMBIENT_PIN.pinPort, &init);
+	
+	HAL_NVIC_SetPriority(ADC1_COMP_IRQn, 3, 0);
+	HAL_NVIC_EnableIRQ(ADC1_COMP_IRQn);
+	
+	ADC_ChannelConfTypeDef sConfig = { 0 };
+	sConfig.Channel = ADC_CHANNEL_3;
+	sConfig.SamplingTime = ADC_SAMPLINGTIME_COMMON_1;
+	sConfig.Rank = ADC_REGULAR_RANK_1;
+	
+	if (HAL_ADC_ConfigChannel(&adc1Handle, &sConfig) != HAL_OK)
+	{
+		__ASM("BKPT 255");
+	}
 }
 
 
 void ReadADCWithCallback(ADCChannel channel, adcCallback callback)
 {
-	ADC_ChannelConfTypeDef sConfig = { 0 };
-	sConfig.Channel = ADC_CHANNEL_3;
-	sConfig.Rank = ADC_REGULAR_RANK_1;
-	
 	// Do not interrupt. 
 	if (inProgress)
 	{
