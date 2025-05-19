@@ -2032,6 +2032,17 @@
 		)
 		(uuid "969ccd34-672a-43ad-a4f0-e86247fd4903")
 	)
+	(label "Vdrive"
+		(at 22.86 17.78 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "97bf65ad-cf11-496f-a5c5-4e67513846d3")
+	)
 	(label "G2"
 		(at 246.38 111.76 180)
 		(fields_autoplaced yes)
@@ -2229,6 +2240,18 @@
 			(justify left bottom)
 		)
 		(uuid "fe54d851-8a9f-4513-bc0b-d362a7db80bb")
+	)
+	(hierarchical_label "Vdrive"
+		(shape input)
+		(at 22.86 17.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2830736c-3851-493d-9240-eb78eaa9d286")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3996,7 +4019,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7u"
+		(property "Value" "2.2u"
 			(at 66.421 161.2321 0)
 			(effects
 				(font
@@ -4636,7 +4659,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 45.4152 163.83 0)
 			(effects
 				(font
