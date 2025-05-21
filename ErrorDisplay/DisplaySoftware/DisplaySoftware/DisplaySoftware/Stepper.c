@@ -140,5 +140,6 @@ void DriveHomeBlocking(Stepper* step)
 		currentCbIndex = (currentCbIndex + 1) % HOME_STEP_COUNT;
 		vTaskDelay(HOME_DELAY_MS);
 	}
+	// Clear after home.
 	StepNone(step);
 }

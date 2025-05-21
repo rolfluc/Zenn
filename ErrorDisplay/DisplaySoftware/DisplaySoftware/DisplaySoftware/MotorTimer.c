@@ -37,12 +37,6 @@ void TIM14_IRQHandler(void)
 	}
 }
 
-//  Drives all of the motors home, one by one.
-static void DriveHome()
-{
-	
-}
-
 void InitTimers()
 {
 	__HAL_RCC_TIM14_CLK_ENABLE();
