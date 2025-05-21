@@ -76,9 +76,11 @@
     <ClInclude Include="ADC.h">
       <FileType>CppCode</FileType>
     </ClInclude>
+    <ClCompile Include="MotorTask.c" />
+    <ClCompile Include="Stepper.c" />
     <ClCompile Include="system_STM32G0xx.c" />
     <ClCompile Include="Timebase.c" />
-    <ClCompile Include="Timer.c" />
+    <ClCompile Include="MotorTimer.c" />
     <ClCompile Include="TLC5973.c" />
     <ClCompile Include="Watchdog.c" />
     <ClInclude Include="Backlight.h" />
@@ -107,9 +109,11 @@
     <ClInclude Include="FreeRTOS\Source\portable\GCC\portmacro.h" />
     <ClInclude Include="Heartbeat.h" />
     <ClInclude Include="LEDController.h" />
+    <ClInclude Include="MotorTask.h" />
     <ClInclude Include="PinDefs.h" />
+    <ClInclude Include="Stepper.h" />
     <ClInclude Include="Timebase.h" />
-    <ClInclude Include="Timer.h" />
+    <ClInclude Include="MotorTimer.h" />
     <ClInclude Include="TLC5973.h" />
     <ClInclude Include="Watchdog.h" />
     <None Include="stm32.props" />

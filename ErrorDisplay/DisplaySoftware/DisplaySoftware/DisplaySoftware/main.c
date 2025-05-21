@@ -4,6 +4,7 @@
 #include "FreeRTOS/Source/include/task.h"
 #include "Heartbeat.h"
 #include "Backlight.h"
+#include "MotorTask.h"
 
 void SystemClock_Config(void)
 {
@@ -52,7 +53,12 @@ int main(void)
 {
 	HAL_Init();
 	SystemClock_Config();
+	__GPIOA_CLK_ENABLE();
+	__GPIOB_CLK_ENABLE();
+	__GPIOC_CLK_ENABLE();
+	__GPIOF_CLK_ENABLE();
 	StartHeartbeat();
+	InitMotors();
 	
 	vTaskStartScheduler();
 	__ASM("bkpt 255");

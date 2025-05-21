@@ -606,7 +606,7 @@
     <ClCompile Include="CAN.c">
       <Filter>Source files</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.c">
+    <ClCompile Include="MotorTimer.c">
       <Filter>Source files</Filter>
     </ClCompile>
     <ClCompile Include="Timebase.c">
@@ -663,12 +663,18 @@
     <ClCompile Include="ADC.c">
       <Filter>Source files</Filter>
     </ClCompile>
+    <ClCompile Include="MotorTask.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stepper.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAN.h">
       <Filter>Header files</Filter>
     </ClInclude>
-    <ClInclude Include="Timer.h">
+    <ClInclude Include="MotorTimer.h">
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Timebase.h">
@@ -765,6 +771,12 @@
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="ADC.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="MotorTask.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stepper.h">
       <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>
