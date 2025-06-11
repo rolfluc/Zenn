@@ -5,6 +5,7 @@
 #include "Heartbeat.h"
 #include "Backlight.h"
 #include "MotorTask.h"
+#include "LEDController.h"
 
 void SystemClock_Config(void)
 {
@@ -58,7 +59,8 @@ int main(void)
 	__GPIOC_CLK_ENABLE();
 	__GPIOF_CLK_ENABLE();
 	StartHeartbeat();
-	InitMotors();
+	InitBacklightLEDs();
+	// InitMotors();
 	
 	vTaskStartScheduler();
 	__ASM("bkpt 255");

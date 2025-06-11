@@ -669,6 +669,9 @@
     <ClCompile Include="Stepper.c">
       <Filter>Source files</Filter>
     </ClCompile>
+    <ClCompile Include="LEDPWM.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CAN.h">
@@ -777,6 +780,9 @@
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Stepper.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="LEDPWM.h">
       <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>

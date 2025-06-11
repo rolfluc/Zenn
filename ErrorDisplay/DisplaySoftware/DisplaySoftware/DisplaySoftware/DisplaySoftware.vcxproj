@@ -72,6 +72,7 @@
     <ClCompile Include="FreeRTOS\Source\timers.c" />
     <ClCompile Include="Heartbeat.c" />
     <ClCompile Include="LEDController.c" />
+    <ClCompile Include="LEDPWM.c" />
     <ClCompile Include="main.c" />
     <ClInclude Include="ADC.h">
       <FileType>CppCode</FileType>
@@ -109,6 +110,7 @@
     <ClInclude Include="FreeRTOS\Source\portable\GCC\portmacro.h" />
     <ClInclude Include="Heartbeat.h" />
     <ClInclude Include="LEDController.h" />
+    <ClInclude Include="LEDPWM.h" />
     <ClInclude Include="MotorTask.h" />
     <ClInclude Include="PinDefs.h" />
     <ClInclude Include="Stepper.h" />

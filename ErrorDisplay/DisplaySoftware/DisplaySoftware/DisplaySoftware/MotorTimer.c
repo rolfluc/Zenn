@@ -7,11 +7,11 @@ static int16_t motorPositions[NUM_TIMEBOXES] = { 0 };
 static bool motorRunning[NUM_TIMEBOXES] = { false, false, false };
 static uint8_t timerCounter = 0;
 
-TIM_HandleTypeDef htim;
+TIM_HandleTypeDef motorTimer;
 
-void TIM14_IRQHandler(void)
+void TIM6_DAC_LPTIM1_IRQHandler(void)
 {
-	__HAL_TIM_CLEAR_FLAG(&htim, TIM_FLAG_UPDATE);
+	__HAL_TIM_CLEAR_FLAG(&motorTimer, TIM_FLAG_UPDATE);
 	timerCounter++;
 	
 	if (motorRunning[0])
@@ -39,21 +39,21 @@ void TIM14_IRQHandler(void)
 
 void InitTimers()
 {
-	__HAL_RCC_TIM14_CLK_ENABLE();
+	__HAL_RCC_TIM6_CLK_ENABLE();
 	
-	htim.Instance = TIM14;
-	htim.Init.Prescaler = 32;
-	htim.Init.CounterMode = TIM_COUNTERMODE_UP;
-	htim.Init.Period = 20000;
-	htim.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
-	htim.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-	if (HAL_TIM_Base_Init(&htim) != HAL_OK)
+	motorTimer.Instance = TIM6;
+	motorTimer.Init.Prescaler = 32;
+	motorTimer.Init.CounterMode = TIM_COUNTERMODE_UP;
+	motorTimer.Init.Period = 20000;
+	motorTimer.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
+	motorTimer.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+	if (HAL_TIM_Base_Init(&motorTimer) != HAL_OK)
 	{
 		__ASM("BKPT 255");
 	}
 	
-	HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
-	HAL_NVIC_EnableIRQ(TIM14_IRQn);
+	HAL_NVIC_SetPriority(TIM6_DAC_LPTIM1_IRQn, 3, 0);
+	HAL_NVIC_EnableIRQ(TIM6_DAC_LPTIM1_IRQn);
 }
 
 void SetCallback(Timebox tb, timeboxCallback cb)

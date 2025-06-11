@@ -2,13 +2,13 @@
 #include "stm32g0xx_hal.h"
 #include "PinDefs.h"
 
-TIM_HandleTypeDef htim;
+TIM_HandleTypeDef ledTimer;
 static const uint8_t LED_BUFFER_LENGTH_MAX = 8;
 static uint64_t OutputBuffer = 0;
 static uint8_t OutputBufferLength = 0;
 static uint64_t outputBufferIndex = 0;
 	
-static void MX_TIM16_Init(void)
+void TIM14_IRQHandler(void)
 {
 	if (OutputBuffer && 1 << outputBufferIndex)
 	{
@@ -21,23 +21,31 @@ static void MX_TIM16_Init(void)
 	outputBufferIndex++;
 	if (outputBufferIndex != OutputBufferLength)
 	{
-		// TODO restart
+		HAL_TIM_Base_Start_IT(&ledTimer);
+	}
+	else
+	{
+		HAL_TIM_Base_Stop_IT(&ledTimer);
 	}
 }
 
 void InitPWM()
 {
-	htim.Instance = TIM16;
-	htim.Init.Prescaler = 0;
-	htim.Init.CounterMode = TIM_COUNTERMODE_UP;
-	htim.Init.Period = 2000;
-	htim.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-	htim.Init.RepetitionCounter = 0;
-	htim.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-	if (HAL_TIM_Base_Init(&htim) != HAL_OK)
+	__HAL_RCC_TIM14_CLK_ENABLE();
+	
+	ledTimer.Instance = TIM14;
+	ledTimer.Init.Prescaler = 0;
+	ledTimer.Init.CounterMode = TIM_COUNTERMODE_UP;
+	ledTimer.Init.Period = 2000;
+	ledTimer.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+	ledTimer.Init.RepetitionCounter = 0;
+	ledTimer.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+	if (HAL_TIM_Base_Init(&ledTimer) != HAL_OK)
 	{
 		__ASM("BKPT 255");
 	}
+	HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
+	HAL_NVIC_EnableIRQ(TIM14_IRQn);
 }
 
 void SendPWM(uint8_t* data, uint8_t length)
@@ -52,5 +60,5 @@ void SendPWM(uint8_t* data, uint8_t length)
 	}
 	OutputBufferLength = 8 * length;
 	outputBufferIndex = 0;
-	// TODO start.
+	HAL_TIM_Base_Start_IT(&ledTimer);
 }

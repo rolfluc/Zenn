@@ -1,17 +1,18 @@
 #include "TLC5973.h"
 #include <stdint.h>
+#include <memory.h>
 
-#define REGISTER_MAP_SIZE_BYTES 6
-static const uint16_t WriteCommand = 0x03AA;
-typedef union
+void InitTLC5973()
 {
-	uint8_t raw[6];
-	struct 
-	{
-		uint16_t GSOUT2 : 12;
-		uint16_t GSOUT1 : 12;
-		uint16_t GSOUT0 : 12;
-		uint16_t WRTCMD : 12; // Data is only copied when this value is 0x03AA
-	}Registers;
-}TLC5973Registers;
-void InitTLC5973();
+	
+}
+
+void FillWriteBuffer(uint8_t* buffer, uint16_t level)
+{
+	TLC5973Registers reg = { 0 };
+	reg.Registers.GSOUT0 = level;
+	reg.Registers.GSOUT1 = level;
+	reg.Registers.GSOUT2 = level;
+	reg.Registers.WRTCMD = WriteCommand;
+	memcpy((void*)buffer, (void*)reg.raw, sizeof(TLC5973Registers));
+}
