@@ -59,7 +59,7 @@ int main(void)
 	__GPIOC_CLK_ENABLE();
 	__GPIOF_CLK_ENABLE();
 	StartHeartbeat();
-	InitBacklightLEDs();
+	// InitBacklightLEDs();
 	// InitMotors();
 	
 	vTaskStartScheduler();
