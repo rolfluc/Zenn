@@ -19,7 +19,6 @@ static bool inProgress = false;
 void ADC1_COMP_IRQHandler(void)
 {
 	inProgress = false;
-	// TODO below might be wrong.
 	uint16_t readValue = HAL_ADC_GetValue(&adc1Handle);
 	ambientCallback(&readValue);
 }

@@ -5,15 +5,20 @@
 #include "TLC5973.h"
 #include "ADC.h"
 
+
+#define ADC_BUFFER_COUNT 8
+static uint16_t adcBuffer[ADC_BUFFER_COUNT];
 uint8_t buffer0[REGISTER_MAP_SIZE_BYTES];
 
 #define LED_STACK_SIZE configMINIMAL_STACK_SIZE * 2
 #define LED_TASK_NAME "LED"
-// Motor wait time is indefinite. If no one comes calling, don't.
+// LED wait time is indefinite. If no one comes calling, don't wake.
 static const uint32_t LED_TIME_MS = 0xffffffff;
 static TaskHandle_t ledTaskHandle = NULL;
 static StackType_t ledStack[LED_STACK_SIZE];
 static StaticTask_t ledTaskBuffer;
+
+static const uint32_t LEDControllerDelay_ms = 100;
 
 typedef union 
 {
@@ -38,6 +43,7 @@ void callback(uint16_t* retVal)
 
 static void LEDTask(void* argument)
 {
+	uint8_t ledBufferIndex = 0;
 	TaskNotification not;
 	InitADC(ADC_0);
 	InitPWM();
@@ -48,9 +54,18 @@ static void LEDTask(void* argument)
 		ReadADCWithCallback(ADC_0, callback);
 		if (xTaskNotifyWait(0, 0xffffffff, (uint32_t*)&not, LED_TIME_MS) == pdTRUE)
 		{
-			// TODO do something with this.
-			// SetBacklight(not.Data.adcVal);
+			uint32_t bufferSum = 0;
+			adcBuffer[ledBufferIndex] = not.Data.adcVal;
+			ledBufferIndex = (ledBufferIndex + 1) % ADC_BUFFER_COUNT; 
+			for (uint8_t i = 0; i < ADC_BUFFER_COUNT; i++)
+			{
+				bufferSum += adcBuffer[i];
+			}
+			// Divide by 8.
+			bufferSum >>= 3;
+			SetBacklight(bufferSum);
 		}
+		vTaskDelay(LEDControllerDelay_ms);
 	}
 }
 
@@ -68,6 +83,6 @@ void InitBacklightLEDs()
 
 void SetBacklight(uint16_t ambientAdcCounts)
 {
-	FillWriteBuffer(buffer0, ambientAdcCounts);
-	SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
+	// FillWriteBuffer(buffer0, ambientAdcCounts);
+	// SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
 }

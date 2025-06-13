@@ -14,5 +14,6 @@ void FillWriteBuffer(uint8_t* buffer, uint16_t level)
 	reg.Registers.GSOUT1 = level;
 	reg.Registers.GSOUT2 = level;
 	reg.Registers.WRTCMD = WriteCommand;
+	uint8_t sze = sizeof(TLC5973Registers);
 	memcpy((void*)buffer, (void*)reg.raw, sizeof(TLC5973Registers));
 }
