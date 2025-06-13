@@ -15,24 +15,42 @@ static TaskHandle_t ledTaskHandle = NULL;
 static StackType_t ledStack[LED_STACK_SIZE];
 static StaticTask_t ledTaskBuffer;
 
+typedef union 
+{
+	struct 
+	{
+		uint16_t adcVal;
+		uint16_t RSVD;
+	}Data;
+	uint32_t raw;
+}TaskNotification;
+
 void callback(uint16_t* retVal)
 {
-	
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	TaskNotification not = { 0 };
+	not.Data.adcVal = *retVal;
+	xTaskNotifyFromISR(ledTaskHandle,
+		not.raw,
+		eSetBits,
+		&xHigherPriorityTaskWoken);
 }
 
 static void LEDTask(void* argument)
 {
+	TaskNotification not;
 	InitADC(ADC_0);
 	InitPWM();
 	InitTLC5973();
-	ReadADCWithCallback(ADC_0, callback);
-	SetBacklight(0x00ff);
+	
 	for (;;)
 	{
-		//if (xTaskNotifyWait(0, 0xffffffff, (uint32_t*)&not, MOT_TIME_MS) == pdTRUE)
-		//
-			
-		//
+		ReadADCWithCallback(ADC_0, callback);
+		if (xTaskNotifyWait(0, 0xffffffff, (uint32_t*)&not, LED_TIME_MS) == pdTRUE)
+		{
+			// TODO do something with this.
+			// SetBacklight(not.Data.adcVal);
+		}
 	}
 }
 
