@@ -83,6 +83,7 @@ void InitBacklightLEDs()
 
 void SetBacklight(uint16_t ambientAdcCounts)
 {
+	// TODO big TODO on how this part works. 
 	// FillWriteBuffer(buffer0, ambientAdcCounts);
 	// SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
 }

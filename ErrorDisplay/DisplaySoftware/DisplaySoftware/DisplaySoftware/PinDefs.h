@@ -11,10 +11,10 @@ typedef struct
 static const PinDef CAN_MCO = { .pinNumber = GPIO_PIN_6, .pinPort = GPIOF };
 static const PinDef CAN_nRX0BF = { .pinNumber = GPIO_PIN_6, .pinPort = GPIOF };
 static const PinDef CAN_nRX1BF = { .pinNumber = GPIO_PIN_6, .pinPort = GPIOF };
-
 static const PinDef CAN_nINT = { .pinNumber = GPIO_PIN_6, .pinPort = GPIOB };
 static const PinDef CAN_nRST = { .pinNumber = GPIO_PIN_7, .pinPort = GPIOB };
 static const PinDef CAN_nTX0RTS = { .pinNumber = GPIO_PIN_8, .pinPort = GPIOB };
+
 static const PinDef CAN_MCU_TXD = { .pinNumber = GPIO_PIN_9, .pinPort = GPIOB };
 static const PinDef CAN_MCU_RXD = { .pinNumber = GPIO_PIN_9, .pinPort = GPIOA };
 static const PinDef CAN_STDBY = { .pinNumber = GPIO_PIN_3, .pinPort = GPIOA };
