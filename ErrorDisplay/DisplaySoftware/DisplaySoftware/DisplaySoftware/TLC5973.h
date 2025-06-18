@@ -23,4 +23,4 @@ typedef union
 }TLC5973Registers;
 
 void InitTLC5973();
-void FillWriteBuffer(uint8_t* buffer, uint16_t level);
+TLC5973Registers ConvertToReg(uint16_t level0, uint16_t level1, uint16_t level2);

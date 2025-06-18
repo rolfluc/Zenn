@@ -4,16 +4,15 @@
 
 void InitTLC5973()
 {
-	
+	// TODO probably nothing actually. 
 }
 
-void FillWriteBuffer(uint8_t* buffer, uint16_t level)
+TLC5973Registers ConvertToReg(uint16_t level0, uint16_t level1, uint16_t level2)
 {
 	TLC5973Registers reg = { 0 };
-	reg.Registers.GSOUT0 = level;
-	reg.Registers.GSOUT1 = level;
-	reg.Registers.GSOUT2 = level;
+	reg.Registers.GSOUT0 = level0;
+	reg.Registers.GSOUT1 = level1;
+	reg.Registers.GSOUT2 = level2;
 	reg.Registers.WRTCMD = WriteCommand;
-	uint8_t sze = sizeof(TLC5973Registers);
-	memcpy((void*)buffer, (void*)reg.raw, sizeof(TLC5973Registers));
+	return reg;
 }

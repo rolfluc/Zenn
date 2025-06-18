@@ -83,7 +83,7 @@ void InitBacklightLEDs()
 
 void SetBacklight(uint16_t ambientAdcCounts)
 {
-	// TODO big TODO on how this part works. 
-	// FillWriteBuffer(buffer0, ambientAdcCounts);
-	// SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
+	TLC5973Registers reg = ConvertToReg(ambientAdcCounts, ambientAdcCounts, ambientAdcCounts);
+	PopulatePwmBuffer(reg, buffer0, REGISTER_MAP_SIZE_BYTES);
+	SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
 }

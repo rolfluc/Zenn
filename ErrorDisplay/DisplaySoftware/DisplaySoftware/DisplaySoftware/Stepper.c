@@ -116,7 +116,7 @@ void InitStepper(Stepper* step)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;
-	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
+	GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_LOW;
 	GPIO_InitStructure.Pull = GPIO_NOPULL;
 
 	GPIO_InitStructure.Pin = step->P00->pinNumber;
