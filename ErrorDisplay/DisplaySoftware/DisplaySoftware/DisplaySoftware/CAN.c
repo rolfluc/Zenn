@@ -3,6 +3,8 @@
 #include "PinDefs.h"
 FDCAN_HandleTypeDef hfdcan1;
 
+cancb callback;
+
 void TIM16_FDCAN_IT0_IRQHandler(void)
 {
 	HAL_FDCAN_IRQHandler(&hfdcan1);
@@ -39,7 +41,7 @@ static void InitPins()
 	HAL_NVIC_EnableIRQ(TIM17_FDCAN_IT1_IRQn);
 }
 
-void InitCAN()
+void InitCAN(cancb cb)
 {
 	RCC_PeriphCLKInitTypeDef PeriphClkInit = { 0 };
 	PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_FDCAN;
@@ -72,4 +74,5 @@ void InitCAN()
 	{
 		__ASM("bkpt 255");
 	}
+	callback = cb;
 }

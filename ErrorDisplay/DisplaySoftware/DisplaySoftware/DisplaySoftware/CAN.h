@@ -1,2 +1,4 @@
 #pragma once
-void InitCAN();
+
+typedef void(*cancb)();
+void InitCAN(cancb cb);

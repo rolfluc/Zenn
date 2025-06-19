@@ -11,8 +11,8 @@ static uint32_t outputBufferIndex = 0;
 
 static inline void FillBit(uint8_t* byte, uint8_t pos, bool isHigh)
 {
-	static const uint8_t bitHigh = 0x03;
-	static const uint8_t bitLow = 0x02;
+	static const uint8_t bitHigh = 0x0A;
+	static const uint8_t bitLow = 0x08;
 	if (isHigh)
 	{
 		*byte |= bitHigh << pos;
@@ -80,18 +80,10 @@ void PopulatePwmBuffer(TLC5973Registers reg, uint8_t* data, uint8_t bufferSize)
 		uint8_t pos = 0;
 		for (uint8_t j = 7; j != 0; j--)
 		{
-			
 			FillBit(&data[bufferIndex], pos, (reg.raw[i] & (1 << j)) > 0);
-			pos = (pos + 2) % 8;
+			pos = (pos + 4) % 8;
 		}
 	}
-	// TODO just for testing:
-	data[0] = 0xAA;
-	data[1] = 0xAA;
-	data[2] = 0xAA;
-	data[3] = 0xAA;
-	data[4] = 0xAA;
-	data[5] = 0xAA;
 }
 
 void SendPWM(uint8_t* data, uint8_t length)

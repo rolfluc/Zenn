@@ -16,7 +16,7 @@
 #define STEP_COUNT 6
 static const uint32_t maxDegrees = 315; 
 static const uint32_t maxSteps = maxDegrees * 3; 
-static const uint32_t HOME_STEP_COUNT = 1;
+static const uint32_t HOME_STEP_COUNT = 300;
 static const uint32_t HOME_DELAY_MS = 10;
 
 typedef void(*stepcb)(Stepper*);
@@ -28,8 +28,8 @@ static inline void Step1(Stepper* step)
 	step->P00->pinPort->BSRR = step->P00->pinNumber;
 	step->P11->pinPort->BSRR = step->P11->pinNumber;
 	// Reset
-	step->P01->pinPort->BSRR = step->P01->pinNumber;
-	step->P10->pinPort->BSRR = step->P10->pinNumber;
+	step->P01->pinPort->BRR = step->P01->pinNumber;
+	step->P10->pinPort->BRR = step->P10->pinNumber;
 }
 
 static inline void Step2(Stepper* step)
@@ -38,9 +38,9 @@ static inline void Step2(Stepper* step)
 	// Set
 	step->P00->pinPort->BSRR = step->P00->pinNumber;
 	// Reset
-	step->P01->pinPort->BSRR = step->P01->pinNumber;
-	step->P10->pinPort->BSRR = step->P10->pinNumber;
-	step->P11->pinPort->BSRR = step->P11->pinNumber;
+	step->P01->pinPort->BRR = step->P01->pinNumber;
+	step->P10->pinPort->BRR = step->P10->pinNumber;
+	step->P11->pinPort->BRR = step->P11->pinNumber;
 }
 
 static inline void Step3(Stepper* step)
@@ -51,7 +51,7 @@ static inline void Step3(Stepper* step)
 	step->P01->pinPort->BSRR = step->P01->pinNumber;
 	step->P10->pinPort->BSRR = step->P10->pinNumber;
 	// Reset
-	step->P11->pinPort->BSRR = step->P11->pinNumber;
+	step->P11->pinPort->BRR = step->P11->pinNumber;
 }
 
 static inline void Step4(Stepper* step)
@@ -61,8 +61,8 @@ static inline void Step4(Stepper* step)
 	step->P01->pinPort->BSRR = step->P01->pinNumber;
 	step->P10->pinPort->BSRR = step->P10->pinNumber;
 	// Reset
-	step->P00->pinPort->BSRR = step->P00->pinNumber;
-	step->P11->pinPort->BSRR = step->P11->pinNumber;
+	step->P00->pinPort->BRR = step->P00->pinNumber;
+	step->P11->pinPort->BRR = step->P11->pinNumber;
 }
 
 static inline void Step5(Stepper* step)
@@ -73,7 +73,7 @@ static inline void Step5(Stepper* step)
 	step->P10->pinPort->BSRR = step->P10->pinNumber;
 	step->P11->pinPort->BSRR = step->P11->pinNumber;
 	// Reset
-	step->P00->pinPort->BSRR = step->P00->pinNumber;
+	step->P00->pinPort->BRR = step->P00->pinNumber;
 }
 
 static inline void Step6(Stepper* step)
@@ -82,9 +82,9 @@ static inline void Step6(Stepper* step)
 	// Set
 	step->P11->pinPort->BSRR = step->P11->pinNumber;
 	// Reset
-	step->P00->pinPort->BSRR = step->P00->pinNumber;
-	step->P01->pinPort->BSRR = step->P01->pinNumber;
-	step->P10->pinPort->BSRR = step->P10->pinNumber;
+	step->P00->pinPort->BRR = step->P00->pinNumber;
+	step->P01->pinPort->BRR = step->P01->pinNumber;
+	step->P10->pinPort->BRR = step->P10->pinNumber;
 }
 
 static inline void StepNone(Stepper* step)
@@ -128,7 +128,8 @@ void InitStepper(Stepper* step)
 	GPIO_InitStructure.Pin = step->P11->pinNumber;
 	HAL_GPIO_Init(step->P11->pinPort, &GPIO_InitStructure);
 	
-	DriveHomeBlocking(step);
+	// DriveHomeBlocking(step);
+	StepNone(step);
 }
 
 void DriveHomeBlocking(Stepper* step)
@@ -137,7 +138,7 @@ void DriveHomeBlocking(Stepper* step)
 	for (uint32_t i = 0; i < HOME_STEP_COUNT; i++)
 	{
 		counterClockwiseCallbacks[currentCbIndex](step);
-		currentCbIndex = (currentCbIndex + 1) % HOME_STEP_COUNT;
+		currentCbIndex = (currentCbIndex + 1) % STEP_COUNT;
 		vTaskDelay(HOME_DELAY_MS);
 	}
 	// Clear after home.

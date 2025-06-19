@@ -85,4 +85,5 @@ void SendMotorPosition(Motor motor, int16_t motorPosition_tenthsdegrees)
 	TaskNotification notification = { 0 };
 	notification.Data.mtr = motor;
 	notification.Data.motorPosition_tenthsdegrees = motorPosition_tenthsdegrees;
+	xTaskNotify(motTaskHandle, notification.raw, eSetBits);
 }

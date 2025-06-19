@@ -59,6 +59,7 @@
     <ClCompile Include="ADC.c" />
     <ClCompile Include="Backlight.c" />
     <ClCompile Include="CAN.c" />
+    <ClCompile Include="Cantask.c" />
     <ClCompile Include="freertos.c" />
     <ClCompile Include="FreeRTOS\Source\croutine.c" />
     <ClCompile Include="FreeRTOS\Source\event_groups.c" />
@@ -85,6 +86,7 @@
     <ClCompile Include="TLC5973.c" />
     <ClCompile Include="Watchdog.c" />
     <ClInclude Include="Backlight.h" />
+    <ClInclude Include="Cantask.h" />
     <ClInclude Include="FreeRTOS\Source\include\atomic.h" />
     <ClInclude Include="FreeRTOS\Source\include\croutine.h" />
     <ClInclude Include="FreeRTOS\Source\include\deprecated_definitions.h" />
