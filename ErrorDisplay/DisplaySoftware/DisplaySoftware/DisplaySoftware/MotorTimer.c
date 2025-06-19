@@ -13,6 +13,7 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
 {
 	__HAL_TIM_CLEAR_FLAG(&motorTimer, TIM_FLAG_UPDATE);
 	timerCounter++;
+	// TODO reissue?
 	
 	if (motorRunning[0])
 	{
@@ -63,5 +64,21 @@ void SetCallback(Timebox tb, timeboxCallback cb)
 
 void SetPosition(Timebox box, int16_t motorPosition_tenthsdegree)
 {
-	
+	switch (box)
+	{
+	case Timebox0:
+		{
+			break;
+		}
+	case Timebox1:
+		{
+			break;
+		}
+	case Timebox2:
+		{
+			break;
+		}
+	default:
+		break;
+	}
 }

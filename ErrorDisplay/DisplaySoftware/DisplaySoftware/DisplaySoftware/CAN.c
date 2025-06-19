@@ -3,7 +3,7 @@
 #include "PinDefs.h"
 FDCAN_HandleTypeDef hfdcan1;
 
-cancb callback;
+cancb canCallback;
 
 void TIM16_FDCAN_IT0_IRQHandler(void)
 {
@@ -74,5 +74,5 @@ void InitCAN(cancb cb)
 	{
 		__ASM("bkpt 255");
 	}
-	callback = cb;
+	canCallback = cb;
 }

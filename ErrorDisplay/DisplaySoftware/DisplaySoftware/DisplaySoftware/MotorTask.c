@@ -3,6 +3,7 @@
 #include "FreeRTOS/Source/include/FreeRTOS.h"
 #include "FreeRTOS/Source/include/task.h"
 
+#include "MotorTimer.h"
 #include "Stepper.h"
 #include "PinDefs.h"
 
@@ -62,7 +63,26 @@ static void MotorTask(void* argument)
 	{
 		if (xTaskNotifyWait(0, 0xffffffff, (uint32_t*)&not, MOT_TIME_MS) == pdTRUE)
 		{
-			
+			switch (not.Data.mtr)
+			{
+			case Motor0:
+				{
+					SetPosition(Timebox0, not.Data.motorPosition_tenthsdegrees);
+					break;
+				}
+			case Motor1:
+				{
+					SetPosition(Timebox1, not.Data.motorPosition_tenthsdegrees);
+					break;
+				}
+			case Motor2:
+				{
+					SetPosition(Timebox2, not.Data.motorPosition_tenthsdegrees);
+					break;
+				}
+			default:
+				break;
+			}
 		}
 	}
 }
