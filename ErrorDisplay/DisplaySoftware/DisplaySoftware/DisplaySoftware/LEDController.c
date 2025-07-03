@@ -7,6 +7,7 @@
 
 
 #define ADC_BUFFER_COUNT 8
+#define TX_BUFFER_SIZE // 4 bits per bit
 static uint16_t adcBuffer[ADC_BUFFER_COUNT];
 uint8_t buffer0[REGISTER_MAP_SIZE_BYTES];
 
@@ -81,9 +82,11 @@ void InitBacklightLEDs()
 		&ledTaskBuffer);
 }
 
+// Not used anymore. Reverting to using PWM on Fets.
 void SetBacklight(uint16_t ambientAdcCounts)
 {
-	TLC5973Registers reg = ConvertToReg(ambientAdcCounts, ambientAdcCounts, ambientAdcCounts);
-	PopulatePwmBuffer(reg, buffer0, REGISTER_MAP_SIZE_BYTES);
-	SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
+	// TODO adapt to PWM
+	//TLC5973Registers reg = ConvertToReg(ambientAdcCounts, ambientAdcCounts, ambientAdcCounts);
+	//PopulatePwmBuffer(reg, buffer0, REGISTER_MAP_SIZE_BYTES);
+	//SendPWM(buffer0, REGISTER_MAP_SIZE_BYTES);
 }

@@ -58,6 +58,8 @@ static void MotorTask(void* argument)
 	InitStepper(&VoltageMotor);
 	InitStepper(&TemperatureMotor);
 	
+	InitTimers(&SpeedMotor, &VoltageMotor, &TemperatureMotor);
+	
 	static TaskNotification not = { 0 };
 	for (;;)
 	{

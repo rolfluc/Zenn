@@ -46,6 +46,7 @@ void TIM14_IRQHandler(void)
 
 void InitPWM()
 {
+	// TODO change this to a circular DMA for a PWM. 
 	__HAL_RCC_TIM14_CLK_ENABLE();
 	
 	GPIO_InitTypeDef GPIO_InitStructure;

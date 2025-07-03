@@ -19,8 +19,6 @@ static const uint32_t maxSteps = maxDegrees * 3;
 static const uint32_t HOME_STEP_COUNT = 300;
 static const uint32_t HOME_DELAY_MS = 10;
 
-typedef void(*stepcb)(Stepper*);
-
 static inline void Step1(Stepper* step)
 {
 	//1001
@@ -142,5 +140,20 @@ void DriveHomeBlocking(Stepper* step)
 		vTaskDelay(HOME_DELAY_MS);
 	}
 	// Clear after home.
+	StepNone(step);
+}
+
+stepcb* GetClockwiseCB()
+{
+	return clockwiseCallbacks;
+}
+
+stepcb* GetCounterClockwiseCB()
+{
+	return counterClockwiseCallbacks;
+}
+
+void ClearMotor(Stepper* step)
+{
 	StepNone(step);
 }

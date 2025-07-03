@@ -46,8 +46,6 @@ void backlightTask()
 		if (hasRolledOver)
 		{
 			// Have enough samples to do something with. Send the average over to the LED Controller to determine the setting.
-			
-			
 		}
 	}
 	else

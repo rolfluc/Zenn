@@ -27,5 +27,10 @@ typedef struct
 	StepperMotorState currentState;	
 }Stepper;
 
+typedef void(*stepcb)(Stepper*);
+
 void InitStepper(Stepper* step);
 void DriveHomeBlocking(Stepper* step);
+void ClearMotor(Stepper* step);
+stepcb* GetClockwiseCB();
+stepcb* GetCounterClockwiseCB();
