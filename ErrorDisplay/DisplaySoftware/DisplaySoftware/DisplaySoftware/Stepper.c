@@ -12,8 +12,7 @@
 //  012345678910
 //	-    --
 //   -  -  -  -
-//    --    --
-#define STEP_COUNT 6
+//    --    --s
 static const uint32_t maxDegrees = 315; 
 static const uint32_t maxSteps = maxDegrees * 3; 
 static const uint32_t HOME_STEP_COUNT = 300;

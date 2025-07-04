@@ -1,5 +1,6 @@
 #pragma once
 #include "PinDefs.h"
+#define STEP_COUNT 6
 typedef enum 
 {
 	State_0,

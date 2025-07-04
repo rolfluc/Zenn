@@ -11,14 +11,14 @@ static const uint32_t CAN_TIME_MS = 0xffffffff;
 static TaskHandle_t canTaskHandle = NULL;
 static StackType_t canStack[CAN_STACK_SIZE];
 static StaticTask_t canTaskBuffer;
-static const int16_t MotorHomeSteps = 0x83ff; // TODO 
-static const uint32_t InitDelay_ms = 10000;
+static const int16_t MotorHomeSteps = -1000; // TODO 
+static const uint32_t InitDelay_ms = 5000;
 
 typedef union 
 {
 	struct 
 	{
-		int32_t canData : 32;
+		int32_t canData : 32; // TODO likely insufficient. LIKELY need to move to queue
 	}Data;
 	uint32_t raw;
 }TaskNotification;
@@ -32,9 +32,9 @@ static void CanTask(void* argument)
 {
 	// InitCAN(CanCallback);
 	SendMotorPosition(Motor0, MotorHomeSteps);
-	vTaskDelay(InitDelay_ms);
+	vTaskDelay(5);
 	SendMotorPosition(Motor1, MotorHomeSteps);
-	vTaskDelay(InitDelay_ms);
+	vTaskDelay(5);
 	SendMotorPosition(Motor2, MotorHomeSteps);
 	vTaskDelay(InitDelay_ms);
 	static TaskNotification not = { 0 };

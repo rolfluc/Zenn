@@ -1,16 +1,41 @@
 #include "MotorTimer.h"
 #include "stm32g0xx_hal.h"
 #include "stdbool.h"
-static const int16_t motorLimits[NUM_TIMEBOXES] = { 16, 64, 64 };
+static const int16_t motorLimits[NUM_TIMEBOXES] = { 4, 7, 9 };
 static int16_t motorPositions[NUM_TIMEBOXES] = { 0 };
+static uint8_t motorCbPosition[NUM_TIMEBOXES] = { 0 };
 static int16_t motorDesiredPositions[NUM_TIMEBOXES] = { 0 };
 static Stepper* steppers[NUM_TIMEBOXES];
 static stepcb* timerCallbacks[NUM_TIMEBOXES] = {};
 static bool motorDirectionClockwise[NUM_TIMEBOXES] = { true, true, true };
+static int8_t motorDirectionIndex[NUM_TIMEBOXES] = { 1, 1, 1 };
 static bool motorRunning[NUM_TIMEBOXES] = { false, false, false };
+static bool motorHoming[NUM_TIMEBOXES] = { true, true, true }; // Init to zero, since they should home first.
 static uint8_t timerCounter = 0;
 
 TIM_HandleTypeDef motorTimer;
+
+static inline void handleMotor(uint8_t index)
+{
+	if (motorRunning[index])
+	{
+		if (timerCounter % motorLimits[index] == 0)
+		{
+			motorCbPosition[index] = (motorCbPosition[index] + 1) % STEP_COUNT;
+			motorPositions[index] += motorDirectionIndex[index];
+			timerCallbacks[index][motorCbPosition[index]](steppers[index]);
+			if (motorPositions[index] == motorDesiredPositions[index])
+			{
+				motorRunning[index] = false;
+				if (motorHoming[index])
+				{
+					motorHoming[index] = false;
+					motorPositions[index] = 0;
+				}
+			}
+		}
+	}
+}
 
 void TIM6_DAC_LPTIM1_IRQHandler(void)
 {
@@ -18,31 +43,16 @@ void TIM6_DAC_LPTIM1_IRQHandler(void)
 	HAL_TIM_Base_Start_IT(&motorTimer);
 	timerCounter++;
 	
-	if (motorRunning[0])
-	{
-		if (timerCounter % motorLimits[0])
-		{
-		}
-	}
-	else if (motorRunning[1]) 
-	{
-		if (timerCounter % motorLimits[1])
-		{
-		}
-	}
-	else if (motorRunning[2])
-	{
-		if (timerCounter % motorLimits[2])
-		{
-		}
-	}
+	handleMotor(0);
+	handleMotor(1);
+	handleMotor(2);
 }
 
 void InitTimers(Stepper* step0, Stepper* step1, Stepper* step2)
 {
 	__HAL_RCC_TIM6_CLK_ENABLE();
 	motorTimer.Instance = TIM6;
-	motorTimer.Init.Prescaler = 32;
+	motorTimer.Init.Prescaler = 2;
 	motorTimer.Init.CounterMode = TIM_COUNTERMODE_UP;
 	motorTimer.Init.Period = 20000;
 	motorTimer.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
@@ -102,6 +112,7 @@ static inline void SetNewPosition(uint8_t index, int16_t position)
 		motorDesiredPositions[index] = desiredMotorPos;
 		motorDirectionClockwise[index] = true;
 		timerCallbacks[index] = GetClockwiseCB();
+		motorDirectionIndex[index] = 1;
 	}
 	else if (desiredMotorPos < motorDesiredPositions[index] && motorDirectionClockwise[index])
 	{
@@ -109,6 +120,7 @@ static inline void SetNewPosition(uint8_t index, int16_t position)
 		motorDesiredPositions[index] = desiredMotorPos;
 		motorDirectionClockwise[index] = false;
 		timerCallbacks[index] = GetCounterClockwiseCB();
+		motorDirectionIndex[index] = -1;
 	}
 	else if (desiredMotorPos < motorDesiredPositions[index] && !motorDirectionClockwise[index])
 	{
