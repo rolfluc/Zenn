@@ -30,7 +30,7 @@ void CanCallback()
 
 static void CanTask(void* argument)
 {
-	// InitCAN(CanCallback);
+	InitCAN(CanCallback);
 	SendMotorPosition(Motor0, MotorHomeSteps);
 	vTaskDelay(5);
 	SendMotorPosition(Motor1, MotorHomeSteps);
