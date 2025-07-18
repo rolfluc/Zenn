@@ -82,7 +82,21 @@ uint8_t ReadADC_Percent(ADCNum adc)
 {		
 	uint8_t retVal = 0;
 	ADC_ChannelConfTypeDef sConfig = { 0 };
-	sConfig.Channel = ADC_CHANNEL_1;
+	switch (adc)
+	{
+	case ADC_0:
+		{
+			sConfig.Channel = ADC_CHANNEL_1;
+			break;
+		}
+	case ADC_1:
+		{
+			sConfig.Channel = ADC_CHANNEL_2;
+			break;
+		}
+	default:
+		break;
+	}
 	sConfig.Rank = ADC_REGULAR_RANK_1;
 	sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
 	sConfig.SingleDiff = ADC_SINGLE_ENDED;

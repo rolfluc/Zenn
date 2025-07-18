@@ -6,10 +6,13 @@
 #define PWM_COUNTS 7500
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
 DMA_HandleTypeDef hdma_tim1_ch1;
 DMA_HandleTypeDef hdma_tim1_ch2;
 DMA_HandleTypeDef hdma_tim1_ch3;
 DMA_HandleTypeDef hdma_tim1_ch4;
+DMA_HandleTypeDef hdma_tim2_ch1;
 
 static PWM RunningPair = PWMPair_None;
 static bool ArmRunning = false;
@@ -31,6 +34,11 @@ void DMA1_Channel4_IRQHandler(void)
 	HAL_DMA_IRQHandler(&hdma_tim1_ch4);
 }
 
+void DMA1_Channel5_IRQHandler(void)
+{
+	HAL_DMA_IRQHandler(&hdma_tim2_ch1);
+}
+
 void DMAMUX_OVR_IRQHandler(void)
 {
 	// Handle DMA1_Channel1
@@ -41,16 +49,115 @@ void DMAMUX_OVR_IRQHandler(void)
 	HAL_DMAEx_MUX_IRQHandler(&hdma_tim1_ch3);
 	// Handle DMA1_Channel4
 	HAL_DMAEx_MUX_IRQHandler(&hdma_tim1_ch4);
+	// Handle DMA1_Channel5
+	HAL_DMAEx_MUX_IRQHandler(&hdma_tim2_ch1);
 }
 
+static void InitMasterClock() {
+	__HAL_RCC_TIM3_CLK_ENABLE();
+	TIM_ClockConfigTypeDef sClockSourceConfig = { 0 };
+	TIM_MasterConfigTypeDef sMasterConfig = { 0 };
+	htim3.Instance = TIM3;
+	htim3.Init.Prescaler = 0;
+	htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+	htim3.Init.Period = 500;
+	htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+	htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+
+	if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+	if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+	if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	HAL_TIM_Base_Start(&htim3);
+}
+
+static void InitArmClock() {
+	__HAL_RCC_TIM2_CLK_ENABLE();
+	
+	hdma_tim2_ch1.Instance = DMA1_Channel5;
+	hdma_tim2_ch1.Init.Request = DMA_REQUEST_TIM2_CH1;
+	hdma_tim2_ch1.Init.Direction = DMA_MEMORY_TO_PERIPH;
+	hdma_tim2_ch1.Init.PeriphInc = DMA_PINC_DISABLE;
+	hdma_tim2_ch1.Init.MemInc = DMA_MINC_ENABLE;
+	hdma_tim2_ch1.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
+	hdma_tim2_ch1.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
+	hdma_tim2_ch1.Init.Mode = DMA_CIRCULAR;
+	hdma_tim2_ch1.Init.Priority = DMA_PRIORITY_LOW;
+	if (HAL_DMA_Init(&hdma_tim2_ch1) != HAL_OK)
+	{
+		Error_Handler();
+	}
+
+	__HAL_LINKDMA(&htim2, hdma[TIM_DMA_ID_CC1], hdma_tim2_ch1);
+	
+	HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+	
+	
+	TIM_SlaveConfigTypeDef sSlaveConfig = { 0 };
+	TIM_MasterConfigTypeDef sMasterConfig = { 0 };
+	TIM_OC_InitTypeDef sConfigOC = { 0 };
+	
+	htim2.Instance = TIM2;
+	htim2.Init.Prescaler = 0;
+	htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+	htim2.Init.Period = PWM_COUNTS;
+	htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+	htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+	if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	sSlaveConfig.SlaveMode = TIM_SLAVEMODE_TRIGGER;
+	sSlaveConfig.InputTrigger = TIM_TS_ITR2;
+	if (HAL_TIM_SlaveConfigSynchro(&htim2, &sSlaveConfig) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	
+	sConfigOC.OCMode = TIM_OCMODE_PWM1;
+	sConfigOC.Pulse = 0;
+	sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+	sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+	if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	
+	GPIO_InitTypeDef GPIO_InitStruct = { 0 };
+	GPIO_InitStruct.Pin = GPIO_PIN_5;
+	GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+}
 
 void InitPWM()
 {
+	InitMasterClock();
 	GPIO_InitTypeDef GPIO_InitStruct = { 0 };
 	__HAL_RCC_TIM1_CLK_ENABLE();
 	__HAL_RCC_GPIOA_CLK_ENABLE();
 	__HAL_RCC_DMAMUX1_CLK_ENABLE();
 	__HAL_RCC_DMA1_CLK_ENABLE();
+	
+	InitArmClock();
 	
 	/* TIM1_CH1 Init */
 	hdma_tim1_ch1.Instance = DMA1_Channel1;
@@ -137,12 +244,13 @@ void InitPWM()
 	TIM_ClockConfigTypeDef sClockSourceConfig = { 0 };
 	TIM_MasterConfigTypeDef sMasterConfig = { 0 };
 	TIM_OC_InitTypeDef sConfigOC = { 0 };
+	TIM_SlaveConfigTypeDef sSlaveConfig = { 0 };
 	
 	htim1.Instance = TIM1;
 	htim1.Init.Prescaler = 0;
 	htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
 	htim1.Init.Period = PWM_COUNTS;
-	htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV2;
+	htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 	htim1.Init.RepetitionCounter = 0;
 	htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
 	if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
@@ -155,6 +263,12 @@ void InitPWM()
 		Error_Handler();
 	}
 	if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	sSlaveConfig.SlaveMode = TIM_SLAVEMODE_TRIGGER;
+	sSlaveConfig.InputTrigger = TIM_TS_ITR2;
+	if (HAL_TIM_SlaveConfigSynchro(&htim1, &sSlaveConfig) != HAL_OK)
 	{
 		Error_Handler();
 	}
@@ -222,10 +336,9 @@ void InitPWM()
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	GPIO_InitStruct.Alternate = GPIO_AF11_TIM1;
 	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
 }
 
-uint16_t buffer0 = 0;
+uint16_t Pair_P_buffer = 0;
 
 static inline uint16_t PercentToCounts(uint8_t percent)
 {
@@ -240,10 +353,7 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	// If 0 is set, just kill them all. // TODO maybe stop the TIM? or maybe kill the GPIOs just to do it faster?
 	if (percent == 0)
 	{
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_2);
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_3);
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_4);
+		Pair_P_buffer = 1;
 		RunningPair = PWMPair_None;
 		return;
 	}
@@ -251,7 +361,7 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	// Already running? Just update
 	if (pair == RunningPair && RunningPair != PWMPair_None)
 	{
-		buffer0 = PercentToCounts(percent);
+		Pair_P_buffer = PercentToCounts(percent);
 		return;
 	}
 	// Need to change direction? stop it all, then let the rest of the system manage.
@@ -270,21 +380,21 @@ void SetPWMPair(PWM pair, uint8_t percent)
 			RunningPair = PWMPair_None;
 		}
 	}
-	buffer0 = PercentToCounts(percent);
+	Pair_P_buffer = PercentToCounts(percent);
 	switch (pair)
 	{
 	case PWMPair_0:
 		{
 			RunningPair = PWMPair_0;
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&buffer0, 1);
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*)&buffer0, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&Pair_P_buffer, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*)&Pair_P_buffer, 1);
 			break;
 		}
 	case PWMPair_1:
 		{
 			RunningPair = PWMPair_1;
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*)&buffer0, 1);
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*)&buffer0, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*)&Pair_P_buffer, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*)&Pair_P_buffer, 1);
 			break;
 		}
 	default:
@@ -295,15 +405,17 @@ void SetPWMPair(PWM pair, uint8_t percent)
 static uint16_t ArmBuffer = 0;
 void SetPWMArm(uint8_t percent)
 {
+	// TODO currently not synced. How to sync this. 
+	// Initial thought : Starting should be done within the ISR of the DMA IRQ?
 	if (percent == 0)
 	{
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
+		HAL_TIM_PWM_Stop_DMA(&htim2, TIM_CHANNEL_1);
 		ArmRunning = false;
 		return;
 	}
 	ArmBuffer = PercentToCounts(percent);
 	if (!ArmRunning)
 	{
-		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&ArmBuffer, 1);
+		HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_1, (uint32_t*)&ArmBuffer, 1);
 	}
 }

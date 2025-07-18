@@ -73,9 +73,9 @@ int main(void)
 	for (;;)
 	{
 		pairVal = ReadADC_Percent(ADC_0);
-		//armVal = ReadADC_Percent(ADC_1);
+		armVal = ReadADC_Percent(ADC_1);
  		SetPWMPair(PWMPair_0, pairVal);
-		//SetPWMArm(armVal);
+		SetPWMArm(armVal);
 		HAL_Delay(50);
 	}
 }
