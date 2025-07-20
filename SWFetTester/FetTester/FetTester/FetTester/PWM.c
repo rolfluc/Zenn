@@ -16,6 +16,7 @@ DMA_HandleTypeDef hdma_tim2_ch1;
 
 static PWM RunningPair = PWMPair_None;
 static bool ArmRunning = false;
+static uint16_t ForwardBuffer = 0;
 
 void DMA1_Channel1_IRQHandler(void)
 {
@@ -79,7 +80,7 @@ static void InitMasterClock() {
 	{
 		Error_Handler();
 	}
-	HAL_TIM_Base_Start(&htim3);
+	//HAL_TIM_Base_Start(&htim3);
 }
 
 static void InitArmClock() {
@@ -336,9 +337,11 @@ void InitPWM()
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	GPIO_InitStruct.Alternate = GPIO_AF11_TIM1;
 	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+	
+	HAL_TIM_Base_Start(&htim3);
 }
 
-uint16_t Pair_P_buffer = 0;
+
 
 static inline uint16_t PercentToCounts(uint8_t percent)
 {
@@ -353,7 +356,7 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	// If 0 is set, just kill them all. // TODO maybe stop the TIM? or maybe kill the GPIOs just to do it faster?
 	if (percent == 0)
 	{
-		Pair_P_buffer = 1;
+		ForwardBuffer = 1;
 		RunningPair = PWMPair_None;
 		return;
 	}
@@ -361,7 +364,7 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	// Already running? Just update
 	if (pair == RunningPair && RunningPair != PWMPair_None)
 	{
-		Pair_P_buffer = PercentToCounts(percent);
+		ForwardBuffer = PercentToCounts(percent);
 		return;
 	}
 	// Need to change direction? stop it all, then let the rest of the system manage.
@@ -380,21 +383,21 @@ void SetPWMPair(PWM pair, uint8_t percent)
 			RunningPair = PWMPair_None;
 		}
 	}
-	Pair_P_buffer = PercentToCounts(percent);
+	ForwardBuffer = PercentToCounts(percent);
 	switch (pair)
 	{
 	case PWMPair_0:
 		{
 			RunningPair = PWMPair_0;
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&Pair_P_buffer, 1);
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*)&Pair_P_buffer, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&ForwardBuffer, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*)&ForwardBuffer, 1);
 			break;
 		}
 	case PWMPair_1:
 		{
 			RunningPair = PWMPair_1;
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*)&Pair_P_buffer, 1);
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*)&Pair_P_buffer, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*)&ForwardBuffer, 1);
+			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*)&ForwardBuffer, 1);
 			break;
 		}
 	default:
