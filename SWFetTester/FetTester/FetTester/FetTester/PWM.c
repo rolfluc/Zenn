@@ -15,8 +15,9 @@ DMA_HandleTypeDef hdma_tim1_ch4;
 DMA_HandleTypeDef hdma_tim2_ch1;
 
 static PWM RunningPair = PWMPair_None;
-static bool ArmRunning = false;
-static uint16_t ForwardBuffer = 0;
+static uint32_t ForwardBuffer = 1;
+static uint32_t BackwardBuffer = 1;
+static uint32_t ArmBuffer = 1;
 
 void DMA1_Channel1_IRQHandler(void)
 {
@@ -80,7 +81,6 @@ static void InitMasterClock() {
 	{
 		Error_Handler();
 	}
-	//HAL_TIM_Base_Start(&htim3);
 }
 
 static void InitArmClock() {
@@ -90,7 +90,7 @@ static void InitArmClock() {
 	hdma_tim2_ch1.Init.Request = DMA_REQUEST_TIM2_CH1;
 	hdma_tim2_ch1.Init.Direction = DMA_MEMORY_TO_PERIPH;
 	hdma_tim2_ch1.Init.PeriphInc = DMA_PINC_DISABLE;
-	hdma_tim2_ch1.Init.MemInc = DMA_MINC_ENABLE;
+	hdma_tim2_ch1.Init.MemInc = DMA_MINC_DISABLE;
 	hdma_tim2_ch1.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
 	hdma_tim2_ch1.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
 	hdma_tim2_ch1.Init.Mode = DMA_CIRCULAR;
@@ -130,11 +130,18 @@ static void InitArmClock() {
 	{
 		Error_Handler();
 	}
+	sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+	if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+	{
+		Error_Handler();
+	}
 	
 	sConfigOC.OCMode = TIM_OCMODE_PWM1;
 	sConfigOC.Pulse = 0;
 	sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
 	sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+	sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
 	if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
 	{
 		Error_Handler();
@@ -269,11 +276,12 @@ void InitPWM()
 	}
 	sSlaveConfig.SlaveMode = TIM_SLAVEMODE_TRIGGER;
 	sSlaveConfig.InputTrigger = TIM_TS_ITR2;
+	sSlaveConfig.TriggerPolarity = TIM_TRIGGERPOLARITY_RISING;
+	sSlaveConfig.TriggerPrescaler = TIM_TRIGGERPRESCALER_DIV1;
 	if (HAL_TIM_SlaveConfigSynchro(&htim1, &sSlaveConfig) != HAL_OK)
 	{
 		Error_Handler();
 	}
-	sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
 	sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
 	sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
 	if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
@@ -337,6 +345,11 @@ void InitPWM()
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	GPIO_InitStruct.Alternate = GPIO_AF11_TIM1;
 	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&ForwardBuffer, 1);
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*)&ForwardBuffer, 1);
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*)&BackwardBuffer, 1);
+	HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*)&BackwardBuffer, 1);
+	HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_1, (uint32_t*)&ArmBuffer, 1);
 	
 	HAL_TIM_Base_Start(&htim3);
 }
@@ -351,9 +364,23 @@ static inline uint16_t PercentToCounts(uint8_t percent)
 
 void SetPWMPair(PWM pair, uint8_t percent)
 {
-	// TODO potentially do not stop the inverted. Maybe just drive them to 1, ensuring the PFET is turned off. 
-	// Might not be a big deal since both nfets should be off. but TBD.
-	// If 0 is set, just kill them all. // TODO maybe stop the TIM? or maybe kill the GPIOs just to do it faster?
+	switch (pair)
+	{
+	case PWMPair_0:
+		{
+			break;
+		}
+	case PWMPair_1:
+		{
+			break;
+		}
+	case PWMPair_None:
+		{
+			break;
+		}
+	default:
+		break;
+	}
 	if (percent == 0)
 	{
 		ForwardBuffer = 1;
@@ -372,32 +399,28 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	{
 		if (RunningPair == PWMPair_0)
 		{
-			HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
-			HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_2);
+			ForwardBuffer = 1;
 			RunningPair = PWMPair_None;
 		}
 		else if (RunningPair == PWMPair_1)
 		{
-			HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_3);
-			HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_4);
+			ForwardBuffer = 2;
 			RunningPair = PWMPair_None;
 		}
 	}
-	ForwardBuffer = PercentToCounts(percent);
+	
 	switch (pair)
 	{
 	case PWMPair_0:
 		{
 			RunningPair = PWMPair_0;
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t*)&ForwardBuffer, 1);
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*)&ForwardBuffer, 1);
+			ForwardBuffer = PercentToCounts(percent);
 			break;
 		}
 	case PWMPair_1:
 		{
 			RunningPair = PWMPair_1;
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*)&ForwardBuffer, 1);
-			HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*)&ForwardBuffer, 1);
+			BackwardBuffer = PercentToCounts(percent);
 			break;
 		}
 	default:
@@ -405,20 +428,12 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	}
 }
 
-static uint16_t ArmBuffer = 0;
 void SetPWMArm(uint8_t percent)
 {
-	// TODO currently not synced. How to sync this. 
-	// Initial thought : Starting should be done within the ISR of the DMA IRQ?
 	if (percent == 0)
 	{
-		HAL_TIM_PWM_Stop_DMA(&htim2, TIM_CHANNEL_1);
-		ArmRunning = false;
+		ArmBuffer = 1;
 		return;
 	}
 	ArmBuffer = PercentToCounts(percent);
-	if (!ArmRunning)
-	{
-		HAL_TIM_PWM_Start_DMA(&htim2, TIM_CHANNEL_1, (uint32_t*)&ArmBuffer, 1);
-	}
 }
