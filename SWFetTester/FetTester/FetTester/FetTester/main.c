@@ -95,5 +95,6 @@ int main(void)
 		armVal = ReadADC_Percent(ADC_1);
 		SetPWMPair(target, pairVal);
 		SetPWMArm(armVal);
+		HAL_Delay(50);
 	}
 }
