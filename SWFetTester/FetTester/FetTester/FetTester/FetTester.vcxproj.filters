@@ -684,6 +684,9 @@
     <ClCompile Include="Err.c">
       <Filter>Source files</Filter>
     </ClCompile>
+    <ClCompile Include="Switch.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PWM.h">
@@ -693,6 +696,9 @@
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="Err.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Switch.h">
       <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -15,6 +15,7 @@ DMA_HandleTypeDef hdma_tim1_ch4;
 DMA_HandleTypeDef hdma_tim2_ch1;
 
 static PWM RunningPair = PWMPair_None;
+// All init to "1" to ensure they're not outputting at all.
 static uint32_t ForwardBuffer = 1;
 static uint32_t BackwardBuffer = 1;
 static uint32_t ArmBuffer = 1;
@@ -368,60 +369,22 @@ void SetPWMPair(PWM pair, uint8_t percent)
 	{
 	case PWMPair_0:
 		{
+			ForwardBuffer = PercentToCounts(percent);
+			BackwardBuffer = 1;
 			break;
 		}
 	case PWMPair_1:
 		{
+			ForwardBuffer = 1;
+			BackwardBuffer = PercentToCounts(percent);
 			break;
 		}
 	case PWMPair_None:
 		{
-			break;
-		}
-	default:
-		break;
-	}
-	if (percent == 0)
-	{
-		ForwardBuffer = 1;
-		RunningPair = PWMPair_None;
-		return;
-	}
-	
-	// Already running? Just update
-	if (pair == RunningPair && RunningPair != PWMPair_None)
-	{
-		ForwardBuffer = PercentToCounts(percent);
-		return;
-	}
-	// Need to change direction? stop it all, then let the rest of the system manage.
-	else
-	{
-		if (RunningPair == PWMPair_0)
-		{
 			ForwardBuffer = 1;
+			BackwardBuffer = 1;
 			RunningPair = PWMPair_None;
-		}
-		else if (RunningPair == PWMPair_1)
-		{
-			ForwardBuffer = 2;
-			RunningPair = PWMPair_None;
-		}
-	}
-	
-	switch (pair)
-	{
-	case PWMPair_0:
-		{
-			RunningPair = PWMPair_0;
-			ForwardBuffer = PercentToCounts(percent);
-			break;
-		}
-	case PWMPair_1:
-		{
-			RunningPair = PWMPair_1;
-			BackwardBuffer = PercentToCounts(percent);
-			break;
+			return;
 		}
 	default:
 		break;

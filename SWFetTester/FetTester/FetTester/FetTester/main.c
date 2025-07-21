@@ -3,6 +3,7 @@
 #include "Err.h"
 #include "PWM.h"
 #include "ADC.h"
+#include "Switch.h"
 
 extern ADC_HandleTypeDef hadc1;
 
@@ -66,16 +67,33 @@ int main(void)
 	SystemClock_Config();
 	InitPWM();
 	InitADC();
+	InitSwitches();
 
+	PWM target = PWMPair_None;
+	SwitchSetting currentSwitch = Switch_None;
 	uint8_t pairVal = 0;
 	uint8_t armVal = 0;
-	SetPWMPair(PWMPair_0, 0);
 	for (;;)
 	{
+		currentSwitch = ReadSwitch();
+		if (currentSwitch == Switch_None)
+		{
+			SetPWMPair(PWMPair_None, 0);
+			SetPWMArm(0);
+			HAL_Delay(50);
+			continue;
+		}
+		else if (currentSwitch == Switch_0)
+		{
+			target = PWMPair_0;
+		}
+		else if (currentSwitch == Switch_1)
+		{
+			target = PWMPair_1;
+		}
 		pairVal = ReadADC_Percent(ADC_0);
 		armVal = ReadADC_Percent(ADC_1);
- 		SetPWMPair(PWMPair_0, pairVal);
+		SetPWMPair(target, pairVal);
 		SetPWMArm(armVal);
-		HAL_Delay(50);
 	}
 }

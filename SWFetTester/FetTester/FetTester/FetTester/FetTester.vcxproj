@@ -60,7 +60,9 @@
     <ClCompile Include="Err.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="PWM.c" />
+    <ClCompile Include="Switch.c" />
     <ClCompile Include="system_STM32G4xx.c" />
+    <ClInclude Include="Switch.h" />
     <None Include="stm32.props" />
     <ClCompile Include="$(BSP_ROOT)\STM32G4xxxx\StartupFiles\startup_stm32g431xx.c" />
     <ClCompile Include="$(BSP_ROOT)\STM32G4xxxx\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c" />
