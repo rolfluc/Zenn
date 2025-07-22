@@ -10,7 +10,6 @@ extern ADC_HandleTypeDef hadc1;
 void ADC1_2_IRQHandler(void)
 {
 	HAL_ADC_IRQHandler(&hadc1);
-	// TODO lots of TODO 
 }
 
 void SysTick_Handler(void)
