@@ -645,6 +645,18 @@
     [
       "ca249708-ec09-41b0-b71d-70bebe19cbfd",
       "HBridgeDriver"
+    ],
+    [
+      "6614bcbf-a6ee-4236-bd05-34316589a024",
+      "Armateur"
+    ],
+    [
+      "eb34c613-22d6-4b91-b5c9-3bbcb10d59f1",
+      "Regen"
+    ],
+    [
+      "592b72e5-95a7-493e-b4e9-fc1a8b0156f6",
+      "MotorConnection"
     ]
   ],
   "text_variables": {}
