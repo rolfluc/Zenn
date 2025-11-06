@@ -1676,6 +1676,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TODO is this PFET?"
+		(exclude_from_sim no)
+		(at 248.92 83.566 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4163bc04-04bd-494d-a283-a1f9195ba7bd")
+	)
 	(text "TODO > 100v reverse schotkey"
 		(exclude_from_sim no)
 		(at 190.754 102.616 0)
