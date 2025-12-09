@@ -1676,35 +1676,15 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TODO is this PFET?"
+	(text "TODO need some Vmot measurement\nmeasurement to some fet to enable regen.\nTODO should this be done fully electronically? \ni.e. when Vmot > Vbat - enable signal for regen?\nNeed to be able to confirm that back EMF voltage is higher\nthan the current battery voltage,\nand that the battery voltage is low enough to accept\n\nTODO do I need a heat sync for too high of battery voltage?\ni.e. shortly after a charge, the battery might not be able\nto accept more energy. i.e. add .. 1kW? Resistor - 120A?"
 		(exclude_from_sim no)
-		(at 248.92 83.566 0)
+		(at 198.374 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "4163bc04-04bd-494d-a283-a1f9195ba7bd")
-	)
-	(text "TODO > 100v reverse schotkey"
-		(exclude_from_sim no)
-		(at 190.754 102.616 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "5dfa2301-5fb5-486b-aecb-1bac529aa362")
-	)
-	(text "TODO correct resistor 33ohm?"
-		(exclude_from_sim no)
-		(at 183.388 80.772 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b7131bd8-16b3-4564-b578-22c82d06456c")
+		(uuid "9f94721a-7d2c-42ae-84a0-36f9a517cfe2")
 	)
 	(text "TODO investigate this"
 		(exclude_from_sim no)
@@ -1716,7 +1696,7 @@
 		)
 		(uuid "ddcfe3c5-252d-47a8-b7d9-0cee3dbffd19")
 	)
-	(text "rdson = __\n/ 2 = __\n__ * 100A * 100A = __W "
+	(text "rdson = 34mOhm\n/ 2 = 17mOhm\n0.017 * 10A * 10A = 1.7W\n\n^--- This needs testing / confirmation.\nThis may need rework"
 		(exclude_from_sim no)
 		(at 245.872 114.3 0)
 		(effects
@@ -1725,6 +1705,16 @@
 			)
 		)
 		(uuid "e0f9aa06-d56d-43c9-84e6-2b832efec16c")
+	)
+	(text "TODO dedicated small MCU for Regen? TBD"
+		(exclude_from_sim no)
+		(at 163.322 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ee5d7501-29ba-4a28-80aa-b8e675e74619")
 	)
 	(junction
 		(at 176.53 99.06)
@@ -2061,7 +2051,7 @@
 		(uuid "2ffc6514-2fb7-4ee5-b567-87bb6e0bf861")
 	)
 	(label "Vdrive"
-		(at 25.4 24.13 0)
+		(at 24.13 20.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2091,7 +2081,7 @@
 		(uuid "5e91900d-8a5a-46b5-8456-61ec269c99f3")
 	)
 	(label "VBAT+"
-		(at 25.4 38.1 0)
+		(at 24.13 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2121,7 +2111,7 @@
 		(uuid "7c5a4e2e-e3b0-44f2-819e-bc5d6de13631")
 	)
 	(label "Mot-"
-		(at 25.4 31.75 0)
+		(at 24.13 27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2201,7 +2191,7 @@
 		(uuid "b799994b-1a82-46a0-9277-713b2a07c1b0")
 	)
 	(label "reg_drv"
-		(at 25.4 20.32 0)
+		(at 24.13 16.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2282,7 +2272,7 @@
 	)
 	(hierarchical_label "VBAT+"
 		(shape input)
-		(at 25.4 38.1 180)
+		(at 24.13 34.29 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2293,7 +2283,7 @@
 	)
 	(hierarchical_label "REG_DRV"
 		(shape input)
-		(at 25.4 20.32 180)
+		(at 24.13 16.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2304,7 +2294,7 @@
 	)
 	(hierarchical_label "VDRIVE"
 		(shape input)
-		(at 25.4 24.13 180)
+		(at 24.13 20.32 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2315,7 +2305,7 @@
 	)
 	(hierarchical_label "MOT-"
 		(shape input)
-		(at 25.4 31.75 180)
+		(at 24.13 27.94 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2747,7 +2737,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "P-MOSFET transistor, drain/gate/source"
+		(property "Description" "RS1P090ATTB1"
 			(at 264.16 95.25 0)
 			(effects
 				(font
@@ -2973,7 +2963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "P-MOSFET transistor, drain/gate/source"
+		(property "Description" "RS1P090ATTB1"
 			(at 232.41 95.25 0)
 			(effects
 				(font
@@ -3075,18 +3065,17 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9b09c855-8dd6-471c-bb15-f2d723a57c27")
 		(property "Reference" "R3"
-			(at 88.9 106.68 90)
+			(at 88.9 110.49 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "R"
-			(at 88.9 109.22 90)
+		(property "Value" "1k"
+			(at 88.9 113.03 90)
 			(effects
 				(font
 					(size 1.27 1.27)

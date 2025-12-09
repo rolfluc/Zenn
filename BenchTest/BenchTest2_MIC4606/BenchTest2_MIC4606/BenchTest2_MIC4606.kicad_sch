@@ -5,18 +5,8 @@
 	(uuid "5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62")
 	(paper "A4")
 	(lib_symbols)
-	(label "Vdrive"
-		(at 92.71 54.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "529a8022-52cb-44a8-aa9b-b64117db5dde")
-	)
 	(sheet
-		(at 21.59 54.61)
+		(at 17.78 31.75)
 		(size 16.51 72.39)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -32,7 +22,7 @@
 		)
 		(uuid "592b72e5-95a7-493e-b4e9-fc1a8b0156f6")
 		(property "Sheetname" "MotorConnection"
-			(at 21.59 53.8984 0)
+			(at 17.78 31.0384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -41,7 +31,7 @@
 			)
 		)
 		(property "Sheetfile" "MotorConnection .kicad_sch"
-			(at 21.59 127.5846 0)
+			(at 17.78 104.7246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -173,9 +163,49 @@
 				(justify left top)
 			)
 		)
-		(pin "Vdrive" input
-			(at 92.71 54.61 0)
-			(uuid "622ad8d5-cfac-4d7b-98d8-52993f22458c")
+		(pin "IN1+" input
+			(at 92.71 44.45 0)
+			(uuid "2236094e-cd53-4847-b21e-77ee2326e2eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN1-" input
+			(at 92.71 46.99 0)
+			(uuid "b9ba8fd9-eeab-45b4-9a75-f40df31e86b0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN2+" input
+			(at 92.71 49.53 0)
+			(uuid "4cea6bef-b50a-4794-a493-f6b567258f0c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "IN2-" input
+			(at 92.71 52.07 0)
+			(uuid "fd148aa9-f921-4e62-87dd-fb32d44571b7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VDRIVE" input
+			(at 92.71 34.29 0)
+			(uuid "eef3a995-8f54-4490-88fa-6b45970a9c3c")
 			(effects
 				(font
 					(size 1.27 1.27)
