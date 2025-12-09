@@ -1686,6 +1686,16 @@
 		)
 		(uuid "9f94721a-7d2c-42ae-84a0-36f9a517cfe2")
 	)
+	(text "TODO is this right?"
+		(exclude_from_sim no)
+		(at 248.158 76.454 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a556ef94-4487-46a5-a917-5c1496892ec3")
+	)
 	(text "TODO investigate this"
 		(exclude_from_sim no)
 		(at 96.774 57.912 90)
@@ -2081,7 +2091,7 @@
 		(uuid "5e91900d-8a5a-46b5-8456-61ec269c99f3")
 	)
 	(label "VBAT+"
-		(at 24.13 34.29 0)
+		(at 24.13 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2109,16 +2119,6 @@
 			(justify right bottom)
 		)
 		(uuid "7c5a4e2e-e3b0-44f2-819e-bc5d6de13631")
-	)
-	(label "Mot-"
-		(at 24.13 27.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8359c5fd-8ee5-43cf-a04d-8a811c1f0f10")
 	)
 	(label "G1"
 		(at 227.33 95.25 180)
@@ -2272,7 +2272,7 @@
 	)
 	(hierarchical_label "VBAT+"
 		(shape input)
-		(at 24.13 34.29 180)
+		(at 24.13 25.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2302,17 +2302,6 @@
 			(justify right)
 		)
 		(uuid "763d4679-f46c-4313-883e-af0075ad3b5b")
-	)
-	(hierarchical_label "MOT-"
-		(shape input)
-		(at 24.13 27.94 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ecf181b6-9785-41b0-849f-8db83e00f7c1")
 	)
 	(symbol
 		(lib_id "New_Library:FAN3217")
