@@ -652,45 +652,15 @@
 		)
 		(uuid "0a39896f-4551-4ea7-8d0b-d848b0f31a01")
 	)
-	(text "TODO design for > 100A"
+	(text "TODO Footprint"
 		(exclude_from_sim no)
-		(at 145.796 91.948 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "477b0e99-8d4d-42bb-b73a-4d8e1e637f2f")
-	)
-	(text "TODO which footprint"
-		(exclude_from_sim no)
-		(at 105.156 92.71 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ce614276-d962-482a-841c-b7475f6dd54c")
-	)
-	(text "TODO which footprint"
-		(exclude_from_sim no)
-		(at 144.272 94.234 0)
+		(at 116.586 101.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "ea407098-5442-4cdc-bb47-acae5b9dfd52")
-	)
-	(text "TODO design for > 100A"
-		(exclude_from_sim no)
-		(at 105.918 90.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "f9f824ee-c923-43f1-a80d-ded70e98ba2c")
 	)
 	(label "Vbat-"
 		(at 105.41 101.6 270)
@@ -753,7 +723,7 @@
 		(uuid "8cf393a3-2d60-4fcb-aa3c-d1fd5e87a2c8")
 	)
 	(label "Vbat+"
-		(at 144.78 101.6 270)
+		(at 125.73 101.6 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -803,7 +773,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x01_Socket"
+		(property "Value" "74622103"
 			(at 106.68 98.4249 90)
 			(effects
 				(font
@@ -830,7 +800,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
+		(property "Description" "74622103"
 			(at 105.41 96.52 0)
 			(effects
 				(font
@@ -853,7 +823,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
-		(at 144.78 96.52 90)
+		(at 125.73 96.52 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -862,7 +832,7 @@
 		(fields_autoplaced yes)
 		(uuid "1dbe71a7-241f-479e-8466-8273a2df50ee")
 		(property "Reference" "J7"
-			(at 146.05 95.8849 90)
+			(at 127 95.8849 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -870,8 +840,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x01_Socket"
-			(at 146.05 98.4249 90)
+		(property "Value" "74622103"
+			(at 127 98.4249 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -880,7 +850,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 144.78 96.52 0)
+			(at 125.73 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -889,7 +859,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 144.78 96.52 0)
+			(at 125.73 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -897,8 +867,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 144.78 96.52 0)
+		(property "Description" "74622103"
+			(at 125.73 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)

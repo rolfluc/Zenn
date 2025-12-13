@@ -129,19 +129,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TODO which footprint"
+	(text "TODO Footprint"
 		(exclude_from_sim no)
-		(at 173.736 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4e63a0e6-b89b-4fdb-9126-57ec27f632c8")
-	)
-	(text "TODO which footprint"
-		(exclude_from_sim no)
-		(at 195.326 76.2 0)
+		(at 205.994 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -149,65 +139,15 @@
 		)
 		(uuid "5c544497-d31b-4272-9ebe-8805b7accdff")
 	)
-	(text "TODO which footprint"
+	(text "TODO footprint"
 		(exclude_from_sim no)
-		(at 234.442 77.724 0)
+		(at 195.58 140.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "901f4a5b-c457-4434-8001-6f9a96735693")
-	)
-	(text "TODO design for > 100A"
-		(exclude_from_sim no)
-		(at 235.966 75.438 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "b43eadcf-7812-4428-8c76-109d04f74987")
-	)
-	(text "TODO which footprint"
-		(exclude_from_sim no)
-		(at 215.646 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ca61838e-eca9-4c4c-828b-00e713f3a244")
-	)
-	(text "TODO design for > 100A"
-		(exclude_from_sim no)
-		(at 196.088 73.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d01f35dd-f16a-4cbd-8b35-ca96152c9bd6")
-	)
-	(text "TODO design for > 25A"
-		(exclude_from_sim no)
-		(at 216.408 129.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "d871fdad-b9e7-4eca-af1b-69675fee737a")
-	)
-	(text "TODO design for > 25A"
-		(exclude_from_sim no)
-		(at 174.498 129.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "e8925fd6-02bc-4372-8063-d53db3f992fa")
+		(uuid "9cf70abe-bf00-4e32-bf56-9898144e3b17")
 	)
 	(label "Mot+"
 		(at 269.24 19.05 180)
@@ -220,7 +160,7 @@
 		(uuid "410c5a1a-b5e8-4709-be0f-d6a8557ec4ad")
 	)
 	(label "Mot+"
-		(at 234.95 85.09 270)
+		(at 215.9 85.09 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -240,7 +180,7 @@
 		(uuid "7d03f4bb-29f6-420f-8158-37ab1c6454a3")
 	)
 	(label "F1"
-		(at 173.99 140.97 270)
+		(at 184.15 140.97 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -280,7 +220,7 @@
 		(uuid "dca06007-96cf-4e27-9968-c212601bc193")
 	)
 	(label "F2"
-		(at 215.9 140.97 270)
+		(at 205.74 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -352,7 +292,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x01_Socket"
+		(property "Value" "7460553"
 			(at 196.85 81.9149 90)
 			(effects
 				(font
@@ -379,7 +319,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
+		(property "Description" "7460553"
 			(at 195.58 80.01 0)
 			(effects
 				(font
@@ -402,7 +342,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
-		(at 173.99 135.89 90)
+		(at 184.15 135.89 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -411,7 +351,7 @@
 		(fields_autoplaced yes)
 		(uuid "398ea96e-e989-470e-8a6e-1fbcdcf7417b")
 		(property "Reference" "J3"
-			(at 175.26 135.2549 90)
+			(at 185.42 135.2549 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -419,8 +359,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x01_Socket"
-			(at 175.26 137.7949 90)
+		(property "Value" "S95243"
+			(at 185.42 137.7949 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -429,7 +369,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 135.89 0)
+			(at 184.15 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -438,7 +378,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 173.99 135.89 0)
+			(at 184.15 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -446,8 +386,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 173.99 135.89 0)
+		(property "Description" "S95243"
+			(at 184.15 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -469,7 +409,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
-		(at 234.95 80.01 90)
+		(at 215.9 80.01 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -478,7 +418,7 @@
 		(fields_autoplaced yes)
 		(uuid "55049781-d2c0-4021-972e-3894674a32dc")
 		(property "Reference" "J5"
-			(at 236.22 79.3749 90)
+			(at 217.17 79.3749 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -486,8 +426,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x01_Socket"
-			(at 236.22 81.9149 90)
+		(property "Value" "7460553"
+			(at 217.17 81.9149 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -496,7 +436,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 234.95 80.01 0)
+			(at 215.9 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -505,7 +445,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 234.95 80.01 0)
+			(at 215.9 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -513,8 +453,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 234.95 80.01 0)
+		(property "Description" "7460553"
+			(at 215.9 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -536,7 +476,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Socket")
-		(at 215.9 135.89 90)
+		(at 205.74 137.16 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -545,7 +485,7 @@
 		(fields_autoplaced yes)
 		(uuid "ab0a86fd-d9f7-48ce-877b-4c29bd47d6c0")
 		(property "Reference" "J4"
-			(at 217.17 135.2549 90)
+			(at 207.01 136.5249 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -553,8 +493,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x01_Socket"
-			(at 217.17 137.7949 90)
+		(property "Value" "S95243"
+			(at 207.01 139.0649 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -563,7 +503,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 135.89 0)
+			(at 205.74 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -572,7 +512,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 215.9 135.89 0)
+			(at 205.74 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -580,8 +520,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 215.9 135.89 0)
+		(property "Description" "S95243"
+			(at 205.74 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
