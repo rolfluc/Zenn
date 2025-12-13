@@ -647,6 +647,14 @@
     [
       "592b72e5-95a7-493e-b4e9-fc1a8b0156f6",
       "MotorConnection"
+    ],
+    [
+      "8c9c9c75-221e-4d76-8e45-9c424cd249f8",
+      "DigitalConnections"
+    ],
+    [
+      "d7319d32-1664-4e1a-811f-1e8bb95f31f4",
+      "BatteryConnections"
     ]
   ],
   "text_variables": {}

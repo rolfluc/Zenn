@@ -288,15 +288,45 @@
 		)
 		(uuid "111ccc56-0dc7-4a98-aa72-701a67e05f20")
 	)
+	(text "TODO this might be Mot+"
+		(exclude_from_sim no)
+		(at 54.356 124.46 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "18f584cd-e428-4306-b90e-999038909b21")
+	)
 	(text "TODO do I make this a seperate board?\nI.e. all this board is, is battery / motor connections?\nAnd an additional logic board? \nAll connections are already isolated to the gate drives"
 		(exclude_from_sim no)
-		(at 159.766 88.9 0)
+		(at 187.198 89.154 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "19fa5585-b3f6-4c5b-8bb6-d30e1d7cc32b")
+	)
+	(label "arm_drv"
+		(at 111.76 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "009cb990-aa2f-4312-a5e8-a8cccf5c3913")
+	)
+	(label "Vbat+"
+		(at 137.16 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0536641a-86cc-4948-b029-b742cd81fd05")
 	)
 	(label "F2"
 		(at 60.96 53.34 180)
@@ -308,6 +338,36 @@
 		)
 		(uuid "0bf28735-7b14-45cf-a09c-340119822f7b")
 	)
+	(label "in2+"
+		(at 111.76 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2624d8e6-6c7e-4484-9392-0acec1051200")
+	)
+	(label "reg_drv"
+		(at 91.44 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "26fa8559-7dbd-4146-adaa-2af1fad773b0")
+	)
+	(label "reg_drv"
+		(at 111.76 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "27e361a3-91b2-4e2e-98dd-9a41990d5464")
+	)
 	(label "F1"
 		(at 60.96 49.53 180)
 		(effects
@@ -318,8 +378,38 @@
 		)
 		(uuid "35926195-f3da-4bae-b859-945f51b338e3")
 	)
+	(label "vDrive"
+		(at 91.44 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "37a02787-41c6-4da9-b176-a3e0724867b7")
+	)
+	(label "in1+"
+		(at 111.76 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3945636a-e330-4c35-b915-950c1cb3e905")
+	)
+	(label "Vbat+"
+		(at 109.22 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "39dd65c7-53d8-4039-9c03-aeac0b7064b1")
+	)
 	(label "F1"
-		(at 34.29 49.53 0)
+		(at 35.56 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -328,8 +418,68 @@
 		)
 		(uuid "43490f59-ce13-48e6-810b-c244ef2c621f")
 	)
+	(label "in1+"
+		(at 92.71 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "74f50a78-3c42-493f-aa9c-72be6b2bffe6")
+	)
+	(label "Mot+"
+		(at 35.56 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7a5f41d9-7737-407f-89c4-b5163791802e")
+	)
 	(label "Mot-"
-		(at 34.29 63.5 0)
+		(at 60.96 123.19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7f34b183-25c8-45d5-b758-76d4552deafb")
+	)
+	(label "arm_drv"
+		(at 91.44 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "82ad5a82-a225-4f28-8cb2-d95dd5879e1a")
+	)
+	(label "in2-"
+		(at 111.76 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "84e32fb6-a918-478b-8cec-a28ad8fda7cc")
+	)
+	(label "vDrive"
+		(at 111.76 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9b5e8f68-e854-4345-b1ce-c560733a607d")
+	)
+	(label "Mot-"
+		(at 35.56 102.87 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -338,8 +488,28 @@
 		)
 		(uuid "a2802611-c469-4bc6-8b57-7b5d12762937")
 	)
+	(label "vDrive"
+		(at 92.71 34.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a62f92bd-656e-4bd5-ad31-a82bd5968684")
+	)
+	(label "Vbat-"
+		(at 109.22 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b8143774-5849-44ff-8378-d1bf6264333d")
+	)
 	(label "F2"
-		(at 34.29 54.61 0)
+		(at 35.56 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -347,6 +517,46 @@
 			(justify left bottom)
 		)
 		(uuid "b95af549-cd6e-498e-94f6-f596d9678c60")
+	)
+	(label "in1-"
+		(at 92.71 46.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c0948ff8-933c-4478-b301-02918d08d5cb")
+	)
+	(label "vDrive"
+		(at 91.44 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c1dbd295-4e2f-40a1-a1d9-963f4e243fe6")
+	)
+	(label "Vbat+"
+		(at 91.44 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d114184a-7c2f-4826-8b61-6c52b33a22a3")
+	)
+	(label "in2-"
+		(at 92.71 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6673187-436e-45a1-aa6c-968097eba747")
 	)
 	(label "current_sns"
 		(at 231.14 72.39 180)
@@ -357,6 +567,26 @@
 			(justify right bottom)
 		)
 		(uuid "daf34cb1-489f-4735-8293-ef1f93bb0dc1")
+	)
+	(label "in1-"
+		(at 111.76 86.36 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dbf72a06-052d-4db3-92c9-463a314858aa")
+	)
+	(label "in2+"
+		(at 92.71 49.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2c5f379-5d6b-447c-bd83-e34c660334e7")
 	)
 	(label "Mot-"
 		(at 62.23 87.63 180)
@@ -508,7 +738,7 @@
 		)
 	)
 	(sheet
-		(at 17.78 31.75)
+		(at 19.05 71.12)
 		(size 16.51 36.83)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -524,7 +754,7 @@
 		)
 		(uuid "592b72e5-95a7-493e-b4e9-fc1a8b0156f6")
 		(property "Sheetname" "MotorConnection"
-			(at 17.78 31.0384 0)
+			(at 19.05 70.4084 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -533,7 +763,7 @@
 			)
 		)
 		(property "Sheetfile" "MotorConnection .kicad_sch"
-			(at 17.78 69.1646 0)
+			(at 19.05 108.5346 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -542,7 +772,7 @@
 			)
 		)
 		(pin "F1" input
-			(at 34.29 49.53 0)
+			(at 35.56 88.9 0)
 			(uuid "07cbffeb-1234-4176-abfc-1f138fbbd737")
 			(effects
 				(font
@@ -552,7 +782,7 @@
 			)
 		)
 		(pin "F2" input
-			(at 34.29 54.61 0)
+			(at 35.56 93.98 0)
 			(uuid "19cde905-ed46-4fab-9f07-9dd810e554db")
 			(effects
 				(font
@@ -562,7 +792,7 @@
 			)
 		)
 		(pin "MOTORCON+" input
-			(at 34.29 59.69 0)
+			(at 35.56 99.06 0)
 			(uuid "240a1b22-ba9d-4b67-a1f8-9168c0911652")
 			(effects
 				(font
@@ -572,7 +802,7 @@
 			)
 		)
 		(pin "MOTORCON-" input
-			(at 34.29 63.5 0)
+			(at 35.56 102.87 0)
 			(uuid "664fb70f-5f1b-4fb4-a662-2f896dbb3366")
 			(effects
 				(font
@@ -667,6 +897,128 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 71.12)
+		(size 25.4 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8c9c9c75-221e-4d76-8e45-9c424cd249f8")
+		(property "Sheetname" "DigitalConnections"
+			(at 111.76 70.4084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DigitalConnections.kicad_sch"
+			(at 111.76 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ARM_DRV" input
+			(at 111.76 73.66 180)
+			(uuid "39da1acb-e81a-4816-a5dd-f7c9f31bcfa9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN1+" input
+			(at 111.76 83.82 180)
+			(uuid "a5a27f75-901a-4d56-b1da-148343d9e6d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN1-" input
+			(at 111.76 86.36 180)
+			(uuid "fec6bef4-4099-45c7-acb5-093dfd896284")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN2+" input
+			(at 111.76 88.9 180)
+			(uuid "6a542255-57cb-4d93-8574-c1be186f1a20")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IN2-" input
+			(at 111.76 91.44 180)
+			(uuid "59ef4e5f-c182-4f04-8c9c-c98d7299eadd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "REG_DRV" input
+			(at 111.76 76.2 180)
+			(uuid "e3824d9e-36c1-46c1-b650-2de8f9a5190e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VBAT+" input
+			(at 137.16 73.66 0)
+			(uuid "0f891b2f-1a45-4147-a0a1-8679b0ca607e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VDRIVE" input
+			(at 111.76 99.06 180)
+			(uuid "da0c4f38-698d-4bf8-9a77-87715a2c6724")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62"
+					(page "6")
 				)
 			)
 		)
@@ -779,6 +1131,68 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 30.48)
+		(size 24.13 29.21)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d7319d32-1664-4e1a-811f-1e8bb95f31f4")
+		(property "Sheetname" "BatteryConnections"
+			(at 109.22 29.7684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "BatteryConnections.kicad_sch"
+			(at 109.22 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VBAT+" input
+			(at 109.22 33.02 180)
+			(uuid "df6f3935-28f1-48e5-be6b-e923854be585")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VBAT-" input
+			(at 109.22 45.72 180)
+			(uuid "d85edda2-09b6-4d46-a2b5-ce77099f88d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62"
+					(page "7")
 				)
 			)
 		)
