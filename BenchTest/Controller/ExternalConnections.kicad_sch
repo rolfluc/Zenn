@@ -5,4 +5,14 @@
 	(uuid "a471c84d-3353-4c33-87e7-164eab9807a9")
 	(paper "A4")
 	(lib_symbols)
+	(text "TODO Pedal Connection"
+		(exclude_from_sim no)
+		(at 205.232 66.802 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5eb10b73-ab78-436c-ad51-36ab833742c4")
+	)
 )
