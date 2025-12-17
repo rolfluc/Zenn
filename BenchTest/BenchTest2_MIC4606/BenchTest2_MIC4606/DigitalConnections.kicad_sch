@@ -1373,6 +1373,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TODO is this referenced to VBAT-?\nTODO this feels dangerous. "
+		(exclude_from_sim no)
+		(at 98.552 153.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "01583e93-5b2a-432d-a8c6-7e7c2f81ef1b")
+	)
+	(text "TODO necessary?\nTODO good enough for ESD?"
+		(exclude_from_sim no)
+		(at 161.798 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3d6f6506-4b71-4296-9ae3-1a2ff49df8be")
+	)
 	(text "Resistor Divider, to present:\nMax Voltage ~88V.\nMin Voltage ~72V.\n88/30 = 2.9333V\n72/30 = 2.4V\n533mV dynamic range\n88V / (30 *10000) = 293uA\nstatic power drain = 0.000293^2 * 10000 = 860uW \n^ * 30 ~= 25mW static draw"
 		(exclude_from_sim no)
 		(at 39.624 145.288 0)
@@ -1382,6 +1402,26 @@
 			)
 		)
 		(uuid "5c4e441d-cfe0-45ab-9cf3-6773c36c5901")
+	)
+	(text "TODO migrate this to an external interface?\nMay consume too much board space. For Both"
+		(exclude_from_sim no)
+		(at 73.406 172.466 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a7e3901d-b70d-46a6-b1db-dea99447db81")
+	)
+	(text "Resistor Divider, to present:\nMax Voltage ~90V.\nMin Voltage ~74V.\n90/30 = 3.0V\n72/30 = 2.4V\n600mV dynamic range\n90V / (30 *10000) = 300uA\nstatic power drain = 0.000300^2 * 10000 = 900uW \n^ * 30 ~= 25mW static draw"
+		(exclude_from_sim no)
+		(at 97.282 139.446 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f1d57599-965b-44de-af47-8e013771f0db")
 	)
 	(no_connect
 		(at 144.78 118.11)
@@ -1409,6 +1449,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 184.15) (xy 110.49 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a280299-4a72-49fc-a872-1c7c4b2033ee")
+	)
+	(wire
+		(pts
 			(xy 21.59 177.8) (xy 21.59 182.88)
 		)
 		(stroke
@@ -1416,6 +1466,36 @@
 			(type default)
 		)
 		(uuid "2ee593b8-6aa9-4e0b-b848-7cc3604c9c19")
+	)
+	(wire
+		(pts
+			(xy 80.01 179.07) (xy 80.01 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31c01fb7-5493-46dd-b8e8-e0aba85e0ec2")
+	)
+	(wire
+		(pts
+			(xy 80.01 168.91) (xy 80.01 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48354156-5984-4e7e-bcce-9d73b86b6239")
+	)
+	(wire
+		(pts
+			(xy 118.11 163.83) (xy 118.11 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e6445c7-55b2-4690-9895-35c938256529")
 	)
 	(wire
 		(pts
@@ -1449,33 +1529,43 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 88.9) (xy 215.9 88.9)
+			(xy 80.01 158.75) (xy 80.01 163.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8ed087ae-67cd-4aaa-bf48-ed17edbc1417")
+		(uuid "96931cff-cb03-49a4-900c-664533009b96")
 	)
 	(wire
 		(pts
-			(xy 198.12 88.9) (xy 199.39 88.9)
+			(xy 116.84 193.04) (xy 114.3 193.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "915f9b7f-bd47-483a-a496-22db9b7e8742")
+		(uuid "a092154d-8f60-4a2b-bf3c-86b1b7140d4e")
 	)
 	(wire
 		(pts
-			(xy 198.12 92.71) (xy 198.12 88.9)
+			(xy 116.84 191.77) (xy 116.84 193.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9e1bf9c3-7667-4fbf-9b67-14994121d4b5")
+		(uuid "b2486493-0b98-4add-8451-2162b6b27f60")
+	)
+	(wire
+		(pts
+			(xy 118.11 173.99) (xy 118.11 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc9f139a-a7d9-44ce-98fc-c9c9e8fe12a3")
 	)
 	(wire
 		(pts
@@ -1528,7 +1618,7 @@
 		(uuid "1aa1c044-9430-4a03-b04f-4be6c771ea16")
 	)
 	(label "Vdrive"
-		(at 132.08 156.21 0)
+		(at 158.75 163.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1536,6 +1626,16 @@
 			(justify left bottom)
 		)
 		(uuid "1be26fb6-036e-49d1-9c2f-353d087f39d3")
+	)
+	(label "Regen_measure"
+		(at 22.86 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "21333142-a030-4b6e-9974-99b007f7e79a")
 	)
 	(label "VBAT_ADC"
 		(at 58.42 182.88 0)
@@ -1587,6 +1687,26 @@
 		)
 		(uuid "35d75388-4e57-4529-ba6c-763f43029eb6")
 	)
+	(label "Vbat-"
+		(at 114.3 193.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3c1ef850-6275-4df9-97d4-16f514260b74")
+	)
+	(label "Regen_Measure_Out"
+		(at 215.9 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "57c91acc-274e-4ca9-a704-409b0f794a09")
+	)
 	(label "Vdrive"
 		(at 132.08 102.87 180)
 		(effects
@@ -1627,6 +1747,16 @@
 		)
 		(uuid "68b4b3af-3265-42a4-9785-0531b680bbb5")
 	)
+	(label "Regen_measure"
+		(at 118.11 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6f221b78-cc4e-4ffe-9f5a-bf963c485652")
+	)
 	(label "IN1-"
 		(at 275.59 33.02 180)
 		(effects
@@ -1646,6 +1776,16 @@
 			(justify left bottom)
 		)
 		(uuid "82935e0e-f851-414a-8e54-79e7d74668a4")
+	)
+	(label "Regen_Measure_Out"
+		(at 115.57 184.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "833ac55c-7ab0-495f-a14e-6bcc68d2aa58")
 	)
 	(label "Vdrive"
 		(at 274.32 16.51 180)
@@ -1874,6 +2014,17 @@
 			(justify left)
 		)
 		(uuid "f1878fba-defa-4fc6-bf72-04aea126036a")
+	)
+	(hierarchical_label "RGN_MSR"
+		(shape input)
+		(at 22.86 22.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f1de6b7c-0ff3-4a03-89cb-ec271c2133c6")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -2149,8 +2300,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 83.82 184.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a1cd1c9-2b01-419a-b5ba-e44a713fe790")
+		(property "Reference" "R16"
+			(at 82.042 186.182 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.296 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 83.82 182.372 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 83.82 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "553ef04e-edc9-4e85-b433-00f9313d0fb9")
+		)
+		(pin "2"
+			(uuid "6f44c14e-3157-4ad2-959e-5b4679098b27")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 132.08 163.83 0)
+		(at 158.75 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2159,7 +2379,7 @@
 		(fields_autoplaced yes)
 		(uuid "1baf1bbe-ee53-4079-b8c7-0ef53c02ce6a")
 		(property "Reference" "#PWR040"
-			(at 132.08 170.18 0)
+			(at 158.75 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2168,7 +2388,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 132.08 168.91 0)
+			(at 158.75 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2176,7 +2396,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 163.83 0)
+			(at 158.75 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2185,7 +2405,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 163.83 0)
+			(at 158.75 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2194,7 +2414,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 163.83 0)
+			(at 158.75 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2209,6 +2429,75 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 91.44 184.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1bf48155-9853-4b4a-96e0-8d7cccbbc3e6")
+		(property "Reference" "R23"
+			(at 89.662 186.182 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 89.662 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 91.44 182.372 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4d4996ca-cbbf-47ef-b6f5-99890ffeebc9")
+		)
+		(pin "2"
+			(uuid "2eb079b1-6071-41ef-8405-c68617789169")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -2423,6 +2712,75 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 114.3 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "27b7b992-3a2e-4f49-9d8a-10c115330816")
+		(property "Reference" "R73"
+			(at 112.522 161.036 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 112.522 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 114.3 156.972 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 114.3 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1a37b02e-f3c9-4494-82a2-7a8900fdc019")
+		)
+		(pin "2"
+			(uuid "2c11a9fe-f2d2-47cd-a76c-fe3e3ca01cd4")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R73")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 58.42 186.69 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2485,6 +2843,144 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 83.82 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30e2ea2a-a2a2-4e9a-a9e1-7e62b92fdb50")
+		(property "Reference" "R1"
+			(at 82.042 160.782 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.296 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 83.82 156.972 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 83.82 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ef83cd85-e9c9-444d-a7ba-f457d7e9df2b")
+		)
+		(pin "2"
+			(uuid "b8b030a9-b68a-43db-ac82-fdf193616968")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 91.44 179.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "32ed02b6-1a4b-45bf-a994-4761330411b0")
+		(property "Reference" "R22"
+			(at 89.662 181.102 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 89.662 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 91.44 177.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "201b3dbb-96f6-4678-b57e-e6867a2a4d6c")
+		)
+		(pin "2"
+			(uuid "a7cf89d6-dbc1-427b-b252-78275ada2b84")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -2768,73 +3264,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 203.2 88.9 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "40df6f95-9b69-478f-859b-5091b6adf562")
-		(property "Reference" "R60"
-			(at 203.2 86.614 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 203.454 88.9 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 90.678 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 203.2 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 203.2 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4b64be05-6043-4165-85c1-46ee6edf0f0d")
-		)
-		(pin "1"
-			(uuid "07b0b4f4-45c4-4c18-8461-bbbced7f52de")
-		)
-		(instances
-			(project ""
-				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
-					(reference "R60")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 40.64 177.8 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3041,72 +3470,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 198.12 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5d8d5b59-f366-4180-91d3-f2bd18431b68")
-		(property "Reference" "#PWR037"
-			(at 198.12 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 198.12 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 198.12 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 198.12 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 198.12 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3d2527ce-872e-4b2e-aa18-53665db44525")
-		)
-		(instances
-			(project "BenchTest2_MIC4606"
-				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
-					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 40.64 167.64 270)
 		(unit 1)
@@ -3170,6 +3533,75 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 99.06 184.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5fc4e1b6-2a6f-4e31-be35-912a6c0c03c3")
+		(property "Reference" "R66"
+			(at 97.282 186.436 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 97.536 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.06 182.372 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 99.06 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3504604-4279-47d4-b144-8a72ffd167be")
+		)
+		(pin "2"
+			(uuid "1201dfaa-6f76-447b-be67-0850a7cab5b8")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R66")
 					(unit 1)
 				)
 			)
@@ -3410,6 +3842,75 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 99.06 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6411f31b-476d-4c8b-b8ea-6c6c5ae9ab90")
+		(property "Reference" "R64"
+			(at 97.282 176.276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 97.536 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.06 172.212 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 99.06 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f544d1b-48eb-4c7b-b353-4088ecd26b07")
+		)
+		(pin "2"
+			(uuid "b4859525-a07c-40b6-864e-5108602d422c")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R64")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 48.26 177.8 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3472,6 +3973,75 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 163.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "69bcd8c6-2830-4e0b-a1ce-f8899b07653f")
+		(property "Reference" "R68"
+			(at 104.902 165.862 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.902 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 106.68 162.052 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23bdd468-3116-439f-9aa4-a3679699bcb7")
+		)
+		(pin "2"
+			(uuid "0a130882-99f3-4c85-a0d8-61e354ae92eb")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R68")
 					(unit 1)
 				)
 			)
@@ -3548,7 +4118,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 132.08 160.02 270)
+		(at 158.75 167.64 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3557,7 +4127,7 @@
 		(fields_autoplaced yes)
 		(uuid "73c93240-ebe3-4e0c-be8e-f1792d93d622")
 		(property "Reference" "D20"
-			(at 134.62 158.7499 90)
+			(at 161.29 166.3699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3566,7 +4136,7 @@
 			)
 		)
 		(property "Value" "SD12LC"
-			(at 134.62 161.2899 90)
+			(at 161.29 168.9099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3575,7 +4145,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 160.02 0)
+			(at 158.75 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3584,7 +4154,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 132.08 160.02 0)
+			(at 158.75 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3593,7 +4163,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 132.08 160.02 0)
+			(at 158.75 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3611,6 +4181,75 @@
 			(project ""
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 99.06 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "790a8177-2854-46e6-adc5-85d063437db4")
+		(property "Reference" "R61"
+			(at 97.282 161.036 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 97.536 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.06 156.972 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 99.06 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc4ace0e-9e32-4f18-9ab5-a1a1b8b1df77")
+		)
+		(pin "2"
+			(uuid "01f977ae-8917-44f6-9d47-4c754b2a09cd")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R61")
 					(unit 1)
 				)
 			)
@@ -3687,6 +4326,558 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 99.06 163.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7a463f67-b926-46bf-9332-131e468c8a43")
+		(property "Reference" "R62"
+			(at 97.282 166.116 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 97.536 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.06 162.052 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 99.06 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a488a6d-b539-4a13-9949-ed98f6c80d85")
+		)
+		(pin "2"
+			(uuid "bdff5723-9314-4d4b-adbc-71411d5659f8")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 83.82 179.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7a53b631-ad58-4079-8af0-787eef77fbd5")
+		(property "Reference" "R15"
+			(at 82.042 181.102 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.296 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 83.82 177.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 83.82 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f515c8d-a6b8-4b51-9510-3396eb23bef1")
+		)
+		(pin "2"
+			(uuid "201a7315-92da-447c-ab37-ad297269591f")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 179.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "805ede28-3b78-4344-b0df-68f8ae67c45b")
+		(property "Reference" "R71"
+			(at 104.902 181.102 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.902 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 106.68 177.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a352a6a-363a-4fea-a733-ec783f8c0d71")
+		)
+		(pin "2"
+			(uuid "1838b6f9-04d1-497f-96b0-b2ad9bbcba84")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R71")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 99.06 168.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "849c7a67-7587-412d-ac2d-98a2b1aa3bd0")
+		(property "Reference" "R63"
+			(at 97.282 171.196 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 97.536 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.06 167.132 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 99.06 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02242abe-9a8e-4219-9116-bfbce6987af0")
+		)
+		(pin "2"
+			(uuid "01412f89-c5fa-4a28-aa52-23a7a08686f9")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 91.44 168.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8a99df4b-09e3-4a55-b5a6-37d82c0b113d")
+		(property "Reference" "R20"
+			(at 89.662 170.942 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 89.662 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 91.44 167.132 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "debe9f07-3ad0-4f4b-a838-ddf19cbb61a4")
+		)
+		(pin "2"
+			(uuid "14aa557a-3904-4c5c-964f-0bd5a3f97cb2")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 99.06 179.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8bbd6a32-8e88-4ab7-af01-d1792e944a08")
+		(property "Reference" "R65"
+			(at 97.282 181.356 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 97.536 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 99.06 177.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 99.06 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 99.06 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59e7efe8-bb50-4df8-8ea0-e944b7be0a03")
+		)
+		(pin "2"
+			(uuid "11f5e505-b034-4b1a-a9b4-0d3c6be7aefb")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R65")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 114.3 168.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8d6275c7-4d2f-4673-a7d0-c91711c08fe4")
+		(property "Reference" "R75"
+			(at 112.522 171.196 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 112.522 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 114.3 167.132 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 114.3 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ed67e973-e91a-4914-a21a-f066a7239cc8")
+		)
+		(pin "2"
+			(uuid "a7f1d0ac-7d9e-495d-9e3a-fd2d56e382a0")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R75")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 83.82 163.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8fa13f00-6e39-44f6-bf51-43366a4d9c71")
+		(property "Reference" "R2"
+			(at 82.042 165.862 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.296 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 83.82 162.052 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 83.82 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e96058a3-577c-4b62-94e8-2e330426ff0d")
+		)
+		(pin "2"
+			(uuid "f53bfaf0-8cfc-4155-9254-f43110146a48")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 33.02 167.64 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3756,6 +4947,75 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 83.82 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a51845c9-b7d7-462d-8c2f-adcc21514017")
+		(property "Reference" "R4"
+			(at 82.042 176.022 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.296 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 83.82 172.212 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 83.82 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b291d9c5-731a-4003-a3be-6fd51da22aa5")
+		)
+		(pin "2"
+			(uuid "9993790f-a9f1-48f8-9e45-0f9283708a5b")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 25.4 157.48 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3818,6 +5078,144 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "R33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 184.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a6289c63-f007-4ed4-938c-90b741999230")
+		(property "Reference" "R72"
+			(at 104.902 186.182 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.902 184.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 106.68 182.372 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "13b39ac9-617a-4030-813d-1db5752c8ead")
+		)
+		(pin "2"
+			(uuid "72584fcc-270b-4a98-89c6-2f8aa72ad7b6")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R72")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab7be2e4-ccc4-4351-8325-e241ddd60a82")
+		(property "Reference" "R67"
+			(at 104.902 160.782 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.902 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 106.68 156.972 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7f423601-e512-40ee-a230-34179331c5b0")
+		)
+		(pin "2"
+			(uuid "664c0fe9-8805-46ea-99a0-3e29b3deee60")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R67")
 					(unit 1)
 				)
 			)
@@ -3963,6 +5361,282 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 91.44 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b58b299c-02e1-46a6-b2e3-fd60df32a302")
+		(property "Reference" "R21"
+			(at 89.662 176.022 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 89.662 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 91.44 172.212 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "197f0a50-1825-4928-ba8b-d7bf1d7bae40")
+		)
+		(pin "2"
+			(uuid "b5d82113-dc53-47f7-95e4-19ffaa8116ae")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 91.44 158.75 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b5bf71ed-0d66-4ced-9583-86f07241303e")
+		(property "Reference" "R18"
+			(at 89.662 160.782 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 89.662 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 91.44 156.972 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0e7d28da-c1d3-4a25-a61c-9cce09301474")
+		)
+		(pin "2"
+			(uuid "711c0a10-8645-47e2-9335-37600b79b721")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 114.3 179.07 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ba22a120-9eaf-41e1-b80e-381a53998a20")
+		(property "Reference" "R77"
+			(at 112.522 181.356 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 112.522 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 114.3 177.292 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 114.3 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6daa182-9ff9-4f92-8c37-63c73753809f")
+		)
+		(pin "2"
+			(uuid "5e9aeb17-9723-452c-b777-c2bdad8e8b1e")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R77")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 116.84 187.96 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bce5add7-2ea0-46e7-814d-58e8e9990dc4")
+		(property "Reference" "R78"
+			(at 114.554 186.182 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 116.84 186.182 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 118.618 187.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 116.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af6d7009-8dc5-47ab-bf3f-3358d701137b")
+		)
+		(pin "2"
+			(uuid "78f2a90a-f2dd-492a-8759-1dc15cd8ae7c")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R78")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 48.26 182.88 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4025,6 +5699,75 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "R55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 114.3 163.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c07976c6-d52c-42ec-99a7-510bb18ef87f")
+		(property "Reference" "R74"
+			(at 112.522 166.116 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 112.522 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 114.3 162.052 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 114.3 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a3a5041d-dc17-488c-bd06-8378440b2ec6")
+		)
+		(pin "2"
+			(uuid "fcf360ef-b558-4c4b-ac02-ac54c8b6f91c")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R74")
 					(unit 1)
 				)
 			)
@@ -4333,6 +6076,144 @@
 	)
 	(symbol
 		(lib_id "Device:R")
+		(at 114.3 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d57e5f7f-c0e0-4cd6-8d20-f8a39da3481f")
+		(property "Reference" "R76"
+			(at 112.522 176.276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 112.522 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 114.3 172.212 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 114.3 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "414ca8f8-618d-4449-917e-6595d9431644")
+		)
+		(pin "2"
+			(uuid "f0f7e2c4-9123-46f2-97ab-aa577a2d3365")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R76")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 83.82 168.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dad96725-77f4-4ee6-a77b-71ec2462e262")
+		(property "Reference" "R3"
+			(at 82.042 170.942 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.296 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 83.82 167.132 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 83.82 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "634ba570-d873-44a3-9fda-e45574372436")
+		)
+		(pin "2"
+			(uuid "50e24306-2e7b-4ade-a278-1a4384f77031")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
 		(at 25.4 177.8 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4470,6 +6351,144 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 106.68 168.91 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f01c5212-4de7-44c6-a13c-6f4350ed9a50")
+		(property "Reference" "R69"
+			(at 104.902 170.942 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.902 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 106.68 167.132 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c200f577-273a-4863-b867-98db3c0813fa")
+		)
+		(pin "2"
+			(uuid "bd184b39-2143-49e5-b530-0187f745f7f7")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R69")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 91.44 163.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f203c1f5-3288-4039-8673-e4ed4ec7cde7")
+		(property "Reference" "R19"
+			(at 89.662 165.862 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 89.662 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 91.44 162.052 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 91.44 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "54cad1d7-809d-420c-8df8-d3b2a8f39283")
+		)
+		(pin "2"
+			(uuid "8ee0fb5c-6c1f-4ff5-8d60-c3ac323a4f64")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 132.08 128.27 0)
 		(unit 1)
@@ -4599,6 +6618,75 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
 					(reference "R40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 173.99 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fbd7206d-1314-4f37-8568-6d3b0557213f")
+		(property "Reference" "R70"
+			(at 104.902 176.022 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 104.902 173.99 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 106.68 172.212 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "293767ea-2d22-4d57-985f-d72f91828f68")
+		)
+		(pin "2"
+			(uuid "d1c9d9b1-517e-4756-ae38-8a4405e03c1c")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/8c9c9c75-221e-4d76-8e45-9c424cd249f8"
+					(reference "R70")
 					(unit 1)
 				)
 			)
