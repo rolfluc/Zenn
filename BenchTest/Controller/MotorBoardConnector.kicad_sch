@@ -1377,7 +1377,7 @@
 		)
 		(uuid "4669bb9f-4bc2-4211-bcdd-15b96671e57b")
 	)
-	(text "TODO Zener on VBAT_ADC to handle weird unexpected high voltage?"
+	(text "TODO Zener on VBAT/VREG to handle weird unexpected high voltage?"
 		(exclude_from_sim no)
 		(at 157.226 147.828 0)
 		(effects
@@ -1426,16 +1426,6 @@
 			(type default)
 		)
 		(uuid "0cdb9e8d-fbd1-42e0-adac-86ea3d5d39b8")
-	)
-	(wire
-		(pts
-			(xy 250.19 88.9) (xy 250.19 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11740627-1fee-4f11-8017-a993ecce41d1")
 	)
 	(wire
 		(pts
@@ -1499,16 +1489,6 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 85.09) (xy 251.46 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1b1630a-530d-439a-9c43-b3a3cbf592b9")
-	)
-	(wire
-		(pts
 			(xy 201.93 101.6) (xy 198.12 101.6)
 		)
 		(stroke
@@ -1516,16 +1496,6 @@
 			(type default)
 		)
 		(uuid "ce80fde4-1222-4bab-8d1f-fb331a7195c1")
-	)
-	(wire
-		(pts
-			(xy 259.08 85.09) (xy 267.97 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d20e6086-0571-4a33-b574-55a2e97bd045")
 	)
 	(wire
 		(pts
@@ -1577,6 +1547,16 @@
 		)
 		(uuid "0157948c-66b9-4b32-8702-3f7a2b6d6b6b")
 	)
+	(label "VREG_ADC"
+		(at 267.97 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "056f94c9-ab43-4cdc-a6ed-6697f68d2634")
+	)
 	(label "IN1+"
 		(at 180.34 40.64 0)
 		(effects
@@ -1626,6 +1606,16 @@
 			(justify right bottom)
 		)
 		(uuid "1e3d4aa2-f46a-46e5-b384-61cc2a2453c8")
+	)
+	(label "VREG_ADC"
+		(at 273.05 19.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2649b010-4348-4635-8e2e-1a344cbae31b")
 	)
 	(label "IN1-"
 		(at 267.97 90.17 180)
@@ -1706,6 +1696,16 @@
 			(justify left bottom)
 		)
 		(uuid "5c40809b-6bc1-440d-b696-24237384537f")
+	)
+	(label "VBAT_ADC"
+		(at 273.05 15.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "68209bfd-91e9-42da-960f-3424ce09f255")
 	)
 	(label "IN2-"
 		(at 267.97 95.25 180)
@@ -1796,6 +1796,16 @@
 			(justify left bottom)
 		)
 		(uuid "b10f195d-ac21-496d-81ce-2ba723de600f")
+	)
+	(label "VREG_ADC"
+		(at 144.78 151.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b1bc11bb-2852-44c1-af9e-54167348739a")
 	)
 	(label "12VDC"
 		(at 170.18 64.77 90)
@@ -1978,6 +1988,28 @@
 			(justify right)
 		)
 		(uuid "573b8864-dcf6-4987-8200-f997f34c44f7")
+	)
+	(hierarchical_label "VBAT_ADC"
+		(shape input)
+		(at 273.05 15.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5b1190f2-34e5-4cdb-9d55-2c7b843b88b2")
+	)
+	(hierarchical_label "VREG_ADC"
+		(shape input)
+		(at 273.05 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67d04c0e-172f-4e9b-946c-657fca0510f1")
 	)
 	(hierarchical_label "H_In2-"
 		(shape input)
@@ -2684,32 +2716,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 255.27 85.09 90)
+		(lib_id "Device:D_Zener")
+		(at 144.78 154.94 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "40df6f95-9b69-478f-859b-5091b6adf562")
-		(property "Reference" "R60"
-			(at 255.27 82.804 90)
+		(fields_autoplaced yes)
+		(uuid "3b855081-d1ee-4468-927c-4f3280f7fe0c")
+		(property "Reference" "D2"
+			(at 147.32 153.6699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "0"
-			(at 255.524 85.09 90)
+		(property "Value" "D_Zener"
+			(at 147.32 156.2099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 255.27 86.868 90)
+			(at 144.78 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2718,7 +2753,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 255.27 85.09 0)
+			(at 144.78 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2726,25 +2761,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 255.27 85.09 0)
+		(property "Description" "Zener diode"
+			(at 144.78 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "4b64be05-6043-4165-85c1-46ee6edf0f0d")
 		)
 		(pin "1"
-			(uuid "07b0b4f4-45c4-4c18-8461-bbbced7f52de")
+			(uuid "fdfb14ad-bf86-4faa-a39e-7bf0a4125047")
+		)
+		(pin "2"
+			(uuid "67a41d1d-1e3e-4161-a9f3-12e7edd4cb3c")
 		)
 		(instances
 			(project "Controller"
 				(path "/3d2636da-949a-430f-b429-214c7142e7ac/680043cb-bc9c-44e2-8bc3-261f88bf76fe"
-					(reference "R60")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -3387,72 +3422,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 250.19 88.9 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5d8d5b59-f366-4180-91d3-f2bd18431b68")
-		(property "Reference" "#PWR037"
-			(at 250.19 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 250.19 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.19 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.19 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 250.19 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3d2527ce-872e-4b2e-aa18-53665db44525")
-		)
-		(instances
-			(project "Controller"
-				(path "/3d2636da-949a-430f-b429-214c7142e7ac/680043cb-bc9c-44e2-8bc3-261f88bf76fe"
-					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 205.74 101.6 90)
 		(mirror x)
@@ -3993,6 +3962,72 @@
 			(project "Controller"
 				(path "/3d2636da-949a-430f-b429-214c7142e7ac/680043cb-bc9c-44e2-8bc3-261f88bf76fe"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 144.78 158.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af4ceb51-ab7c-4392-850b-f5f1e5b55cd9")
+		(property "Reference" "#PWR023"
+			(at 144.78 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 144.78 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 144.78 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 144.78 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0235030-e71f-457c-a75a-a44bab0eff5f")
+		)
+		(instances
+			(project "Controller"
+				(path "/3d2636da-949a-430f-b429-214c7142e7ac/680043cb-bc9c-44e2-8bc3-261f88bf76fe"
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
