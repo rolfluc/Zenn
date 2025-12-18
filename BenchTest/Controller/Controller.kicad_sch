@@ -39,6 +39,86 @@
 				(justify left top)
 			)
 		)
+		(pin "armateur" input
+			(at 41.91 76.2 0)
+			(uuid "89a62853-58e9-419f-84c2-a0692b872279")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "H_In1+" input
+			(at 41.91 82.55 0)
+			(uuid "0d1b0aa6-942d-4b85-8f83-456f5a8b2e7f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "H_In1-" input
+			(at 41.91 85.09 0)
+			(uuid "8e473adb-3c3e-4f51-add1-003ac2b15f41")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "H_In2+" input
+			(at 41.91 87.63 0)
+			(uuid "903fc3d1-3fc7-4fef-9944-e3367046f395")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "H_In2-" input
+			(at 41.91 90.17 0)
+			(uuid "b8f3acdd-ea9e-46fe-bccf-bcbd4a4dbfac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "regen" input
+			(at 41.91 78.74 0)
+			(uuid "3f960243-a5f7-4f86-ab7d-98128a21cfd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VBAT_ADC" input
+			(at 41.91 95.25 0)
+			(uuid "41d4a98c-e370-4d5e-bb7b-83e3b469aeca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VREG_ADC" input
+			(at 41.91 97.79 0)
+			(uuid "81edf315-2db3-4b0e-9535-ed9993aad224")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "Controller"
 				(path "/3d2636da-949a-430f-b429-214c7142e7ac"

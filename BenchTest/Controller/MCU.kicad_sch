@@ -5,4 +5,252 @@
 	(uuid "12db33b0-086e-4d20-9afe-0ebcace3cdeb")
 	(paper "A4")
 	(lib_symbols)
+	(label "in1-"
+		(at 92.71 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3477ea7a-8581-4e86-bdc1-8a348d93390f")
+	)
+	(label "in2-"
+		(at 273.05 24.13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3822d882-da9a-4cea-a004-5cd6e4fd7855")
+	)
+	(label "in2+"
+		(at 92.71 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5148eccb-a1b4-4380-ab41-195df3439b04")
+	)
+	(label "in1+"
+		(at 273.05 19.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "536d7f1c-a167-4882-8aff-233838f27b82")
+	)
+	(label "in1+"
+		(at 92.71 116.84 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "55c93244-7559-41d8-8d92-d5a06a355772")
+	)
+	(label "arm_drv"
+		(at 273.05 13.97 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "583079b6-b5f9-4cfc-b529-f21d375c04c7")
+	)
+	(label "Vbat_Adc"
+		(at 92.71 133.35 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "779c71e5-145f-4316-9f00-fe7616747030")
+	)
+	(label "reg_drv"
+		(at 92.71 114.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8049bfe4-8713-4f72-bfd5-0a3ed64286e0")
+	)
+	(label "in2+"
+		(at 273.05 26.67 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "87eadf4d-6353-49a5-ae37-626bc9eb1181")
+	)
+	(label "in2-"
+		(at 92.71 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "96994ede-459d-4bb9-8577-a906b272de8f")
+	)
+	(label "Regen_Adc"
+		(at 92.71 135.89 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d1db2325-6c58-4ae8-8ec7-a30d233f18d6")
+	)
+	(label "arm_drv"
+		(at 92.71 111.76 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dcef9da5-a6e5-4501-8bbe-58d89db8ee8e")
+	)
+	(label "Vbat_Adc"
+		(at 24.13 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e03fefc7-889a-4471-8629-cf9700d60c1b")
+	)
+	(label "Regen_Adc"
+		(at 24.13 15.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e54924c2-08a6-48c2-972a-62b6e17afb19")
+	)
+	(label "in1-"
+		(at 273.05 21.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e961cfb6-9cbc-41a1-bea3-31ed7202b2d9")
+	)
+	(label "reg_drv"
+		(at 273.05 16.51 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f05c5976-7982-4a50-bac9-087e034cce87")
+	)
+	(hierarchical_label "VBAT_ADC"
+		(shape input)
+		(at 24.13 19.05 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "03183a70-1d47-4b2c-9cb1-afd87d27330c")
+	)
+	(hierarchical_label "H_In2-"
+		(shape input)
+		(at 273.05 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "079e688b-c862-4057-84d3-4530ba1d2992")
+	)
+	(hierarchical_label "VREG_ADC"
+		(shape input)
+		(at 24.13 15.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6b9c06fb-6798-4533-8f18-41beea419a31")
+	)
+	(hierarchical_label "H_In2+"
+		(shape input)
+		(at 273.05 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b8c0fe3-2507-4384-9c4b-122d161f40e3")
+	)
+	(hierarchical_label "regen"
+		(shape input)
+		(at 273.05 16.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a2c32030-682d-43e6-b261-7ca8a57d15da")
+	)
+	(hierarchical_label "armateur"
+		(shape input)
+		(at 273.05 13.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a2eeb1a0-b0de-4024-82d5-b8da57f7abc7")
+	)
+	(hierarchical_label "H_In1+"
+		(shape input)
+		(at 273.05 19.05 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d0320a62-5e28-4bd5-9b24-5f58d241813e")
+	)
+	(hierarchical_label "H_In1-"
+		(shape input)
+		(at 273.05 21.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d2a2f46d-b30a-4810-bcbf-bf7932026a5e")
+	)
 )

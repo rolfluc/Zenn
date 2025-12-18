@@ -1337,15 +1337,15 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TODO move pin2 over to Regen Voltage Detector?"
+	(text "Neither ADC is expected to exceed 3.0V.\nZener set to 3.2V breakdown\nAt 3.2V: 200mV above expected dynamic range, but not harmful to electronics"
 		(exclude_from_sim no)
-		(at 244.348 93.726 90)
+		(at 147.828 144.018 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
-		(uuid "0d22c7f3-aa49-4da8-b46d-7f522e8ca314")
+		(uuid "36a712f6-bd37-48fb-a5a9-31ef0f9e2cc9")
 	)
 	(text "if = 3mA\nvf = 1.55V\nR = 620"
 		(exclude_from_sim no)
@@ -1376,16 +1376,6 @@
 			)
 		)
 		(uuid "4669bb9f-4bc2-4211-bcdd-15b96671e57b")
-	)
-	(text "TODO Zener on VBAT/VREG to handle weird unexpected high voltage?"
-		(exclude_from_sim no)
-		(at 157.226 147.828 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "4e170d6c-364f-4d70-8f59-0e9280f8c5b9")
 	)
 	(text "if = 3mA\nvf = 1.55V\nR = 620"
 		(exclude_from_sim no)
@@ -2743,7 +2733,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 144.78 154.94 0)
 			(effects
 				(font
@@ -2761,7 +2751,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "KDZVTR3.0B"
 			(at 144.78 154.94 0)
 			(effects
 				(font
@@ -4263,7 +4253,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 158.75 154.94 0)
 			(effects
 				(font
@@ -4281,7 +4271,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "KDZVTR3.0B"
 			(at 158.75 154.94 0)
 			(effects
 				(font
