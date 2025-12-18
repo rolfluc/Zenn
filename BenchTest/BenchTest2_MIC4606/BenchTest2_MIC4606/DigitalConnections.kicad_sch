@@ -1373,7 +1373,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TODO is this referenced to VBAT-?\nTODO this feels dangerous. "
+	(text "TODO is this referenced to VBAT-?"
 		(exclude_from_sim no)
 		(at 98.552 153.67 0)
 		(effects
@@ -1423,9 +1423,9 @@
 		)
 		(uuid "f1d57599-965b-44de-af47-8e013771f0db")
 	)
-	(text "TODO currently setup to use 12V drive from digital. \nMigrate from 5V reverse breakdown ESD"
+	(text "Drive Signals are 5V. So long as the reality is below 5V all set"
 		(exclude_from_sim no)
-		(at 164.084 96.52 0)
+		(at 158.75 97.79 90)
 		(effects
 			(font
 				(size 1.27 1.27)

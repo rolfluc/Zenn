@@ -778,6 +778,12 @@
 		(uuid "d9868799-19d5-482c-af3f-c882a7f168ba")
 	)
 	(junction
+		(at 82.55 29.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "488695bb-2498-4d30-9c4d-deb6366892f4")
+	)
+	(junction
 		(at 93.98 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -835,6 +841,26 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 29.21) (xy 85.09 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b96d23f5-44ad-49a8-be9c-a3d3373278eb")
+	)
+	(wire
+		(pts
+			(xy 82.55 27.94) (xy 82.55 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf59656b-fbe5-4c09-ad69-30bb09f7e34a")
+	)
+	(wire
+		(pts
 			(xy 26.67 85.09) (xy 26.67 87.63)
 		)
 		(stroke
@@ -863,6 +889,16 @@
 		)
 		(uuid "c58e6172-2f68-4131-ac41-d66241d1db4f")
 	)
+	(wire
+		(pts
+			(xy 82.55 29.21) (xy 82.55 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cad2f16e-b9a6-450e-9a01-0f65be553283")
+	)
 	(label "PEDAL_OUT"
 		(at 93.98 80.01 180)
 		(effects
@@ -873,15 +909,25 @@
 		)
 		(uuid "1a85dda7-43b8-4a76-828e-197e2ab08269")
 	)
-	(label "Sense"
-		(at 24.13 30.48 0)
+	(label "CURRENT_SENSE_0_2_5"
+		(at 85.09 29.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "59d88363-4f5c-4984-81d4-54e16e86c460")
+		(uuid "2cc68295-5a95-4639-9e0e-d7bb472cdbfb")
+	)
+	(label "Sense"
+		(at 82.55 20.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2ea57a78-5a98-43c5-b85d-57300b9d2b8c")
 	)
 	(label "PEDAL_OUT"
 		(at 24.13 77.47 0)
@@ -912,6 +958,16 @@
 			(justify right bottom)
 		)
 		(uuid "6d9944a3-1a6c-40d9-acc5-5be8b7f61910")
+	)
+	(label "Sense"
+		(at 24.13 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c0f3939-95c8-4afb-8159-42521b1f026d")
 	)
 	(label "CurentSenseVRef"
 		(at 24.13 27.94 0)
@@ -953,6 +1009,16 @@
 		)
 		(uuid "d8474b3e-4ba4-4019-ae94-9a56243dbb85")
 	)
+	(label "CURRENT_SENSE_0_2_5"
+		(at 266.7 21.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "da51fbd4-aa7a-4e74-ae77-ccb3567dd0eb")
+	)
 	(label "SWITCH_1"
 		(at 24.13 82.55 0)
 		(effects
@@ -985,6 +1051,17 @@
 		)
 		(uuid "1fb4481c-b9c8-4452-b317-d1e451fd4b31")
 	)
+	(hierarchical_label "CURRENT_SENSE"
+		(shape input)
+		(at 266.7 21.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9ebff8cc-2008-44f8-a75b-83c1c776519a")
+	)
 	(hierarchical_label "Pedal_Signal"
 		(shape input)
 		(at 266.7 13.97 0)
@@ -995,6 +1072,141 @@
 			(justify left)
 		)
 		(uuid "c7acf480-2a4e-46aa-b9d4-5aaf4073c45b")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 82.55 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07756306-a1bc-44e6-be63-7f9ef585b626")
+		(property "Reference" "#PWR055"
+			(at 82.55 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 82.55 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 82.55 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75071f4e-aee0-4294-bff6-86750c2bc2d2")
+		)
+		(instances
+			(project "Controller"
+				(path "/3d2636da-949a-430f-b429-214c7142e7ac/971a06b1-ac55-4b0d-af5a-bd1cbd3ac4b4"
+					(reference "#PWR055")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c9da1b6-d92e-430c-b645-598a94c6cbde")
+		(property "Reference" "R14"
+			(at 85.09 36.068 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.55 36.322 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+			(at 80.772 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5c480801-3f69-421f-87f3-45e44948bf12")
+		)
+		(pin "1"
+			(uuid "3209bb2c-f911-4ac2-aad0-af0ed4a2910f")
+		)
+		(instances
+			(project "Controller"
+				(path "/3d2636da-949a-430f-b429-214c7142e7ac/971a06b1-ac55-4b0d-af5a-bd1cbd3ac4b4"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1464,6 +1676,75 @@
 			(project ""
 				(path "/3d2636da-949a-430f-b429-214c7142e7ac/971a06b1-ac55-4b0d-af5a-bd1cbd3ac4b4"
 					(reference "#PWR054")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bff16759-a381-4291-98ba-92395131b773")
+		(property "Reference" "R13"
+			(at 85.09 25.654 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 82.55 25.908 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+			(at 80.772 24.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "81a1ded0-7eca-4c6d-aacd-d2f42565e027")
+		)
+		(pin "1"
+			(uuid "6e92a31f-8cd4-4355-88b8-2ce1d3c27ffd")
+		)
+		(instances
+			(project "Controller"
+				(path "/3d2636da-949a-430f-b429-214c7142e7ac/971a06b1-ac55-4b0d-af5a-bd1cbd3ac4b4"
+					(reference "R13")
 					(unit 1)
 				)
 			)
