@@ -1191,7 +1191,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "TODO need some Vmot measurement\nmeasurement to some fet to enable regen.\nTODO should this be done fully electronically? \ni.e. when Vmot > Vbat - enable signal for regen?\nNeed to be able to confirm that back EMF voltage is higher\nthan the current battery voltage,\nand that the battery voltage is low enough to accept\n\nTODO do I need a heat sync for too high of battery voltage?\ni.e. shortly after a charge, the battery might not be able\nto accept more energy. i.e. add .. 1kW? Resistor - 120A?"
+	(text "TODO do I need a heat sync for too high of battery voltage?\ni.e. shortly after a charge, the battery might not be able\nto accept more energy. i.e. add .. 1kW? Resistor - 120A?"
 		(exclude_from_sim no)
 		(at 198.374 45.72 0)
 		(effects
@@ -1200,16 +1200,6 @@
 			)
 		)
 		(uuid "9f94721a-7d2c-42ae-84a0-36f9a517cfe2")
-	)
-	(text "TODO is this right?\nIs this the right direction? Is this the right connection?"
-		(exclude_from_sim no)
-		(at 248.158 76.454 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "a556ef94-4487-46a5-a917-5c1496892ec3")
 	)
 	(text "TODO investigate this"
 		(exclude_from_sim no)
@@ -1223,7 +1213,7 @@
 	)
 	(text "rdson = 34mOhm\n/ 2 = 17mOhm\n0.017 * 10A * 10A = 1.7W\n\n^--- This needs testing / confirmation.\nThis may need rework"
 		(exclude_from_sim no)
-		(at 245.872 114.3 0)
+		(at 247.65 124.714 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1231,15 +1221,21 @@
 		)
 		(uuid "e0f9aa06-d56d-43c9-84e6-2b832efec16c")
 	)
-	(text "TODO dedicated small MCU for Regen? TBD"
+	(text "TODO\nhttps://www.wecanfigurethisout.org/ENERGY/Web_notes/Energy_Consumption/Greener_Cars_and_Trucks_Supporting_Files/How%20can%20I%20implement%20regenerative%20braking%20of%20a%20DC%20motor%20-%20Electrical%20Engineering%20Stack%20Exchange.pdf\nAccording to above, might be able to just recognize when \nVbat < Vmot, and just selectively enable the negative side to \nregen\n\nIn theory, might be able to fully drop this"
 		(exclude_from_sim no)
-		(at 163.322 132.08 0)
+		(at 148.844 136.144 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "ee5d7501-29ba-4a28-80aa-b8e675e74619")
+	)
+	(junction
+		(at 246.38 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "00fa8d66-90ce-4dbf-9ffe-29ded1d67520")
 	)
 	(junction
 		(at 176.53 99.06)
@@ -1273,6 +1269,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 104.14) (xy 246.38 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02133d8c-e9fa-42af-83b4-b7e23cc50c9b")
+	)
+	(wire
+		(pts
 			(xy 106.68 62.23) (xy 106.68 63.5)
 		)
 		(stroke
@@ -1303,6 +1309,16 @@
 	)
 	(wire
 		(pts
+			(xy 234.95 100.33) (xy 234.95 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "221736fa-01d8-4e5f-82a5-f4236910dc0e")
+	)
+	(wire
+		(pts
 			(xy 176.53 115.57) (xy 176.53 110.49)
 		)
 		(stroke
@@ -1310,6 +1326,16 @@
 			(type default)
 		)
 		(uuid "2393b452-2794-4e1f-a06a-c1cc9672cc9a")
+	)
+	(wire
+		(pts
+			(xy 246.38 104.14) (xy 266.7 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3061d61a-8db7-43cd-a17d-025cda05ec0e")
 	)
 	(wire
 		(pts
@@ -1423,6 +1449,16 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 104.14) (xy 266.7 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75dbd312-6a3d-457f-8d57-43d48a8cae76")
+	)
+	(wire
+		(pts
 			(xy 190.5 90.17) (xy 190.5 99.06)
 		)
 		(stroke
@@ -1460,6 +1496,16 @@
 			(type default)
 		)
 		(uuid "944f1731-e559-4834-9191-872f2a426ff6")
+	)
+	(wire
+		(pts
+			(xy 234.95 104.14) (xy 246.38 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0bb0c1c-98c4-41e9-9bb0-a54dbf2d9203")
 	)
 	(wire
 		(pts
@@ -1581,6 +1627,16 @@
 		)
 		(uuid "2ffc6514-2fb7-4ee5-b567-87bb6e0bf861")
 	)
+	(label "Mot-"
+		(at 246.38 113.03 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3227a8ac-9383-49bb-b356-425880c1d2ad")
+	)
 	(label "Vdrive"
 		(at 24.13 20.32 0)
 		(effects
@@ -1602,17 +1658,7 @@
 		(uuid "5e91900d-8a5a-46b5-8456-61ec269c99f3")
 	)
 	(label "VBAT+"
-		(at 234.95 90.17 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "604e6b01-3cd1-4575-97bd-87495acf2f16")
-	)
-	(label "VBAT+"
-		(at 26.67 25.4 0)
+		(at 24.13 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1631,6 +1677,16 @@
 		)
 		(uuid "7c5a4e2e-e3b0-44f2-819e-bc5d6de13631")
 	)
+	(label "Mot+"
+		(at 234.95 90.17 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f9bebe7-c4c9-4f23-b12d-dfbb56adf3c1")
+	)
 	(label "G1"
 		(at 227.33 95.25 180)
 		(effects
@@ -1641,7 +1697,7 @@
 		)
 		(uuid "8ecba350-597f-4191-9d52-059f5a3b9d33")
 	)
-	(label "VBAT+"
+	(label "Mot+"
 		(at 266.7 90.17 90)
 		(effects
 			(font
@@ -1649,17 +1705,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "92597d8c-e37d-4c12-86bc-eddd571a25fd")
-	)
-	(label "Mot-"
-		(at 266.7 100.33 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "98e31f77-a1ec-4576-8c55-ca6fa2169cc6")
+		(uuid "9f71c37d-12b2-4f32-90fb-24a04b80c550")
 	)
 	(label "reg_drv"
 		(at 127 105.41 180)
@@ -1710,16 +1756,6 @@
 			(justify left bottom)
 		)
 		(uuid "d7ed3a8a-4bf0-464c-97df-74b3d5e79d31")
-	)
-	(label "Mot-"
-		(at 234.95 100.33 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "dead65e0-1025-452e-b13a-79154d322f3f")
 	)
 	(label "Vdrive_iso"
 		(at 149.86 73.66 90)
@@ -2421,6 +2457,76 @@
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/eb34c613-22d6-4b91-b5c9-3bbcb10d59f1"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 246.38 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8238510e-a6cc-42f9-bf99-ca2f8c5b7b28")
+		(property "Reference" "R78"
+			(at 248.92 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 248.92 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 244.602 109.22 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 246.38 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 246.38 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c7c7a046-1a5e-48a4-9bcc-a581ba0af854")
+		)
+		(pin "1"
+			(uuid "72eacf3d-b144-4ea9-b1e2-ccee2c48056d")
+		)
+		(instances
+			(project ""
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/eb34c613-22d6-4b91-b5c9-3bbcb10d59f1"
+					(reference "R78")
 					(unit 1)
 				)
 			)
