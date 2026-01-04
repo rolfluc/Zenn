@@ -1648,7 +1648,7 @@
 		)
 		(uuid "b1b7bd18-330a-4d9a-be4e-a03a2502d68a")
 	)
-	(text "Cap Bank 44u -> 88u"
+	(text "1.12->2.24m"
 		(exclude_from_sim no)
 		(at 136.398 38.862 0)
 		(effects
@@ -2709,7 +2709,7 @@
 		(uuid "0cbb1800-ff5d-475e-ace3-795c6233aac2")
 	)
 	(label "VBAT-"
-		(at 132.08 57.15 270)
+		(at 133.35 57.15 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2729,7 +2729,7 @@
 		(uuid "236a50e0-dc39-479e-97de-d1f0f68b465b")
 	)
 	(label "VBAT+"
-		(at 132.08 49.53 90)
+		(at 133.35 49.53 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2858,6 +2858,16 @@
 		)
 		(uuid "5df65a14-406d-4ca0-aa69-4ac08cb0c34f")
 	)
+	(label "VBAT-"
+		(at 157.48 57.15 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "642ac89a-99d5-4092-8559-bd666ab4bb4b")
+	)
 	(label "IN2-"
 		(at 21.59 27.94 0)
 		(effects
@@ -2919,7 +2929,7 @@
 		(uuid "967e18c9-7ca3-4e61-bd4e-25db0ebdf80c")
 	)
 	(label "VBAT+"
-		(at 152.4 49.53 90)
+		(at 157.48 49.53 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2949,7 +2959,7 @@
 		(uuid "a3a36233-0724-4dce-82d8-ff2a7ac772e0")
 	)
 	(label "VBAT-"
-		(at 142.24 57.15 270)
+		(at 144.78 57.15 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2958,18 +2968,8 @@
 		)
 		(uuid "be3971c9-64ba-49b6-8165-0ba2924ba814")
 	)
-	(label "VBAT-"
-		(at 152.4 57.15 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c3576ac8-6d5f-4b73-9184-5858f2628184")
-	)
 	(label "VBAT+"
-		(at 142.24 49.53 90)
+		(at 144.78 49.53 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3282,7 +3282,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 50.292 46.99 90)
 			(effects
 				(font
@@ -3351,7 +3351,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 181.61 114.3 0)
 			(effects
 				(font
@@ -3754,6 +3754,164 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 157.48 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "4ceecec6-ae9f-4c21-8943-b36f0cb82861")
+		(property "Reference" "C3"
+			(at 161.29 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "560u"
+			(at 161.29 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Radial_D18.0mm_H35.5mm_P7.50mm"
+			(at 158.4452 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 157.48 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 157.48 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "EPAG201ELL561MM45S"
+			(at 157.48 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a3b3eb8f-c3fe-4be4-9b48-368bc787b385")
+		)
+		(pin "1"
+			(uuid "f218d1f6-6fc3-425d-a565-72b414fd883b")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/ca249708-ec09-41b0-b71d-70bebe19cbfd"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 144.78 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "55825ef2-12f1-426b-9725-4636a0b89d33")
+		(property "Reference" "C2"
+			(at 148.59 52.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "560u"
+			(at 148.59 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Radial_D18.0mm_H35.5mm_P7.50mm"
+			(at 145.7452 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 144.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 144.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "EPAG201ELL561MM45S"
+			(at 144.78 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6cd3c616-81c8-4605-ad7b-d5e0b8063288")
+		)
+		(pin "1"
+			(uuid "bd33238d-9cfd-41fe-92d8-69610c16064d")
+		)
+		(instances
+			(project "BenchTest2_MIC4606"
+				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/ca249708-ec09-41b0-b71d-70bebe19cbfd"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 135.89 123.19 90)
 		(unit 1)
@@ -3977,7 +4135,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
+		(property "Value" "560u"
 			(at 125.73 54.6099 0)
 			(effects
 				(font
@@ -3986,7 +4144,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:C_Radial_D18.0mm_H35.5mm_P7.50mm"
 			(at 122.8852 57.15 0)
 			(effects
 				(font
@@ -4013,7 +4171,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "226AVG100MFBJ"
+		(property "P/N" "EPAG201ELL561MM45S"
 			(at 121.92 53.34 0)
 			(effects
 				(font
@@ -4032,85 +4190,6 @@
 			(project ""
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/ca249708-ec09-41b0-b71d-70bebe19cbfd"
 					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 132.08 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7cea3a47-342c-4a31-abb4-83d8c08b6282")
-		(property "Reference" "C10"
-			(at 135.89 52.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u"
-			(at 135.89 54.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.0452 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 132.08 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 132.08 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "226AVG100MFBJ"
-			(at 132.08 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a4ecdab8-2daf-476f-941f-5d5ffb7f8eda")
-		)
-		(pin "1"
-			(uuid "193e7464-3d93-4070-b34d-08198734439e")
-		)
-		(instances
-			(project "BenchTest2_MIC4606"
-				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/ca249708-ec09-41b0-b71d-70bebe19cbfd"
-					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -4215,7 +4294,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 181.61 135.89 0)
 			(effects
 				(font
@@ -4398,85 +4477,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 142.24 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "b0fb0a97-6d78-47d6-a4d6-f04a49ea7a97")
-		(property "Reference" "C11"
-			(at 146.05 52.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u"
-			(at 146.05 54.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 143.2052 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 142.24 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 142.24 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "226AVG100MFBJ"
-			(at 142.24 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "89f49fa8-46ab-437e-8e2c-2b44902326be")
-		)
-		(pin "1"
-			(uuid "5886d237-51a0-4fcf-808e-eeb2b16fa2b1")
-		)
-		(instances
-			(project "BenchTest2_MIC4606"
-				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/ca249708-ec09-41b0-b71d-70bebe19cbfd"
-					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 99.06 135.89 0)
 		(unit 1)
@@ -4502,7 +4502,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 99.06 135.89 0)
 			(effects
 				(font
@@ -4710,7 +4710,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 55.88 46.99 0)
 			(effects
 				(font
@@ -4952,7 +4952,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 99.06 114.3 0)
 			(effects
 				(font
@@ -5065,16 +5065,16 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 152.4 53.34 0)
+		(at 133.35 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "dd054aba-762c-4f2a-9d4d-39227f321ba2")
-		(property "Reference" "C14"
-			(at 156.21 52.0699 0)
+		(uuid "de8e3b3b-1c4f-4b4d-ab87-0e2559fcfce2")
+		(property "Reference" "C1"
+			(at 137.16 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5082,8 +5082,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22u"
-			(at 156.21 54.6099 0)
+		(property "Value" "560u"
+			(at 137.16 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5091,8 +5091,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 153.3652 57.15 0)
+		(property "Footprint" "Capacitor_THT:C_Radial_D18.0mm_H35.5mm_P7.50mm"
+			(at 134.3152 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5101,7 +5101,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 152.4 53.34 0)
+			(at 133.35 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5110,7 +5110,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 152.4 53.34 0)
+			(at 133.35 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5118,8 +5118,8 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "226AVG100MFBJ"
-			(at 152.4 53.34 0)
+		(property "P/N" "EPAG201ELL561MM45S"
+			(at 133.35 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5128,15 +5128,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "b1f7b510-3972-42f7-be92-553f88108708")
+			(uuid "74019373-b7f4-4d0d-b00c-8101e87a6bfc")
 		)
 		(pin "1"
-			(uuid "d9e3a86f-df68-48e5-984f-ec2b4a1d9db6")
+			(uuid "634b8537-726d-4fb2-b67d-a305a58775fc")
 		)
 		(instances
 			(project "BenchTest2_MIC4606"
 				(path "/5c5197d3-4aa5-4f8b-b790-1e4b8d49fd62/ca249708-ec09-41b0-b71d-70bebe19cbfd"
-					(reference "C14")
+					(reference "C1")
 					(unit 1)
 				)
 			)
