@@ -652,16 +652,6 @@
 		)
 		(uuid "0a39896f-4551-4ea7-8d0b-d848b0f31a01")
 	)
-	(text "TODO Footprint"
-		(exclude_from_sim no)
-		(at 116.586 101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "ea407098-5442-4cdc-bb47-acae5b9dfd52")
-	)
 	(label "Vbat-"
 		(at 105.41 101.6 270)
 		(effects
@@ -782,7 +772,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Library:WP-RAFE_74622103"
 			(at 105.41 96.52 0)
 			(effects
 				(font
@@ -849,7 +839,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Library:WP-RAFE_74622103"
 			(at 125.73 96.52 0)
 			(effects
 				(font
