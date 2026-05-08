@@ -1,0 +1,225 @@
+(footprint "CUI_TB002-500-02BE"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.945 -5.989 0)
+		(layer "F.SilkS")
+		(uuid "48b015c2-0e6c-4329-84c9-e7b6478649bf")
+		(effects
+			(font
+				(size 1.4 1.4)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CUI_TB002-500-02BE"
+		(at 12.502 4.861 0)
+		(layer "F.Fab")
+		(uuid "59d704c4-d7a9-4185-89f1-f3c312ae32ca")
+		(effects
+			(font
+				(size 1.4 1.4)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e5493ff1-ff60-4c32-8a15-c35d972f53e5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "af18b350-3a13-4d11-916f-6dfee6f7dff5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -2.5 -4.1)
+		(end 7.5 -4.1)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e90d9140-832c-4c32-9fd2-523c7170dd42")
+	)
+	(fp_line
+		(start -2.5 3.5)
+		(end -2.5 -4.1)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dfec9bb0-6e53-42ff-b6ce-dc74c2cc50df")
+	)
+	(fp_line
+		(start 7.5 -4.1)
+		(end 7.5 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2f80ac3b-1690-4989-9b8a-6f9060ac0546")
+	)
+	(fp_line
+		(start 7.5 3.5)
+		(end -2.5 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7ef3607a-4396-489b-af23-033d9b3e2eab")
+	)
+	(fp_circle
+		(center 0 4.5)
+		(end 0.1 4.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "af19b19b-cd05-4c93-9d71-3673abba4cf5")
+	)
+	(fp_line
+		(start -2.75 -4.35)
+		(end 7.75 -4.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d3ce3a82-fa3f-47eb-b4c0-ace12cf6c878")
+	)
+	(fp_line
+		(start -2.75 3.75)
+		(end -2.75 -4.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "100f7a85-2199-4db6-9e89-e0adc3a506d3")
+	)
+	(fp_line
+		(start 7.75 -4.35)
+		(end 7.75 3.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9972ce1b-8576-4acd-a140-45c13f82fcff")
+	)
+	(fp_line
+		(start 7.75 3.75)
+		(end -2.75 3.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "be1a6ffa-f02d-49b8-9a16-59f96af76402")
+	)
+	(fp_line
+		(start -2.5 -4.1)
+		(end 7.5 -4.1)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "bcbd8a22-59aa-4c7f-83d6-2072682ae19d")
+	)
+	(fp_line
+		(start -2.5 3.5)
+		(end -2.5 -4.1)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "60cacc76-e886-4d79-864f-fe778698f321")
+	)
+	(fp_line
+		(start 7.5 -4.1)
+		(end 7.5 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "af332e28-e992-4efd-9007-d7229ebabbee")
+	)
+	(fp_line
+		(start 7.5 3.5)
+		(end -2.5 3.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7b2f026b-936e-4d9a-918a-abf2365fb93e")
+	)
+	(fp_circle
+		(center 0 4.5)
+		(end 0.1 4.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a846a821-477c-4021-bcec-0f12b778e914")
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.95 1.95)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "8304e3fd-8365-4702-84cd-5be1998c3131")
+	)
+	(pad "2" thru_hole circle
+		(at 5 0)
+		(size 1.95 1.95)
+		(drill 1.3)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "ff03b404-7f7c-4ca8-ab6f-e32205dc6a3c")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/rolf0/Documents/arc/ZennMotorController/Zenn/Lightsmodule/TB002_500_02BE/TB002-500-02BE.step"
+		(offset
+			(xyz 7.5 4.25 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
+)

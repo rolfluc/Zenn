@@ -1,0 +1,130 @@
+(footprint "100SPxT1B1M2QEH"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 4 -0.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "40579eba-594b-4692-b6ee-e15f6e45c78b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "100SPxT1B1M2QEH"
+		(at 3.43 6.35 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "3c00549b-ba80-468e-aa46-2d92ab973ad7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7c1879e-9d66-41e4-b473-5054eda13228")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fe4388e7-8c63-42aa-8a55-5b41eeb1bbc5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start 0 0)
+		(end 6.86 12.7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0d62c7b0-195b-48a5-8f96-577fc85c1efb")
+	)
+	(fp_circle
+		(center 6.86 12.7)
+		(end 7.25 13)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "751d7f38-e9d1-43cd-9d87-6876baf05b53")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 3.43 6.35 90)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "2f6f8174-6e68-42df-9cd3-5f8620200441")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole roundrect
+		(at 3.43 11.15)
+		(size 2.85 2.85)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "dc0d4307-80ce-473f-a6c1-3cae7d7b26fe")
+	)
+	(pad "2" thru_hole roundrect
+		(at 3.43 6.45)
+		(size 2.85 2.85)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "01d059db-6936-4ad1-b0f4-9ba19c4ae38d")
+	)
+	(pad "3" thru_hole roundrect
+		(at 3.43 1.75)
+		(size 2.85 2.85)
+		(drill 1.85)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "1f5fe4f6-3399-4bb6-8c07-d5059beb37c4")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/141_100SPxT1B1M2xE.stp"
+		(offset
+			(xyz 3.5 -6.5 8)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -90)
+		)
+	)
+)
