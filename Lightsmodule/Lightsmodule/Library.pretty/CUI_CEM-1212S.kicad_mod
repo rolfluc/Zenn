@@ -1,0 +1,116 @@
+(footprint "CUI_CEM-1212S"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.376025 -7.555985 0)
+		(layer "F.SilkS")
+		(uuid "7671ccac-1f78-439c-9057-24fa26fffd3b")
+		(effects
+			(font
+				(size 1.00278 1.00278)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CUI_CEM-1212S"
+		(at 4.95897 7.27085 0)
+		(layer "F.Fab")
+		(uuid "8ca39557-db0a-4911-87a8-de05975c5298")
+		(effects
+			(font
+				(size 1.000803 1.000803)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "727e4b69-659b-4ebe-b31e-f76d8ce2ada8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f9a48f5-8dc3-4e06-87b3-6246ab0c4b33")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center 0 0)
+		(end 6 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "cfcc4660-e5d4-45c7-97f5-cbdb6ef56383")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 6.25 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f6ec6217-4d9b-408d-9789-9da1f1c8038a")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 6 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3b3a1c3c-d6c6-440e-a0a9-c4d16843ce8e")
+	)
+	(pad "M" thru_hole circle
+		(at 3.25 0)
+		(size 1.408 1.408)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "b6ed10d1-71ec-4d66-9fb8-8995a0506282")
+	)
+	(pad "P" thru_hole circle
+		(at -3.25 0)
+		(size 1.408 1.408)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "a8a82797-ea5d-4051-a5e0-b136f5d278f8")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/rolf0/Documents/arc/ZennMotorController/Zenn/Lightsmodule/CEM_1212S/CEM-1212S.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
