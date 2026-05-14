@@ -5167,6 +5167,16 @@
 		)
 		(uuid "690f70dd-3c02-4cae-a7f3-8b7a52acc5fd")
 	)
+	(label "RIGHT_EN"
+		(at 67.31 144.78 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6938d0ab-3b72-4ad6-9d2d-7b867a996f03")
+	)
 	(label "HORN"
 		(at 44.45 90.17 270)
 		(effects
@@ -5188,14 +5198,14 @@
 		(uuid "86eb288d-4449-40f0-a8b5-6e7bd1311012")
 	)
 	(label "LEFT_EN"
-		(at 67.31 144.78 90)
+		(at 67.31 160.02 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "94ddf790-9c90-49e8-9fb2-5f7d4b2d53f0")
+		(uuid "a0140a6d-a81a-495a-b618-2110508629d8")
 	)
 	(label "R_OUT"
 		(at 255.27 40.64 180)
@@ -5326,16 +5336,6 @@
 			(justify right bottom)
 		)
 		(uuid "ddd4d012-2ec7-4026-b61d-f0aa900a1035")
-	)
-	(label "RIGHT_EN"
-		(at 67.31 160.02 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "df3c70ae-2f7e-458b-9eb3-6ecc644cbf2d")
 	)
 	(label "LEFT_EN"
 		(at 139.7 77.47 180)
@@ -9112,7 +9112,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Library:CUI_CEM-1212S"
+		(property "Footprint" ""
 			(at 271.145 119.38 90)
 			(effects
 				(font
@@ -9774,70 +9774,6 @@
 			(project "Lightsmodule"
 				(path "/15738d50-cc27-46ea-b201-adde7f892d56"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 252.73 86.36 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a71e111-99e0-4986-8598-1aa24599e704")
-		(property "Reference" "H3"
-			(at 255.27 85.1478 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 255.27 87.5721 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4"
-			(at 252.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 252.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 252.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "Lightsmodule"
-				(path "/15738d50-cc27-46ea-b201-adde7f892d56"
-					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -11415,7 +11351,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dfd6759a-c3e8-4d55-934e-5620d21dcd5f")
-		(property "Reference" "SW1"
+		(property "Reference" "SW11"
 			(at 135.255 81.3378 90)
 			(effects
 				(font
@@ -11481,7 +11417,7 @@
 		(instances
 			(project "Lightsmodule"
 				(path "/15738d50-cc27-46ea-b201-adde7f892d56"
-					(reference "SW1")
+					(reference "SW11")
 					(unit 1)
 				)
 			)
