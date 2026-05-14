@@ -83,16 +83,7 @@
 		(layer "F.Fab")
 		(uuid "3b3a1c3c-d6c6-440e-a0a9-c4d16843ce8e")
 	)
-	(pad "M" thru_hole circle
-		(at 3.25 0)
-		(size 1.408 1.408)
-		(drill 0.9)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(solder_mask_margin 0.102)
-		(uuid "b6ed10d1-71ec-4d66-9fb8-8995a0506282")
-	)
-	(pad "P" thru_hole circle
+	(pad "1" thru_hole circle
 		(at -3.25 0)
 		(size 1.408 1.408)
 		(drill 0.9)
@@ -100,6 +91,15 @@
 		(remove_unused_layers no)
 		(solder_mask_margin 0.102)
 		(uuid "a8a82797-ea5d-4051-a5e0-b136f5d278f8")
+	)
+	(pad "2" thru_hole circle
+		(at 3.25 0)
+		(size 1.408 1.408)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.102)
+		(uuid "b6ed10d1-71ec-4d66-9fb8-8995a0506282")
 	)
 	(embedded_fonts no)
 	(model "C:/Users/rolf0/Documents/arc/ZennMotorController/Zenn/Lightsmodule/CEM_1212S/CEM-1212S.step"
